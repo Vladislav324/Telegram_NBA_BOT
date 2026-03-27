@@ -1,0 +1,2802 @@
+{
+  "wolverhampton wanderers": {
+    "h_gs": 1.467,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "aston villa": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "abournemouth": {
+    "h_gs": 1.617,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "sunderland": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.053,
+    "a_gc": 1.527,
+    "matches": 2,
+    "updated": "2026-02-28"
+  },
+  "newcastle united": {
+    "h_gs": 1.317,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "everton": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.601,
+    "a_gc": 1.416,
+    "matches": 2,
+    "updated": "2026-02-28"
+  },
+  "burnley": {
+    "h_gs": 1.818,
+    "h_gc": 1.49,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-02-28"
+  },
+  "brentford": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.49,
+    "a_gc": 1.818,
+    "matches": 2,
+    "updated": "2026-02-28"
+  },
+  "liverpool": {
+    "h_gs": 1.982,
+    "h_gc": 1.712,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-02-28"
+  },
+  "west ham united": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.663,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "levante ud": {
+    "h_gs": 2.104,
+    "h_gc": 1.057,
+    "a_gs": 1.073,
+    "a_gc": 2.038,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "deportivo alavés": {
+    "h_gs": 1.755,
+    "h_gc": 1.215,
+    "a_gs": 0.908,
+    "a_gc": 2.115,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "rayo vallecano de madrid": {
+    "h_gs": 1.767,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "athletic club": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.181,
+    "a_gc": 1.655,
+    "matches": 2,
+    "updated": "2026-02-28"
+  },
+  "parma calcio 1913": {
+    "h_gs": 1.317,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "cagliari calcio": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "como 1907": {
+    "h_gs": 1.317,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "us lecce": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "augsburg": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "1. köln": {
+    "h_gs": 1.555,
+    "h_gc": 1.46,
+    "a_gs": 1.04,
+    "a_gc": 1.401,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "rc strasbourg alsace": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "racing club de lens": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "porto": {
+    "h_gs": 1.767,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "arouca": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.767,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "sporting clube de portugal": {
+    "h_gs": 1.767,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "gd estoril praia": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.767,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "kasımpaşa": {
+    "h_gs": 1.317,
+    "h_gc": 1.512,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "rizespor": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.512,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "leeds united": {
+    "h_gs": 1.125,
+    "h_gc": 1.747,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-05"
+  },
+  "manchester city": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.31,
+    "a_gc": 1.125,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "barcelona": {
+    "h_gs": 1.708,
+    "h_gc": 1.053,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-02-28"
+  },
+  "villarreal": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.053,
+    "a_gc": 1.708,
+    "matches": 2,
+    "updated": "2026-02-28"
+  },
+  "rcd mallorca": {
+    "h_gs": 1.317,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "real sociedad de fútbol": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "hellas verona": {
+    "h_gs": 1.527,
+    "h_gc": 1.456,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-02-28"
+  },
+  "ssc napoli": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "tsg 1899 hoffenheim": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "st. pauli 1910": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "bayer 04 leverkusen": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "1. fsv mainz 05": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "sv werder bremen": {
+    "h_gs": 1.467,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "1. heidenheim 1846": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "borussia mönchengladbach": {
+    "h_gs": 1.399,
+    "h_gc": 0.907,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-02-28"
+  },
+  "1. union berlin": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "borussia dortmund": {
+    "h_gs": 1.673,
+    "h_gc": 1.472,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "bayern münchen": {
+    "h_gs": 2.081,
+    "h_gc": 0.928,
+    "a_gs": 1.948,
+    "a_gc": 1.502,
+    "matches": 7,
+    "updated": "2026-03-22"
+  },
+  "stade rennais 1901": {
+    "h_gs": 1.617,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "toulouse": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.035,
+    "a_gc": 1.527,
+    "matches": 2,
+    "updated": "2026-02-28"
+  },
+  "as monaco": {
+    "h_gs": 1.467,
+    "h_gc": 1.663,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "angerso": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.663,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "avs": {
+    "h_gs": 1.253,
+    "h_gc": 0.907,
+    "a_gs": 1.215,
+    "a_gc": 1.614,
+    "matches": 3,
+    "updated": "2026-03-09"
+  },
+  "cf estrela da amadora": {
+    "h_gs": 1.616,
+    "h_gc": 1.359,
+    "a_gs": 1.062,
+    "a_gc": 1.467,
+    "matches": 2,
+    "updated": "2026-03-09"
+  },
+  "cd nacional": {
+    "h_gs": 1.467,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "sporting clube de braga": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "bournemouth": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "west ham": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 2.067,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "newcastle": {
+    "h_gs": 1.617,
+    "h_gc": 1.512,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "rayo vallecano": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "como": {
+    "h_gs": 1.767,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "lecce": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.767,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "bayer leverkusen": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "fsv mainz 05": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "union berlin": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "1899 hoffenheim": {
+    "h_gs": 1.317,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "fc st. pauli": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "werder bremen": {
+    "h_gs": 1.617,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "1. heidenheim": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "rennes": {
+    "h_gs": 1.467,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "heerenveen": {
+    "h_gs": 1.617,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "sparta rotterdam": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "estrela": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "kocaelispor": {
+    "h_gs": 1.317,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "beşiktaş": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "real oviedo": {
+    "h_gs": 2.067,
+    "h_gc": 1.363,
+    "a_gs": 1.942,
+    "a_gc": 1.324,
+    "matches": 2,
+    "updated": "2026-03-05"
+  },
+  "club atlético de madrid": {
+    "h_gs": 1.837,
+    "h_gc": 1.358,
+    "a_gs": 1.52,
+    "a_gc": 2.297,
+    "matches": 6,
+    "updated": "2026-03-23"
+  },
+  "internazionale milano": {
+    "h_gs": 1.617,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "genoac": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "le havre ac": {
+    "h_gs": 1.317,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "paris saint-germain": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "napoli": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "galatasaray": {
+    "h_gs": 1.767,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "alanyaspor": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.767,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "göztepe": {
+    "h_gs": 1.317,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "eyüpspor": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-02-28"
+  },
+  "vitória": {
+    "h_gs": 1.414,
+    "h_gc": 1.195,
+    "a_gs": 1.214,
+    "a_gc": 1.324,
+    "matches": 3,
+    "updated": "2026-03-15"
+  },
+  "alverca": {
+    "h_gs": 1.614,
+    "h_gc": 1.215,
+    "a_gs": 1.183,
+    "a_gc": 1.371,
+    "matches": 4,
+    "updated": "2026-03-15"
+  },
+  "leeds": {
+    "h_gs": 1.125,
+    "h_gc": 1.181,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-05"
+  },
+  "mallorca": {
+    "h_gs": 1.317,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "real sociedad": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "monaco": {
+    "h_gs": 1.617,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "angers": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "heracles": {
+    "h_gs": 1.467,
+    "h_gc": 1.512,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "psv eindhoven": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.512,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "nacional": {
+    "h_gs": 1.467,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "sc braga": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "oviedo": {
+    "h_gs": 1.317,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "atletico madrid": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "inter": {
+    "h_gs": 1.617,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "genoa": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "le havre": {
+    "h_gs": 1.317,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "paris saint germain": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "nec nijmegen": {
+    "h_gs": 1.617,
+    "h_gc": 1.512,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "fortuna sittard": {
+    "h_gs": 1.47,
+    "h_gc": 1.65,
+    "a_gs": 1.581,
+    "a_gc": 1.53,
+    "matches": 3,
+    "updated": "2026-03-15"
+  },
+  "guimaraes": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "manchester united": {
+    "h_gs": 1.673,
+    "h_gc": 1.437,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "crystal palace": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.8,
+    "a_gc": 1.578,
+    "matches": 3,
+    "updated": "2026-03-06"
+  },
+  "elche": {
+    "h_gs": 1.494,
+    "h_gc": 1.283,
+    "a_gs": 1.185,
+    "a_gc": 1.942,
+    "matches": 5,
+    "updated": "2026-03-22"
+  },
+  "rcd espanyol de barcelona": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "valencia": {
+    "h_gs": 1.399,
+    "h_gc": 1.804,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "ca osasuna": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 2.112,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "us cremonese": {
+    "h_gs": 1.317,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "ac milan": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.199,
+    "a_gc": 1.125,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "us sassuolo calcio": {
+    "h_gs": 1.467,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "atalanta": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.053,
+    "a_gc": 1.545,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "vfb stuttgart": {
+    "h_gs": 1.836,
+    "h_gc": 0.907,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "vfl wolfsburg": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 0.907,
+    "a_gc": 1.836,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "paris": {
+    "h_gs": 1.271,
+    "h_gc": 1.035,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "ogc nice": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "cd tondela": {
+    "h_gs": 1.818,
+    "h_gc": 0.907,
+    "a_gs": 1.215,
+    "a_gc": 1.331,
+    "matches": 3,
+    "updated": "2026-03-16"
+  },
+  "cd santa clara": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "cremonese": {
+    "h_gs": 1.317,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "pec zwolle": {
+    "h_gs": 1.131,
+    "h_gc": 1.053,
+    "a_gs": 1.214,
+    "a_gc": 1.47,
+    "matches": 3,
+    "updated": "2026-03-14"
+  },
+  "ajax": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "fulham": {
+    "h_gs": 1.673,
+    "h_gc": 1.181,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "tottenham hotspur": {
+    "h_gs": 1.47,
+    "h_gc": 1.65,
+    "a_gs": 1.212,
+    "a_gc": 1.617,
+    "matches": 2,
+    "updated": "2026-03-06"
+  },
+  "brighton & hove albion": {
+    "h_gs": 1.617,
+    "h_gc": 1.512,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "nottingham forest": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.437,
+    "a_gc": 1.673,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "espanyol": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "gençlerbirliği s.k.": {
+    "h_gs": 1.317,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "kayserispor": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "metz": {
+    "h_gs": 1.253,
+    "h_gc": 1.181,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-02"
+  },
+  "stade brestois 29": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.181,
+    "a_gc": 1.253,
+    "matches": 2,
+    "updated": "2026-03-02"
+  },
+  "lille osc": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "nantes": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.035,
+    "a_gc": 1.399,
+    "matches": 2,
+    "updated": "2026-03-02"
+  },
+  "lorient": {
+    "h_gs": 1.545,
+    "h_gc": 1.327,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "aj auxerre": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "arsenal": {
+    "h_gs": 1.416,
+    "h_gc": 1.437,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "chelsea": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.437,
+    "a_gc": 1.416,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "eintracht frankfurt": {
+    "h_gs": 1.416,
+    "h_gc": 1.035,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-02"
+  },
+  "sc freiburg": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.035,
+    "a_gc": 1.416,
+    "matches": 2,
+    "updated": "2026-03-02"
+  },
+  "fc volendam": {
+    "h_gs": 1.767,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "groningen": {
+    "h_gs": 1.47,
+    "h_gc": 1.505,
+    "a_gs": 1.312,
+    "a_gc": 1.517,
+    "matches": 3,
+    "updated": "2026-03-14"
+  },
+  "twente": {
+    "h_gs": 1.617,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "feyenoord": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "torino": {
+    "h_gs": 1.545,
+    "h_gc": 1.035,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-01"
+  },
+  "ss lazio": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "brighton": {
+    "h_gs": 1.617,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "tottenham": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "sassuolo": {
+    "h_gs": 1.617,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "nice": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "real betis balompié": {
+    "h_gs": 1.767,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "sevilla": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.456,
+    "a_gc": 1.801,
+    "matches": 2,
+    "updated": "2026-03-02"
+  },
+  "hamburger sv": {
+    "h_gs": 2.411,
+    "h_gc": 1.25,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 3,
+    "updated": "2026-03-05"
+  },
+  "rb leipzig": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.456,
+    "a_gc": 1.655,
+    "matches": 2,
+    "updated": "2026-03-02"
+  },
+  "casa pia ac": {
+    "h_gs": 1.317,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "moreirense": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.31,
+    "a_gc": 1.271,
+    "matches": 2,
+    "updated": "2026-03-02"
+  },
+  "tondela": {
+    "h_gs": 1.617,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "santa clara": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "girona": {
+    "h_gs": 1.655,
+    "h_gc": 1.583,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-02"
+  },
+  "rc celta de vigo": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.512,
+    "a_gc": 1.767,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "as roma": {
+    "h_gs": 1.818,
+    "h_gc": 1.344,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-02"
+  },
+  "juventus": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.344,
+    "a_gc": 1.818,
+    "matches": 2,
+    "updated": "2026-03-02"
+  },
+  "olympique de marseille": {
+    "h_gs": 1.317,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "olympique lyonnais": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "osasuna": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "lazio": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "auxerre": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "utrecht": {
+    "h_gs": 1.617,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "az alkmaar": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "samsunspor": {
+    "h_gs": 1.317,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "gaziantep fk": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-03-01"
+  },
+  "rio ave": {
+    "h_gs": 1.253,
+    "h_gc": 1.292,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-02"
+  },
+  "famalicão": {
+    "h_gs": 1.324,
+    "h_gc": 1.068,
+    "a_gs": 1.581,
+    "a_gc": 1.542,
+    "matches": 3,
+    "updated": "2026-03-15"
+  },
+  "real betis": {
+    "h_gs": 1.617,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-02"
+  },
+  "celta vigo": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-03-02"
+  },
+  "lille": {
+    "h_gs": 1.467,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-02"
+  },
+  "marseille": {
+    "h_gs": 1.767,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-02"
+  },
+  "lyon": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 1.767,
+    "matches": 1,
+    "updated": "2026-03-02"
+  },
+  "excelsior": {
+    "h_gs": 1.317,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-02"
+  },
+  "go ahead eagles": {
+    "h_gs": 1.47,
+    "h_gc": 1.65,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 2,
+    "updated": "2026-03-09"
+  },
+  "casa pia": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-02"
+  },
+  "famalicao": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-03-02"
+  },
+  "antalyaspor": {
+    "h_gs": 1.617,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-02"
+  },
+  "fenerbahçe": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-02"
+  },
+  "реал мадрид": {
+    "h_gs": 1.99,
+    "h_gc": 1.236,
+    "a_gs": 1.194,
+    "a_gc": 1.534,
+    "matches": 7,
+    "updated": "2026-03-23"
+  },
+  "хетафе": {
+    "h_gs": 1.614,
+    "h_gc": 1.073,
+    "a_gs": 0.991,
+    "a_gc": 1.604,
+    "matches": 5,
+    "updated": "2026-03-22"
+  },
+  "пиза": {
+    "h_gs": 1.634,
+    "h_gc": 1.156,
+    "a_gs": 0.929,
+    "a_gc": 1.822,
+    "matches": 5,
+    "updated": "2026-03-23"
+  },
+  "болонья": {
+    "h_gs": 1.275,
+    "h_gc": 1.442,
+    "a_gs": 1.156,
+    "a_gc": 1.221,
+    "matches": 5,
+    "updated": "2026-03-23"
+  },
+  "удинезе": {
+    "h_gs": 1.679,
+    "h_gc": 0.92,
+    "a_gs": 1.197,
+    "a_gc": 1.153,
+    "matches": 5,
+    "updated": "2026-03-21"
+  },
+  "фиорентина": {
+    "h_gs": 1.287,
+    "h_gc": 1.063,
+    "a_gs": 0.782,
+    "a_gc": 1.817,
+    "matches": 5,
+    "updated": "2026-03-23"
+  },
+  "жил висенте": {
+    "h_gs": 1.608,
+    "h_gc": 1.28,
+    "a_gs": 1.356,
+    "a_gc": 1.614,
+    "matches": 4,
+    "updated": "2026-03-15"
+  },
+  "бенфика": {
+    "h_gs": 1.614,
+    "h_gc": 1.356,
+    "a_gs": 1.28,
+    "a_gc": 1.47,
+    "matches": 4,
+    "updated": "2026-03-15"
+  },
+  "birmingham city": {
+    "h_gs": 2.217,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-03"
+  },
+  "middlesbrough": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 2.217,
+    "matches": 1,
+    "updated": "2026-03-03"
+  },
+  "борнмут": {
+    "h_gs": 1.929,
+    "h_gc": 1.324,
+    "a_gs": 1.068,
+    "a_gc": 1.324,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "брентфорд": {
+    "h_gs": 1.761,
+    "h_gc": 1.068,
+    "a_gs": 1.04,
+    "a_gc": 1.646,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "сандерленд": {
+    "h_gs": 1.331,
+    "h_gc": 1.215,
+    "a_gs": 1.626,
+    "a_gc": 1.108,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "эвертон": {
+    "h_gs": 1.555,
+    "h_gc": 1.04,
+    "a_gs": 1.068,
+    "a_gc": 1.616,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "бёрнли": {
+    "h_gs": 1.324,
+    "h_gc": 1.068,
+    "a_gs": 1.182,
+    "a_gc": 1.555,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "вулверхэмптон": {
+    "h_gs": 1.617,
+    "h_gc": 1.812,
+    "a_gs": 1.068,
+    "a_gc": 1.761,
+    "matches": 2,
+    "updated": "2026-03-17"
+  },
+  "ливерпуль": {
+    "h_gs": 1.812,
+    "h_gc": 1.172,
+    "a_gs": 1.395,
+    "a_gc": 1.633,
+    "matches": 6,
+    "updated": "2026-03-22"
+  },
+  "райо вальекано": {
+    "h_gs": 1.838,
+    "h_gc": 1.684,
+    "a_gs": 1.047,
+    "a_gc": 1.405,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "ипсвич": {
+    "h_gs": 1.219,
+    "h_gc": 1.046,
+    "a_gs": 1.567,
+    "a_gc": 1.513,
+    "matches": 5,
+    "updated": "2026-03-22"
+  },
+  "hull city": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-03-05"
+  },
+  "wolves": {
+    "h_gs": 1.617,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-05"
+  },
+  "dundee utd": {
+    "h_gs": 1.617,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-05"
+  },
+  "st mirren": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-05"
+  },
+  "port vale": {
+    "h_gs": 1.467,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-05"
+  },
+  "бристоль": {
+    "h_gs": 1.147,
+    "h_gc": 1.059,
+    "a_gs": 0.924,
+    "a_gc": 1.467,
+    "matches": 5,
+    "updated": "2026-03-22"
+  },
+  "фулхэм": {
+    "h_gs": 1.684,
+    "h_gc": 1.182,
+    "a_gs": 1.359,
+    "a_gc": 2.052,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "вест хэм": {
+    "h_gs": 1.47,
+    "h_gc": 1.214,
+    "a_gs": 1.04,
+    "a_gc": 1.542,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "ман сити": {
+    "h_gs": 1.327,
+    "h_gc": 1.545,
+    "a_gs": 1.058,
+    "a_gc": 1.653,
+    "matches": 5,
+    "updated": "2026-03-22"
+  },
+  "ноттингем": {
+    "h_gs": 2.052,
+    "h_gc": 1.359,
+    "a_gs": 1.465,
+    "a_gc": 1.388,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "брайтон": {
+    "h_gs": 1.414,
+    "h_gc": 1.44,
+    "a_gs": 1.214,
+    "a_gc": 1.324,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "арсенал": {
+    "h_gs": 1.667,
+    "h_gc": 0.925,
+    "a_gs": 1.437,
+    "a_gc": 1.271,
+    "matches": 4,
+    "updated": "2026-03-18"
+  },
+  "астон вилла": {
+    "h_gs": 1.929,
+    "h_gc": 1.04,
+    "a_gs": 1.796,
+    "a_gc": 1.761,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "челси": {
+    "h_gs": 1.148,
+    "h_gc": 1.461,
+    "a_gs": 1.149,
+    "a_gc": 2.451,
+    "matches": 5,
+    "updated": "2026-03-22"
+  },
+  "ньюкасл": {
+    "h_gs": 1.567,
+    "h_gc": 1.18,
+    "a_gs": 1.323,
+    "a_gc": 2.111,
+    "matches": 5,
+    "updated": "2026-03-23"
+  },
+  "ман юнайтед": {
+    "h_gs": 1.761,
+    "h_gc": 1.796,
+    "a_gs": 1.195,
+    "a_gc": 1.8,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "байер": {
+    "h_gs": 1.407,
+    "h_gc": 1.185,
+    "a_gs": 1.294,
+    "a_gc": 2.477,
+    "matches": 6,
+    "updated": "2026-03-22"
+  },
+  "комо": {
+    "h_gs": 1.907,
+    "h_gc": 0.908,
+    "a_gs": 1.214,
+    "a_gc": 1.616,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "интер": {
+    "h_gs": 1.405,
+    "h_gc": 1.185,
+    "a_gs": 0.924,
+    "a_gc": 1.236,
+    "matches": 5,
+    "updated": "2026-03-23"
+  },
+  "servette": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-03-05"
+  },
+  "сельта": {
+    "h_gs": 2.096,
+    "h_gc": 0.912,
+    "a_gs": 1.214,
+    "a_gc": 1.47,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "наполи": {
+    "h_gs": 1.545,
+    "h_gc": 1.053,
+    "a_gs": 1.215,
+    "a_gc": 1.331,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "торино": {
+    "h_gs": 1.616,
+    "h_gc": 1.068,
+    "a_gs": 1.195,
+    "a_gc": 1.684,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "боруссия м": {
+    "h_gs": 1.616,
+    "h_gc": 1.068,
+    "a_gs": 1.336,
+    "a_gc": 1.684,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "псж": {
+    "h_gs": 2.219,
+    "h_gc": 1.489,
+    "a_gs": 1.648,
+    "a_gc": 1.062,
+    "matches": 8,
+    "updated": "2026-03-23"
+  },
+  "монако": {
+    "h_gs": 1.616,
+    "h_gc": 1.068,
+    "a_gs": 1.04,
+    "a_gc": 1.259,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "heracles almelo": {
+    "h_gs": 1.317,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-07"
+  },
+  "утрехт": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 1,
+    "updated": "2026-03-07"
+  },
+  "престон": {
+    "h_gs": 1.549,
+    "h_gc": 1.053,
+    "a_gs": 0.917,
+    "a_gc": 1.545,
+    "matches": 4,
+    "updated": "2026-03-21"
+  },
+  "оксфорд": {
+    "h_gs": 1.653,
+    "h_gc": 1.058,
+    "a_gs": 0.916,
+    "a_gc": 1.411,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "ароука": {
+    "h_gs": 1.47,
+    "h_gc": 1.359,
+    "a_gs": 1.062,
+    "a_gc": 1.317,
+    "matches": 2,
+    "updated": "2026-03-15"
+  },
+  "осасуна": {
+    "h_gs": 1.401,
+    "h_gc": 1.428,
+    "a_gs": 1.214,
+    "a_gc": 1.761,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "мальорка": {
+    "h_gs": 2.052,
+    "h_gc": 1.068,
+    "a_gs": 1.569,
+    "a_gc": 1.542,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "жирона": {
+    "h_gs": 1.761,
+    "h_gc": 1.068,
+    "a_gs": 0.912,
+    "a_gc": 1.53,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "реал сосьедад": {
+    "h_gs": 1.761,
+    "h_gc": 1.214,
+    "a_gs": 1.44,
+    "a_gc": 1.684,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "атлетик бильбао": {
+    "h_gs": 1.671,
+    "h_gc": 1.053,
+    "a_gs": 1.068,
+    "a_gc": 1.761,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "барселона": {
+    "h_gs": 2.968,
+    "h_gc": 1.158,
+    "a_gs": 0.908,
+    "a_gc": 2.005,
+    "matches": 8,
+    "updated": "2026-03-23"
+  },
+  "кальяри": {
+    "h_gs": 1.388,
+    "h_gc": 1.182,
+    "a_gs": 1.214,
+    "a_gc": 1.761,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "аталанта": {
+    "h_gs": 1.235,
+    "h_gc": 1.542,
+    "a_gs": 1.185,
+    "a_gc": 1.82,
+    "matches": 5,
+    "updated": "2026-03-23"
+  },
+  "ювентус": {
+    "h_gs": 1.272,
+    "h_gc": 1.053,
+    "a_gs": 1.214,
+    "a_gc": 1.324,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "рб лейпциг": {
+    "h_gs": 2.224,
+    "h_gc": 1.17,
+    "a_gs": 1.068,
+    "a_gc": 1.47,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "аугсбург": {
+    "h_gs": 1.614,
+    "h_gc": 1.781,
+    "a_gs": 1.165,
+    "a_gc": 1.801,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "вольфсбург": {
+    "h_gs": 1.131,
+    "h_gc": 1.053,
+    "a_gs": 1.214,
+    "a_gc": 1.47,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "гамбург": {
+    "h_gs": 1.47,
+    "h_gc": 1.068,
+    "a_gs": 1.195,
+    "a_gc": 1.555,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "хайденхайм": {
+    "h_gs": 1.813,
+    "h_gc": 1.595,
+    "a_gs": 1.068,
+    "a_gc": 1.47,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "хоффенхайм": {
+    "h_gs": 1.47,
+    "h_gc": 1.214,
+    "a_gs": 1.17,
+    "a_gc": 2.096,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "фрайбург": {
+    "h_gs": 1.51,
+    "h_gc": 1.31,
+    "a_gs": 1.356,
+    "a_gc": 1.472,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "майнц": {
+    "h_gs": 1.414,
+    "h_gc": 1.053,
+    "a_gs": 1.359,
+    "a_gc": 1.324,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "штутгарт": {
+    "h_gs": 1.47,
+    "h_gc": 1.068,
+    "a_gs": 1.619,
+    "a_gc": 1.414,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "боруссия д": {
+    "h_gs": 1.812,
+    "h_gc": 1.2,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "нант": {
+    "h_gs": 1.542,
+    "h_gc": 1.723,
+    "a_gs": 1.359,
+    "a_gc": 1.761,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "анже": {
+    "h_gs": 1.324,
+    "h_gc": 1.359,
+    "a_gs": 1.44,
+    "a_gc": 1.967,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "осер": {
+    "h_gs": 1.684,
+    "h_gc": 0.912,
+    "a_gs": 1.214,
+    "a_gc": 1.616,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "страсбур": {
+    "h_gs": 1.324,
+    "h_gc": 1.068,
+    "a_gs": 1.336,
+    "a_gc": 1.542,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "тулуза": {
+    "h_gs": 1.272,
+    "h_gc": 1.04,
+    "a_gs": 1.65,
+    "a_gc": 1.761,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "марсель": {
+    "h_gs": 1.529,
+    "h_gc": 1.325,
+    "a_gs": 1.212,
+    "a_gc": 1.317,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "аякс": {
+    "h_gs": 1.907,
+    "h_gc": 1.068,
+    "a_gs": 1.512,
+    "a_gc": 1.467,
+    "matches": 2,
+    "updated": "2026-03-15"
+  },
+  "псв": {
+    "h_gs": 1.801,
+    "h_gc": 1.472,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 2,
+    "updated": "2026-03-15"
+  },
+  "аз": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.212,
+    "a_gc": 1.767,
+    "matches": 1,
+    "updated": "2026-03-08"
+  },
+  "sbv excelsior": {
+    "h_gs": 1.317,
+    "h_gc": 1.363,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-08"
+  },
+  "sc heerenveen": {
+    "h_gs": 1.761,
+    "h_gc": 1.068,
+    "a_gs": 1.363,
+    "a_gc": 1.317,
+    "matches": 2,
+    "updated": "2026-03-15"
+  },
+  "морейренсе": {
+    "h_gs": 1.317,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-09"
+  },
+  "насьонал": {
+    "h_gs": 1.472,
+    "h_gc": 1.073,
+    "a_gs": 1.42,
+    "a_gc": 1.108,
+    "matches": 4,
+    "updated": "2026-03-20"
+  },
+  "спортинг": {
+    "h_gs": 0.984,
+    "h_gc": 1.314,
+    "a_gs": 0.917,
+    "a_gc": 1.278,
+    "matches": 5,
+    "updated": "2026-03-18"
+  },
+  "эшторил": {
+    "h_gs": 1.467,
+    "h_gc": 1.062,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-09"
+  },
+  "каза пия": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-03-09"
+  },
+  "халл": {
+    "h_gs": 1.807,
+    "h_gc": 1.053,
+    "a_gs": 1.167,
+    "a_gc": 1.687,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "миллуолл": {
+    "h_gs": 1.403,
+    "h_gc": 1.2,
+    "a_gs": 1.053,
+    "a_gc": 1.532,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "блэкберн": {
+    "h_gs": 1.265,
+    "h_gc": 1.045,
+    "a_gs": 1.2,
+    "a_gc": 1.653,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "портсмут": {
+    "h_gs": 1.403,
+    "h_gc": 1.167,
+    "a_gs": 1.183,
+    "a_gc": 2.091,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "ковентри": {
+    "h_gs": 1.403,
+    "h_gc": 1.2,
+    "a_gs": 1.329,
+    "a_gc": 1.136,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "суонси": {
+    "h_gs": 1.394,
+    "h_gc": 1.458,
+    "a_gs": 1.308,
+    "a_gc": 1.545,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "сток": {
+    "h_gs": 1.936,
+    "h_gc": 1.434,
+    "a_gs": 1.183,
+    "a_gc": 1.807,
+    "matches": 4,
+    "updated": "2026-03-21"
+  },
+  "вильярреал": {
+    "h_gs": 1.813,
+    "h_gc": 1.182,
+    "a_gs": 1.214,
+    "a_gc": 1.761,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "бетис": {
+    "h_gs": 1.47,
+    "h_gc": 1.214,
+    "a_gs": 1.053,
+    "a_gc": 1.671,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "севилья": {
+    "h_gs": 1.259,
+    "h_gc": 1.324,
+    "a_gs": 1.359,
+    "a_gc": 2.052,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "лечче": {
+    "h_gs": 1.617,
+    "h_gc": 1.212,
+    "a_gs": 1.467,
+    "a_gc": 1.67,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "кремонезе": {
+    "h_gs": 1.47,
+    "h_gc": 1.068,
+    "a_gs": 1.324,
+    "a_gc": 1.388,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "парма": {
+    "h_gs": 1.331,
+    "h_gc": 1.356,
+    "a_gs": 0.907,
+    "a_gc": 1.416,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "верона": {
+    "h_gs": 1.324,
+    "h_gc": 1.359,
+    "a_gs": 1.17,
+    "a_gc": 1.401,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "генуя": {
+    "h_gs": 1.388,
+    "h_gc": 1.324,
+    "a_gs": 1.359,
+    "a_gc": 1.324,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "рома": {
+    "h_gs": 1.614,
+    "h_gc": 1.498,
+    "a_gs": 1.181,
+    "a_gc": 1.673,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "милан": {
+    "h_gs": 1.684,
+    "h_gc": 1.195,
+    "a_gs": 1.068,
+    "a_gc": 1.47,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "санкт-паули": {
+    "h_gs": 1.272,
+    "h_gc": 1.195,
+    "a_gs": 1.068,
+    "a_gc": 1.616,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "айнтрахт": {
+    "h_gs": 1.47,
+    "h_gc": 1.068,
+    "a_gs": 1.053,
+    "a_gc": 1.414,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "унион берлин": {
+    "h_gs": 1.467,
+    "h_gc": 1.663,
+    "a_gs": 1.042,
+    "a_gc": 1.703,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "вердер": {
+    "h_gs": 1.324,
+    "h_gc": 1.359,
+    "a_gs": 1.569,
+    "a_gc": 1.259,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "ланс": {
+    "h_gs": 2.224,
+    "h_gc": 1.053,
+    "a_gs": 1.214,
+    "a_gc": 1.616,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "мец": {
+    "h_gs": 1.761,
+    "h_gc": 1.65,
+    "a_gs": 0.912,
+    "a_gc": 1.517,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "лилль": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.325,
+    "a_gc": 1.278,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "лорьян": {
+    "h_gs": 1.616,
+    "h_gc": 1.214,
+    "a_gs": 1.04,
+    "a_gc": 1.401,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "брест": {
+    "h_gs": 1.617,
+    "h_gc": 1.062,
+    "a_gs": 0.917,
+    "a_gc": 1.812,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "гавр": {
+    "h_gs": 1.761,
+    "h_gc": 1.214,
+    "a_gs": 1.195,
+    "a_gc": 1.813,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "спарта роттердам": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.068,
+    "a_gc": 1.907,
+    "matches": 2,
+    "updated": "2026-03-15"
+  },
+  "твенте": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.663,
+    "a_gc": 1.467,
+    "matches": 1,
+    "updated": "2026-03-09"
+  },
+  "telstar 1963": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.421,
+    "a_gc": 1.69,
+    "matches": 2,
+    "updated": "2026-03-15"
+  },
+  "nac breda": {
+    "h_gs": 1.767,
+    "h_gc": 1.512,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-09"
+  },
+  "фейеноорд": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.512,
+    "a_gc": 1.767,
+    "matches": 1,
+    "updated": "2026-03-09"
+  },
+  "нек": {
+    "h_gs": 1.767,
+    "h_gc": 1.062,
+    "a_gs": 1.505,
+    "a_gc": 1.616,
+    "matches": 2,
+    "updated": "2026-03-15"
+  },
+  "volendam": {
+    "h_gs": 1.47,
+    "h_gc": 1.359,
+    "a_gs": 1.062,
+    "a_gc": 1.767,
+    "matches": 2,
+    "updated": "2026-03-15"
+  },
+  "порто": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.363,
+    "a_gc": 1.617,
+    "matches": 1,
+    "updated": "2026-03-09"
+  },
+  "дерби": {
+    "h_gs": 0.854,
+    "h_gc": 0.587,
+    "a_gs": 0.942,
+    "a_gc": 1.414,
+    "matches": 7,
+    "updated": "2026-03-22"
+  },
+  "шеффилд уэнсдей": {
+    "h_gs": 1.283,
+    "h_gc": 1.319,
+    "a_gs": 0.714,
+    "a_gc": 1.108,
+    "matches": 7,
+    "updated": "2026-03-22"
+  },
+  "лестер": {
+    "h_gs": 1.529,
+    "h_gc": 1.341,
+    "a_gs": 1.045,
+    "a_gc": 1.136,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "шеффилд юнайтед": {
+    "h_gs": 1.403,
+    "h_gc": 1.191,
+    "a_gs": 1.184,
+    "a_gc": 1.529,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "вест бромвич": {
+    "h_gs": 1.687,
+    "h_gc": 1.042,
+    "a_gs": 1.053,
+    "a_gc": 1.265,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "charlton athletic": {
+    "h_gs": 1.265,
+    "h_gc": 1.053,
+    "a_gs": 1.184,
+    "a_gc": 1.278,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "бирмингем": {
+    "h_gs": 1.278,
+    "h_gc": 1.434,
+    "a_gs": 0.916,
+    "a_gc": 1.403,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "валенсия": {
+    "h_gs": 1.467,
+    "h_gc": 1.212,
+    "a_gs": 1.2,
+    "a_gc": 1.262,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "ницца": {
+    "h_gs": 1.388,
+    "h_gc": 1.607,
+    "a_gs": 1.359,
+    "a_gc": 1.324,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "ренн": {
+    "h_gs": 1.137,
+    "h_gc": 1.042,
+    "a_gs": 1.212,
+    "a_gc": 1.617,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "лион": {
+    "h_gs": 1.388,
+    "h_gc": 1.04,
+    "a_gs": 1.214,
+    "a_gc": 1.761,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "санта клара": {
+    "h_gs": 1.317,
+    "h_gc": 1.212,
+    "a_gs": 1.25,
+    "a_gc": 1.55,
+    "matches": 1,
+    "updated": "2026-03-11"
+  },
+  "кпр": {
+    "h_gs": 2.091,
+    "h_gc": 1.053,
+    "a_gs": 1.717,
+    "a_gc": 1.278,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "мидлсбро": {
+    "h_gs": 1.278,
+    "h_gc": 1.184,
+    "a_gs": 0.916,
+    "a_gc": 1.265,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "галатасарай": {
+    "h_gs": 1.467,
+    "h_gc": 1.062,
+    "a_gs": 1.068,
+    "a_gc": 1.907,
+    "matches": 2,
+    "updated": "2026-03-19"
+  },
+  "тоттенхэм": {
+    "h_gs": 1.513,
+    "h_gc": 1.582,
+    "a_gs": 1.456,
+    "a_gc": 1.912,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "уотфорд": {
+    "h_gs": 1.513,
+    "h_gc": 1.048,
+    "a_gs": 1.181,
+    "a_gc": 1.69,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "wrexham": {
+    "h_gs": 1.545,
+    "h_gc": 1.31,
+    "a_gs": 1.323,
+    "a_gc": 1.651,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "реал овьедо": {
+    "h_gs": 1.47,
+    "h_gc": 1.068,
+    "a_gs": 1.453,
+    "a_gc": 2.469,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "лацио": {
+    "h_gs": 1.399,
+    "h_gc": 0.907,
+    "a_gs": 1.356,
+    "a_gc": 1.331,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "сассуоло": {
+    "h_gs": 1.324,
+    "h_gc": 1.214,
+    "a_gs": 1.053,
+    "a_gc": 1.401,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "рио аве": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.062,
+    "a_gc": 1.767,
+    "matches": 1,
+    "updated": "2026-03-12"
+  },
+  "mirassol": {
+    "h_gs": 1.388,
+    "h_gc": 1.595,
+    "a_gs": 1.505,
+    "a_gc": 1.47,
+    "matches": 3,
+    "updated": "2026-03-20"
+  },
+  "santos": {
+    "h_gs": 1.403,
+    "h_gc": 1.325,
+    "a_gs": 1.175,
+    "a_gc": 1.394,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "fk bodø/glimt": {
+    "h_gs": 1.467,
+    "h_gc": 1.062,
+    "a_gs": 1.505,
+    "a_gc": 1.324,
+    "matches": 2,
+    "updated": "2026-03-18"
+  },
+  "саутгемптон": {
+    "h_gs": 1.545,
+    "h_gc": 0.925,
+    "a_gs": 1.327,
+    "a_gc": 1.399,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "норвич": {
+    "h_gs": 1.673,
+    "h_gc": 1.035,
+    "a_gs": 1.063,
+    "a_gc": 1.269,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "ca mineiro": {
+    "h_gs": 1.271,
+    "h_gc": 1.31,
+    "a_gs": 1.215,
+    "a_gc": 1.614,
+    "matches": 3,
+    "updated": "2026-03-23"
+  },
+  "ec bahia": {
+    "h_gs": 1.259,
+    "h_gc": 1.182,
+    "a_gs": 1.059,
+    "a_gc": 1.818,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "ec vitória": {
+    "h_gs": 1.55,
+    "h_gc": 1.25,
+    "a_gs": 1.327,
+    "a_gc": 1.545,
+    "matches": 2,
+    "updated": "2026-03-21"
+  },
+  "sc corinthians paulista": {
+    "h_gs": 1.317,
+    "h_gc": 1.363,
+    "a_gs": 1.042,
+    "a_gc": 1.687,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "coritiba fbc": {
+    "h_gs": 1.47,
+    "h_gc": 1.068,
+    "a_gs": 1.376,
+    "a_gc": 1.251,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "cr flamengo": {
+    "h_gs": 1.388,
+    "h_gc": 0.912,
+    "a_gs": 1.068,
+    "a_gc": 1.47,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "cruzeiro ec": {
+    "h_gs": 1.142,
+    "h_gc": 1.298,
+    "a_gs": 0.912,
+    "a_gc": 1.813,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "clube do remo": {
+    "h_gs": 1.816,
+    "h_gc": 1.053,
+    "a_gs": 0.917,
+    "a_gc": 1.262,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "fluminense": {
+    "h_gs": 1.794,
+    "h_gc": 1.31,
+    "a_gs": 1.195,
+    "a_gc": 1.684,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "cr vasco da gama": {
+    "h_gs": 1.341,
+    "h_gc": 1.666,
+    "a_gs": 1.505,
+    "a_gc": 1.324,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "se palmeiras": {
+    "h_gs": 1.262,
+    "h_gc": 1.292,
+    "a_gs": 1.313,
+    "a_gc": 1.136,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "são paulo": {
+    "h_gs": 1.653,
+    "h_gc": 1.053,
+    "a_gs": 1.308,
+    "a_gc": 1.403,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "chapecoense af": {
+    "h_gs": 1.812,
+    "h_gc": 1.167,
+    "a_gs": 1.062,
+    "a_gc": 1.917,
+    "matches": 3,
+    "updated": "2026-03-21"
+  },
+  "grêmio fbpa": {
+    "h_gs": 1.8,
+    "h_gc": 1.195,
+    "a_gs": 1.585,
+    "a_gc": 1.394,
+    "matches": 4,
+    "updated": "2026-03-23"
+  },
+  "брага": {
+    "h_gs": 1.681,
+    "h_gc": 1.31,
+    "a_gs": 1.053,
+    "a_gc": 1.517,
+    "matches": 4,
+    "updated": "2026-03-22"
+  },
+  "botafogo fr": {
+    "h_gs": 1.467,
+    "h_gc": 1.062,
+    "a_gs": 1.058,
+    "a_gc": 1.561,
+    "matches": 3,
+    "updated": "2026-03-22"
+  },
+  "кристал пэлас": {
+    "h_gs": 1.617,
+    "h_gc": 1.062,
+    "a_gs": 1.505,
+    "a_gc": 1.324,
+    "matches": 2,
+    "updated": "2026-03-22"
+  },
+  "лидс": {
+    "h_gs": 1.324,
+    "h_gc": 1.068,
+    "a_gs": 1.062,
+    "a_gc": 1.617,
+    "matches": 2,
+    "updated": "2026-03-22"
+  },
+  "ca paranaense": {
+    "h_gs": 1.795,
+    "h_gc": 0.917,
+    "a_gs": 1.363,
+    "a_gc": 1.767,
+    "matches": 3,
+    "updated": "2026-03-23"
+  }
+}
