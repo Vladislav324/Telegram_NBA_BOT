@@ -1,0 +1,2292 @@
+{
+  "538064": {
+    "match": "Wolverhampton Wanderers vs Aston Villa",
+    "opening": {
+      "2": 1.88,
+      "1": 4.6,
+      "X": 3.85,
+      "over_2.5": 1.93,
+      "under_2.5": 1.96
+    },
+    "saved_at": "2026-02-27T10:37:21"
+  },
+  "538063": {
+    "match": "Newcastle United vs Everton",
+    "opening": {
+      "2": 5.1,
+      "1": 1.75,
+      "X": 4.15,
+      "over_2.5": 1.73,
+      "under_2.5": 2.0,
+      "over_2.75": 1.96,
+      "under_2.75": 1.93
+    },
+    "saved_at": "2026-02-27T10:39:37"
+  },
+  "538058": {
+    "match": "Burnley vs Brentford",
+    "opening": {
+      "2": 1.77,
+      "1": 5.1,
+      "X": 4.0,
+      "over_2.5": 1.87,
+      "under_2.5": 2.02
+    },
+    "saved_at": "2026-02-27T10:40:21"
+  },
+  "538060": {
+    "match": "Liverpool vs West Ham United",
+    "opening": {
+      "1": 1.44,
+      "2": 7.6,
+      "X": 5.6,
+      "over_2.5": 1.4,
+      "under_2.5": 2.62,
+      "over_3.25": 1.91,
+      "under_3.25": 1.98
+    },
+    "saved_at": "2026-02-27T10:40:59"
+  },
+  "538061": {
+    "match": "Leeds United vs Manchester City",
+    "opening": {
+      "1": 5.6,
+      "2": 1.64,
+      "X": 4.6,
+      "over_2.5": 1.62,
+      "under_2.5": 2.2,
+      "over_3.0": 2.07,
+      "under_3.0": 1.83
+    },
+    "saved_at": "2026-02-27T10:42:26"
+  },
+  "538059": {
+    "match": "Fulham vs Tottenham Hotspur",
+    "opening": {
+      "1": 2.18,
+      "2": 3.5,
+      "X": 3.75,
+      "over_2.5": 1.73,
+      "under_2.5": 2.05,
+      "over_2.75": 1.95,
+      "under_2.75": 1.93
+    },
+    "saved_at": "2026-02-27T10:43:04"
+  },
+  "538056": {
+    "match": "Brighton & Hove Albion vs Nottingham Forest",
+    "opening": {
+      "1": 2.16,
+      "2": 3.6,
+      "X": 3.65,
+      "over_2.5": 1.85,
+      "under_2.5": 2.04
+    },
+    "saved_at": "2026-02-27T10:43:42"
+  },
+  "538062": {
+    "match": "Manchester United vs Crystal Palace",
+    "opening": {
+      "2": 6.4,
+      "1": 1.57,
+      "X": 4.5,
+      "over_2.5": 1.65,
+      "under_2.5": 2.15,
+      "over_3.0": 2.07,
+      "under_3.0": 1.83
+    },
+    "saved_at": "2026-02-27T10:44:20"
+  },
+  "538057": {
+    "match": "Arsenal vs Chelsea",
+    "opening": {
+      "1": 1.66,
+      "2": 5.8,
+      "X": 4.3,
+      "over_2.5": 1.7,
+      "under_2.5": 2.05,
+      "over_2.75": 1.93,
+      "under_2.75": 1.96
+    },
+    "saved_at": "2026-02-27T10:44:58"
+  },
+  "538068": {
+    "match": "Everton vs Burnley",
+    "opening": {
+      "2": 5.6,
+      "1": 1.69,
+      "X": 3.85,
+      "over_2.5": 1.94,
+      "under_2.5": 1.89
+    },
+    "saved_at": "2026-02-27T10:47:00"
+  },
+  "538070": {
+    "match": "Leeds United vs Sunderland",
+    "opening": {
+      "1": 1.93,
+      "2": 4.23,
+      "X": 3.68,
+      "over_2.5": 2.0,
+      "under_2.5": 1.73,
+      "over_2.25": 1.83,
+      "under_2.25": 2.02
+    },
+    "saved_at": "2026-02-27T10:47:38"
+  },
+  "538074": {
+    "match": "Wolverhampton Wanderers vs Liverpool",
+    "opening": {
+      "2": 1.48,
+      "1": 7.2,
+      "X": 4.93,
+      "over_2.5": 1.5,
+      "under_2.5": 2.4,
+      "over_3.0": 1.9,
+      "under_3.0": 1.93
+    },
+    "saved_at": "2026-02-27T10:48:16"
+  },
+  "538071": {
+    "match": "Manchester City vs Nottingham Forest",
+    "opening": {
+      "1": 1.39,
+      "2": 9.2,
+      "X": 5.5,
+      "over_2.5": 1.5,
+      "under_2.5": 2.5,
+      "over_3.0": 1.89,
+      "under_3.0": 1.94
+    },
+    "saved_at": "2026-02-27T10:49:29"
+  },
+  "538067": {
+    "match": "Brighton & Hove Albion vs Arsenal",
+    "opening": {
+      "2": 1.65,
+      "1": 5.5,
+      "X": 4.36,
+      "over_2.5": 1.9,
+      "under_2.5": 1.93
+    },
+    "saved_at": "2026-02-27T10:50:07"
+  },
+  "538069": {
+    "match": "Fulham vs West Ham United",
+    "opening": {
+      "1": 2.06,
+      "2": 3.68,
+      "X": 3.6,
+      "over_2.5": 1.73,
+      "under_2.5": 2.0,
+      "over_2.75": 1.99,
+      "under_2.75": 1.85
+    },
+    "saved_at": "2026-02-27T10:50:45"
+  },
+  "538066": {
+    "match": "Aston Villa vs Chelsea",
+    "opening": {
+      "1": 2.7,
+      "2": 2.5,
+      "X": 3.73,
+      "over_2.5": 1.65,
+      "under_2.5": 2.15,
+      "over_2.75": 1.83,
+      "under_2.75": 2.01
+    },
+    "saved_at": "2026-02-27T10:51:23"
+  },
+  "538072": {
+    "match": "Newcastle United vs Manchester United",
+    "opening": {
+      "2": 2.75,
+      "1": 2.54,
+      "X": 3.85,
+      "over_2.5": 1.5,
+      "under_2.5": 2.45,
+      "over_3.0": 1.81,
+      "under_3.0": 2.04
+    },
+    "saved_at": "2026-02-27T10:51:26"
+  },
+  "538073": {
+    "match": "Tottenham Hotspur vs Crystal Palace",
+    "opening": {
+      "2": 3.2,
+      "1": 2.4,
+      "X": 3.4,
+      "over_2.5": 1.85,
+      "under_2.5": 1.99
+    },
+    "saved_at": "2026-02-27T10:51:29"
+  },
+  "544465": {
+    "match": "Levante UD vs Deportivo Alavés",
+    "opening": {
+      "2": 3.0,
+      "1": 2.76,
+      "X": 3.2,
+      "over_2.25": 2.02,
+      "under_2.25": 1.87,
+      "over_2.5": 2.3,
+      "under_2.5": 1.62
+    },
+    "saved_at": "2026-02-27T10:52:00"
+  },
+  "544466": {
+    "match": "Rayo Vallecano de Madrid vs Athletic Club",
+    "opening": {
+      "2": 3.35,
+      "1": 2.48,
+      "X": 3.25,
+      "over_2.25": 2.05,
+      "under_2.25": 1.84,
+      "over_2.5": 2.3,
+      "under_2.5": 1.6
+    },
+    "saved_at": "2026-02-27T10:52:03"
+  },
+  "544461": {
+    "match": "Barcelona vs Villarreal CF",
+    "opening": {
+      "1": 1.32,
+      "2": 9.4,
+      "X": 7.0,
+      "over_3.75": 1.89,
+      "under_3.75": 1.98,
+      "over_2.5": 1.25,
+      "under_2.5": 3.5,
+      "over_3.5": 1.7,
+      "under_3.5": 2.1
+    },
+    "saved_at": "2026-02-27T10:52:06"
+  },
+  "544464": {
+    "match": "RCD Mallorca vs Real Sociedad de Fútbol",
+    "opening": {
+      "1": 3.2,
+      "2": 2.56,
+      "X": 3.3,
+      "over_2.25": 1.86,
+      "under_2.25": 2.03,
+      "over_2.5": 2.05,
+      "under_2.5": 1.73
+    },
+    "saved_at": "2026-02-27T10:52:09"
+  },
+  "544467": {
+    "match": "Real Oviedo vs Club Atlético de Madrid",
+    "opening": {
+      "2": 1.74,
+      "1": 6.0,
+      "X": 3.8,
+      "over_2.5": 2.08,
+      "under_2.5": 1.85
+    },
+    "saved_at": "2026-02-27T10:52:10"
+  },
+  "544463": {
+    "match": "Elche CF vs RCD Espanyol de Barcelona",
+    "opening": {
+      "1": 2.52,
+      "2": 3.25,
+      "X": 3.3,
+      "over_2.5": 2.08,
+      "under_2.5": 1.86
+    },
+    "saved_at": "2026-02-27T10:53:04"
+  },
+  "544470": {
+    "match": "Valencia CF vs CA Osasuna",
+    "opening": {
+      "2": 3.35,
+      "1": 2.5,
+      "X": 3.2,
+      "over_2.25": 2.01,
+      "under_2.25": 1.88,
+      "over_2.5": 2.25,
+      "under_2.5": 1.67
+    },
+    "saved_at": "2026-02-27T10:53:07"
+  },
+  "544462": {
+    "match": "Real Betis Balompié vs Sevilla",
+    "opening": {
+      "1": 1.85,
+      "2": 4.9,
+      "X": 3.83,
+      "over_2.5": 2.02,
+      "under_2.5": 1.88
+    },
+    "saved_at": "2026-02-27T10:53:08"
+  },
+  "544468": {
+    "match": "Girona vs RC Celta de Vigo",
+    "opening": {
+      "2": 3.05,
+      "1": 2.52,
+      "X": 3.5,
+      "over_2.5": 2.01,
+      "under_2.5": 1.88
+    },
+    "saved_at": "2026-02-27T10:53:25"
+  },
+  "544469": {
+    "match": "Real Madrid CF vs Getafe CF",
+    "opening": {
+      "2": 12.5,
+      "1": 1.33,
+      "X": 5.7,
+      "over_2.5": 1.85,
+      "under_2.5": 2.05
+    },
+    "saved_at": "2026-02-27T10:53:28"
+  },
+  "544440": {
+    "match": "Rayo Vallecano de Madrid vs Real Oviedo",
+    "opening": {
+      "2": 1.74,
+      "1": 6.0,
+      "X": 3.8,
+      "over_2.5": 2.08,
+      "under_2.5": 1.85
+    },
+    "saved_at": "2026-02-27T10:53:31"
+  },
+  "537080": {
+    "match": "Parma Calcio 1913 vs Cagliari Calcio",
+    "opening": {
+      "2": 3.83,
+      "1": 2.38,
+      "X": 3.05,
+      "over_2.5": 2.5,
+      "under_2.5": 1.44,
+      "over_2.0": 1.85,
+      "under_2.0": 2.04
+    },
+    "saved_at": "2026-02-27T10:53:34"
+  },
+  "537076": {
+    "match": "Como 1907 vs US Lecce",
+    "opening": {
+      "1": 1.41,
+      "2": 10.5,
+      "X": 4.9,
+      "over_2.5": 2.03,
+      "under_2.5": 1.86
+    },
+    "saved_at": "2026-02-27T10:53:37"
+  },
+  "537078": {
+    "match": "Hellas Verona vs SSC Napoli",
+    "opening": {
+      "1": 8.0,
+      "2": 1.55,
+      "X": 4.2,
+      "over_2.5": 2.15,
+      "under_2.5": 1.62,
+      "over_2.25": 2.03,
+      "under_2.25": 1.86
+    },
+    "saved_at": "2026-02-27T10:53:40"
+  },
+  "537084": {
+    "match": "US Cremonese vs AC Milan",
+    "opening": {
+      "2": 1.51,
+      "1": 7.6,
+      "X": 4.4,
+      "over_2.5": 1.94,
+      "under_2.5": 1.94
+    },
+    "saved_at": "2026-02-27T10:54:37"
+  },
+  "537082": {
+    "match": "US Sassuolo Calcio vs Atalanta BC",
+    "opening": {
+      "2": 2.02,
+      "1": 4.1,
+      "X": 3.65,
+      "over_2.5": 1.89,
+      "under_2.5": 1.99
+    },
+    "saved_at": "2026-02-27T10:54:52"
+  },
+  "537077": {
+    "match": "Torino vs SS Lazio",
+    "opening": {
+      "2": 2.92,
+      "1": 3.0,
+      "X": 2.98,
+      "over_2.5": 2.4,
+      "under_2.5": 1.5,
+      "over_2.0": 1.85,
+      "under_2.0": 2.04
+    },
+    "saved_at": "2026-02-27T10:54:53"
+  },
+  "537075": {
+    "match": "AS Roma vs Juventus",
+    "opening": {
+      "1": 2.76,
+      "2": 3.05,
+      "X": 3.15,
+      "over_2.5": 2.2,
+      "under_2.5": 1.62,
+      "over_2.25": 2.03,
+      "under_2.25": 1.86
+    },
+    "saved_at": "2026-02-27T10:54:54"
+  },
+  "537081": {
+    "match": "AC Pisa 1909 vs Bologna 1909",
+    "opening": {
+      "2": 2.1,
+      "1": 4.2,
+      "X": 3.45,
+      "over_2.5": 2.0,
+      "under_2.5": 1.73,
+      "over_2.25": 1.91,
+      "under_2.25": 1.98
+    },
+    "saved_at": "2026-02-27T10:54:55"
+  },
+  "537083": {
+    "match": "Udinese Calcio vs ACF Fiorentina",
+    "opening": {
+      "2": 2.52,
+      "1": 3.17,
+      "X": 3.4,
+      "over_2.5": 2.07,
+      "under_2.5": 1.83
+    },
+    "saved_at": "2026-02-27T10:54:56"
+  },
+  "540621": {
+    "match": "Augsburg vs 1. Köln",
+    "opening": {
+      "2": 3.35,
+      "1": 2.32,
+      "X": 3.65,
+      "over_2.5": 1.7,
+      "under_2.5": 2.05,
+      "over_2.75": 1.93,
+      "under_2.75": 1.95
+    },
+    "saved_at": "2026-02-27T10:55:12"
+  },
+  "540619": {
+    "match": "TSG 1899 Hoffenheim vs St. Pauli 1910",
+    "opening": {
+      "2": 7.4,
+      "1": 1.51,
+      "X": 4.8,
+      "over_2.5": 1.7,
+      "under_2.5": 2.05,
+      "over_2.75": 2.01,
+      "under_2.75": 1.88
+    },
+    "saved_at": "2026-02-27T10:55:13"
+  },
+  "540615": {
+    "match": "Bayer 04 Leverkusen vs 1. FSV Mainz 05",
+    "opening": {
+      "1": 1.75,
+      "2": 5.2,
+      "X": 4.2,
+      "over_2.5": 1.62,
+      "under_2.5": 2.2,
+      "over_2.75": 1.88,
+      "under_2.75": 2.01
+    },
+    "saved_at": "2026-02-27T10:55:14"
+  },
+  "540620": {
+    "match": "SV Werder Bremen vs 1. Heidenheim 1846",
+    "opening": {
+      "2": 4.6,
+      "1": 1.84,
+      "X": 4.0,
+      "over_2.5": 1.7,
+      "under_2.5": 2.05,
+      "over_2.75": 1.88,
+      "under_2.75": 2.0
+    },
+    "saved_at": "2026-02-27T10:55:15"
+  },
+  "540618": {
+    "match": "Borussia Mönchengladbach vs 1. Union Berlin",
+    "opening": {
+      "1": 2.44,
+      "2": 3.3,
+      "X": 3.4,
+      "over_2.5": 2.08,
+      "under_2.5": 1.82
+    },
+    "saved_at": "2026-02-27T10:55:16"
+  },
+  "540613": {
+    "match": "Borussia Dortmund vs Bayern München",
+    "opening": {
+      "2": 1.68,
+      "1": 4.9,
+      "X": 4.9,
+      "over_2.5": 1.3,
+      "under_2.5": 3.3,
+      "over_3.75": 2.02,
+      "under_3.75": 1.87
+    },
+    "saved_at": "2026-02-27T10:55:17"
+  },
+  "540617": {
+    "match": "VfB Stuttgart vs VfL Wolfsburg",
+    "opening": {
+      "1": 1.59,
+      "2": 5.6,
+      "X": 4.83,
+      "over_2.5": 1.4,
+      "under_2.5": 2.75,
+      "over_3.25": 1.89,
+      "under_3.25": 1.99
+    },
+    "saved_at": "2026-02-27T10:55:18"
+  },
+  "540614": {
+    "match": "Eintracht Frankfurt vs SC Freiburg",
+    "opening": {
+      "1": 2.26,
+      "2": 3.3,
+      "X": 3.65,
+      "over_2.5": 1.75,
+      "under_2.5": 1.95,
+      "over_2.75": 2.02,
+      "under_2.75": 1.88
+    },
+    "saved_at": "2026-02-27T10:55:19"
+  },
+  "540616": {
+    "match": "Hamburger SV vs RB Leipzig",
+    "opening": {
+      "1": 3.4,
+      "2": 2.2,
+      "X": 3.85,
+      "over_2.5": 1.57,
+      "under_2.5": 2.3,
+      "over_3.0": 1.93,
+      "under_3.0": 1.95
+    },
+    "saved_at": "2026-02-27T10:55:34"
+  },
+  "540558": {
+    "match": "Hamburger SV vs Bayer 04 Leverkusen",
+    "opening": {
+      "2": 2.07,
+      "1": 3.48,
+      "X": 3.65,
+      "over_2.5": 1.73,
+      "under_2.5": 2.0,
+      "over_2.75": 1.93,
+      "under_2.75": 1.91
+    },
+    "saved_at": "2026-02-27T10:55:50"
+  },
+  "542620": {
+    "match": "RC Strasbourg Alsace vs Racing Club de Lens",
+    "opening": {
+      "2": 3.1,
+      "1": 2.38,
+      "X": 3.75,
+      "over_2.5": 1.65,
+      "under_2.5": 2.17,
+      "over_2.75": 1.85,
+      "under_2.75": 2.04
+    },
+    "saved_at": "2026-02-27T10:55:51"
+  },
+  "542613": {
+    "match": "Le Havre AC vs Paris Saint-Germain",
+    "opening": {
+      "1": 10.5,
+      "2": 1.3,
+      "X": 6.4,
+      "over_2.5": 1.4,
+      "under_2.5": 2.75,
+      "over_3.25": 1.94,
+      "under_3.25": 1.93,
+      "over_3.5": 2.07,
+      "under_3.5": 1.72
+    },
+    "saved_at": "2026-02-27T10:57:15"
+  },
+  "542617": {
+    "match": "Paris vs OGC Nice",
+    "opening": {
+      "2": 3.05,
+      "1": 2.5,
+      "X": 3.45,
+      "over_2.5": 1.95,
+      "under_2.5": 1.93
+    },
+    "saved_at": "2026-02-27T10:57:16"
+  },
+  "542619": {
+    "match": "Lille OSC vs Nantes",
+    "opening": {
+      "1": 1.53,
+      "2": 7.5,
+      "X": 4.59,
+      "over_2.5": 1.74,
+      "under_2.5": 2.05,
+      "over_2.75": 2.04,
+      "under_2.75": 1.85
+    },
+    "saved_at": "2026-02-27T10:58:12"
+  },
+  "542615": {
+    "match": "Lorient vs AJ Auxerre",
+    "opening": {
+      "2": 4.1,
+      "1": 2.08,
+      "X": 3.35,
+      "over_2.5": 2.25,
+      "under_2.5": 1.67,
+      "over_2.25": 2.03,
+      "under_2.25": 1.86
+    },
+    "saved_at": "2026-02-27T10:58:27"
+  },
+  "545909": {
+    "match": "Porto vs Arouca",
+    "opening": {
+      "2": 16.5,
+      "1": 1.24,
+      "X": 7.0,
+      "over_2.5": 1.7,
+      "under_2.5": 2.18,
+      "over_2.75": 2.0,
+      "under_2.75": 1.87
+    },
+    "saved_at": "2026-02-27T10:58:28"
+  },
+  "545907": {
+    "match": "Sporting Clube de Portugal vs GD Estoril Praia",
+    "opening": {
+      "2": 15.0,
+      "1": 1.2,
+      "X": 8.6,
+      "over_3.5": 1.83,
+      "under_3.5": 1.83,
+      "over_2.5": 1.25,
+      "under_2.5": 3.5,
+      "over_3.75": 1.95,
+      "under_3.75": 1.9
+    },
+    "saved_at": "2026-02-27T10:58:28"
+  },
+  "545914": {
+    "match": "AVS vs CF Estrela da Amadora",
+    "opening": {
+      "1": 2.8,
+      "2": 2.86,
+      "X": 3.15,
+      "over_2.5": 2.15,
+      "under_2.5": 1.66,
+      "over_2.25": 1.97,
+      "under_2.25": 1.88
+    },
+    "saved_at": "2026-02-27T10:58:28"
+  },
+  "545912": {
+    "match": "CD Nacional vs Sporting Clube de Braga",
+    "opening": {
+      "2": 1.6,
+      "1": 6.2,
+      "X": 4.4,
+      "over_2.5": 1.85,
+      "under_2.5": 2.05,
+      "over_2.75": 1.98,
+      "under_2.75": 1.88
+    },
+    "saved_at": "2026-02-27T10:58:29"
+  },
+  "545908": {
+    "match": "Vitória vs Alverca",
+    "opening": {
+      "2": 4.7,
+      "1": 1.8,
+      "X": 3.58,
+      "over_2.5": 2.05,
+      "under_2.5": 1.75,
+      "over_2.25": 1.8,
+      "under_2.25": 2.05
+    },
+    "saved_at": "2026-02-27T10:58:29"
+  },
+  "545911": {
+    "match": "CD Tondela vs CD Santa Clara",
+    "opening": {
+      "2": 2.44,
+      "1": 3.3,
+      "X": 3.0,
+      "over_1.5": 1.48,
+      "under_1.5": 2.43,
+      "over_2.0": 1.96,
+      "under_2.0": 1.88,
+      "over_2.5": 2.5,
+      "under_2.5": 1.44
+    },
+    "saved_at": "2026-02-27T10:58:30"
+  },
+  "545915": {
+    "match": "Casa Pia AC vs Moreirense",
+    "opening": {
+      "1": 2.74,
+      "2": 2.91,
+      "X": 3.0,
+      "over_2.5": 2.4,
+      "under_2.5": 1.5,
+      "over_2.0": 1.88,
+      "under_2.0": 1.96
+    },
+    "saved_at": "2026-02-27T10:58:30"
+  },
+  "545910": {
+    "match": "Rio Ave vs Famalicão",
+    "opening": {
+      "2": 1.92,
+      "1": 4.05,
+      "X": 3.61,
+      "over_2.5": 1.93,
+      "under_2.5": 1.91
+    },
+    "saved_at": "2026-02-27T10:58:31"
+  },
+  "545913": {
+    "match": "Gil Vicente vs Sport Lisboa e Benfica",
+    "opening": {
+      "2": 1.64,
+      "1": 6.0,
+      "X": 4.0,
+      "over_2.25": 1.82,
+      "under_2.25": 2.03,
+      "over_2.5": 1.96,
+      "under_2.5": 1.75
+    },
+    "saved_at": "2026-02-27T10:58:31"
+  },
+  "1379240": {
+    "match": "Bournemouth vs Sunderland",
+    "opening": {
+      "1": 1.75,
+      "best_1": 1.79,
+      "2": 4.75,
+      "best_2": 5.0,
+      "X": 3.98,
+      "best_X": 4.1,
+      "over_2.75": 2.01,
+      "under_2.75": 1.9
+    },
+    "saved_at": "2026-02-28T13:03:50"
+  },
+  "1379242": {
+    "match": "Burnley vs Brentford",
+    "opening": {
+      "2": 1.79,
+      "best_2": 1.84,
+      "1": 4.61,
+      "best_1": 4.7,
+      "X": 3.86,
+      "best_X": 4.0,
+      "over_2.75": 2.04,
+      "under_2.75": 1.87
+    },
+    "saved_at": "2026-02-28T13:05:58"
+  },
+  "1379245": {
+    "match": "Liverpool vs West Ham",
+    "opening": {
+      "1": 1.42,
+      "best_1": 1.44,
+      "2": 7.21,
+      "best_2": 7.8,
+      "X": 5.14,
+      "best_X": 5.5,
+      "over_3.25": 2.0,
+      "under_3.25": 1.91
+    },
+    "saved_at": "2026-02-28T13:08:03"
+  },
+  "1379247": {
+    "match": "Newcastle vs Everton",
+    "opening": {
+      "2": 4.43,
+      "best_2": 4.8,
+      "1": 1.83,
+      "best_1": 1.84,
+      "X": 3.82,
+      "best_X": 3.95,
+      "over_2.75": 1.98,
+      "under_2.75": 1.93
+    },
+    "saved_at": "2026-02-28T17:12:41"
+  },
+  "1379244": {
+    "match": "Leeds vs Manchester City",
+    "opening": {
+      "1": 5.08,
+      "best_1": 5.5,
+      "2": 1.69,
+      "best_2": 1.71,
+      "X": 4.06,
+      "best_X": 4.2,
+      "over_2.5": 1.85,
+      "under_2.5": 2.06,
+      "best_under_2.5": 2.1
+    },
+    "saved_at": "2026-02-28T17:13:44"
+  },
+  "1391075": {
+    "match": "Rayo Vallecano vs Athletic Club",
+    "opening": {
+      "2": 3.55,
+      "best_2": 3.85,
+      "1": 3.07,
+      "best_1": 3.35,
+      "X": 2.21,
+      "best_X": 2.22,
+      "over_3.0": 1.83,
+      "under_3.0": 2.06
+    },
+    "saved_at": "2026-02-28T17:15:19"
+  },
+  "1391069": {
+    "match": "Barcelona vs Villarreal",
+    "opening": {
+      "1": 1.37,
+      "best_1": 1.4,
+      "2": 7.25,
+      "best_2": 7.6,
+      "X": 5.93,
+      "best_X": 6.2,
+      "over_3.75": 1.89,
+      "under_3.75": 2.02
+    },
+    "saved_at": "2026-02-28T17:16:22"
+  },
+  "1391074": {
+    "match": "Mallorca vs Real Sociedad",
+    "opening": {
+      "1": 3.17,
+      "best_1": 3.3,
+      "2": 2.44,
+      "best_2": 2.48,
+      "X": 3.32,
+      "best_X": 3.35,
+      "over_2.25": 1.98,
+      "under_2.25": 1.93
+    },
+    "saved_at": "2026-02-28T17:17:55"
+  },
+  "1391077": {
+    "match": "Oviedo vs Atletico Madrid",
+    "opening": {
+      "2": 1.85,
+      "best_2": 1.88,
+      "1": 5.06,
+      "best_1": 5.1,
+      "X": 3.45,
+      "best_X": 3.55,
+      "over_2.25": 1.85,
+      "under_2.25": 2.07
+    },
+    "saved_at": "2026-02-28T17:18:59"
+  },
+  "1378124": {
+    "match": "Como vs Lecce",
+    "opening": {
+      "1": 1.45,
+      "best_1": 2.12,
+      "2": 8.47,
+      "X": 3.97,
+      "over_2.25": 1.88,
+      "under_2.25": 2.01
+    },
+    "saved_at": "2026-02-28T17:20:03"
+  },
+  "1378133": {
+    "match": "Hellas Verona vs Napoli",
+    "opening": {
+      "1": 6.33,
+      "best_1": 7.0,
+      "2": 1.68,
+      "X": 3.58,
+      "best_X": 3.7,
+      "over_2.0": 1.92,
+      "under_2.0": 1.99
+    },
+    "saved_at": "2026-02-28T17:20:34"
+  },
+  "1378126": {
+    "match": "Inter vs Genoa",
+    "opening": {
+      "2": 10.4,
+      "best_2": 10.5,
+      "1": 1.33,
+      "best_1": 1.36,
+      "X": 5.36,
+      "best_X": 5.7,
+      "over_2.75": 1.95,
+      "under_2.75": 1.95
+    },
+    "saved_at": "2026-02-28T17:20:35"
+  },
+  "1388516": {
+    "match": "Bayer Leverkusen vs FSV Mainz 05",
+    "opening": {
+      "1": 1.72,
+      "best_1": 1.74,
+      "2": 4.7,
+      "best_2": 5.1,
+      "X": 4.16,
+      "best_X": 4.3,
+      "over_2.75": 1.83,
+      "under_2.75": 2.09
+    },
+    "saved_at": "2026-02-28T17:20:36"
+  },
+  "1388517": {
+    "match": "Borussia Mönchengladbach vs Union Berlin",
+    "opening": {
+      "1": 2.45,
+      "best_1": 2.52,
+      "2": 3.16,
+      "best_2": 3.25,
+      "X": 3.3,
+      "best_X": 3.35,
+      "over_2.25": 1.85,
+      "under_2.25": 2.07
+    },
+    "saved_at": "2026-02-28T17:20:37"
+  },
+  "1388521": {
+    "match": "1899 Hoffenheim vs FC St. Pauli",
+    "opening": {
+      "2": 6.38,
+      "best_2": 6.8,
+      "1": 1.54,
+      "best_1": 1.57,
+      "X": 4.35,
+      "best_X": 4.6,
+      "over_2.5": 1.91,
+      "under_2.5": 2.0
+    },
+    "saved_at": "2026-02-28T17:20:38"
+  },
+  "1388523": {
+    "match": "Werder Bremen vs 1. FC Heidenheim",
+    "opening": {
+      "2": 5.26,
+      "best_2": 5.3,
+      "1": 1.65,
+      "best_1": 1.67,
+      "X": 4.18,
+      "best_X": 4.6,
+      "over_3.0": 2.07,
+      "under_3.0": 1.85
+    },
+    "saved_at": "2026-02-28T17:20:39"
+  },
+  "1388518": {
+    "match": "Borussia Dortmund vs Bayern München",
+    "opening": {
+      "2": 1.7,
+      "best_2": 1.73,
+      "1": 4.51,
+      "best_1": 4.8,
+      "X": 4.45,
+      "best_X": 4.6,
+      "over_3.5": 1.99,
+      "under_3.5": 1.91
+    },
+    "saved_at": "2026-02-28T17:20:40"
+  },
+  "1387912": {
+    "match": "Rennes vs Toulouse",
+    "opening": {
+      "1": 2.01,
+      "best_1": 2.02,
+      "2": 4.01,
+      "best_2": 4.2,
+      "X": 3.55,
+      "best_X": 3.65,
+      "over_2.5": 1.91,
+      "under_2.5": 2.0
+    },
+    "saved_at": "2026-02-28T17:20:41"
+  },
+  "1387910": {
+    "match": "Monaco vs Angers",
+    "opening": {
+      "2": 6.82,
+      "best_2": 7.6,
+      "1": 1.48,
+      "best_1": 1.51,
+      "X": 4.74,
+      "best_X": 4.8,
+      "over_2.75": 1.92,
+      "under_2.75": 1.99
+    },
+    "saved_at": "2026-02-28T17:20:42"
+  },
+  "1387905": {
+    "match": "Le Havre vs Paris Saint Germain",
+    "opening": {
+      "1": 9.66,
+      "best_1": 11.0,
+      "2": 1.29,
+      "best_2": 1.31,
+      "X": 6.24,
+      "best_X": 6.6,
+      "over_3.25": 2.0,
+      "under_3.25": 1.88
+    },
+    "saved_at": "2026-02-28T17:20:42"
+  },
+  "1381085": {
+    "match": "Heerenveen vs Sparta Rotterdam",
+    "opening": {
+      "1": 2.12,
+      "2": 3.33,
+      "best_2": 3.4,
+      "X": 3.82,
+      "best_X": 4.0,
+      "over_3.0": 1.98,
+      "under_3.0": 1.91
+    },
+    "saved_at": "2026-02-28T17:21:10"
+  },
+  "1381086": {
+    "match": "Heracles vs PSV Eindhoven",
+    "opening": {
+      "1": 8.65,
+      "best_1": 9.2,
+      "2": 1.28,
+      "best_2": 1.33,
+      "X": 6.73,
+      "best_X": 6.8,
+      "over_3.75": 1.96,
+      "under_3.75": 1.9
+    },
+    "saved_at": "2026-02-28T17:21:15"
+  },
+  "1381087": {
+    "match": "NEC Nijmegen vs Fortuna Sittard",
+    "opening": {
+      "2": 6.96,
+      "best_2": 7.4,
+      "1": 1.42,
+      "best_1": 1.45,
+      "X": 5.22,
+      "best_X": 5.4,
+      "over_3.25": 1.94,
+      "under_3.25": 1.94
+    },
+    "saved_at": "2026-02-28T17:21:15"
+  },
+  "1396444": {
+    "match": "AVS vs Estrela",
+    "opening": {
+      "1": 2.59,
+      "best_1": 2.64,
+      "2": 2.87,
+      "best_2": 2.96,
+      "X": 3.34,
+      "best_X": 3.35,
+      "over_2.5": 1.98,
+      "best_over_2.5": 2.06,
+      "under_2.5": 1.9
+    },
+    "saved_at": "2026-02-28T17:21:16"
+  },
+  "1396448": {
+    "match": "Nacional vs SC Braga",
+    "opening": {
+      "2": 1.58,
+      "best_2": 1.62,
+      "1": 5.92,
+      "best_1": 6.2,
+      "X": 4.21,
+      "best_X": 4.4,
+      "over_2.5": 1.86,
+      "under_2.5": 2.03
+    },
+    "saved_at": "2026-02-28T17:21:17"
+  },
+  "1394642": {
+    "match": "Galatasaray vs Alanyaspor",
+    "opening": {
+      "2": 9.23,
+      "best_2": 10.0,
+      "1": 1.31,
+      "best_1": 1.34,
+      "X": 5.99,
+      "best_X": 6.0,
+      "over_3.25": 2.03,
+      "under_3.25": 1.86
+    },
+    "saved_at": "2026-02-28T17:21:20"
+  },
+  "1379241": {
+    "match": "Brighton vs Nottingham Forest",
+    "opening": {
+      "1": 2.03,
+      "best_1": 2.1,
+      "2": 3.72,
+      "best_2": 3.85,
+      "X": 3.67,
+      "best_X": 3.7,
+      "over_2.5": 1.86,
+      "under_2.5": 2.03
+    },
+    "saved_at": "2026-03-01T03:15:54"
+  },
+  "1379243": {
+    "match": "Fulham vs Tottenham",
+    "opening": {
+      "1": 1.98,
+      "best_1": 2.06,
+      "2": 3.68,
+      "best_2": 3.8,
+      "X": 3.87,
+      "best_X": 3.9,
+      "over_2.75": 1.9,
+      "under_2.75": 1.99
+    },
+    "saved_at": "2026-03-01T03:17:29"
+  },
+  "1379246": {
+    "match": "Manchester United vs Crystal Palace",
+    "opening": {
+      "2": 6.05,
+      "best_2": 6.6,
+      "1": 1.52,
+      "best_1": 1.57,
+      "X": 4.63,
+      "best_X": 4.7,
+      "over_3.0": 2.02,
+      "under_3.0": 1.87
+    },
+    "saved_at": "2026-03-01T03:19:04"
+  },
+  "1379239": {
+    "match": "Arsenal vs Chelsea",
+    "opening": {
+      "1": 1.58,
+      "best_1": 1.62,
+      "2": 5.68,
+      "best_2": 6.0,
+      "X": 4.33,
+      "best_X": 4.4,
+      "over_2.75": 1.94,
+      "under_2.75": 1.94
+    },
+    "saved_at": "2026-03-01T03:20:39"
+  },
+  "1391071": {
+    "match": "Elche vs Espanyol",
+    "opening": {
+      "1": 2.46,
+      "best_1": 2.52,
+      "2": 3.13,
+      "best_2": 3.2,
+      "X": 3.27,
+      "best_X": 3.35,
+      "over_2.5": 2.02,
+      "under_2.5": 1.87
+    },
+    "saved_at": "2026-03-01T03:36:32"
+  },
+  "1391078": {
+    "match": "Valencia vs Osasuna",
+    "opening": {
+      "2": 3.29,
+      "best_2": 3.3,
+      "1": 2.44,
+      "best_1": 2.54,
+      "X": 3.13,
+      "best_X": 3.2,
+      "over_2.25": 2.01,
+      "under_2.25": 1.88
+    },
+    "saved_at": "2026-03-01T03:38:07"
+  },
+  "1391070": {
+    "match": "Real Betis vs Sevilla",
+    "opening": {
+      "1": 1.8,
+      "best_1": 1.85,
+      "2": 4.62,
+      "best_2": 4.9,
+      "X": 3.8,
+      "best_X": 3.85,
+      "over_2.5": 2.02,
+      "under_2.5": 1.87
+    },
+    "saved_at": "2026-03-01T03:39:43"
+  },
+  "1391072": {
+    "match": "Girona vs Celta Vigo",
+    "opening": {
+      "2": 3.1,
+      "best_2": 3.15,
+      "1": 2.42,
+      "best_1": 2.46,
+      "X": 3.36,
+      "best_X": 3.5,
+      "over_2.5": 2.0,
+      "under_2.5": 1.88
+    },
+    "saved_at": "2026-03-01T03:41:18"
+  },
+  "1378125": {
+    "match": "Cremonese vs AC Milan",
+    "opening": {
+      "2": 1.46,
+      "best_2": 1.51,
+      "1": 7.29,
+      "best_1": 8.0,
+      "X": 4.59,
+      "best_X": 4.6,
+      "over_2.5": 1.9,
+      "under_2.5": 1.99
+    },
+    "saved_at": "2026-03-01T03:42:53"
+  },
+  "1378130": {
+    "match": "Sassuolo vs Atalanta",
+    "opening": {
+      "2": 2.06,
+      "best_2": 2.12,
+      "1": 3.84,
+      "best_1": 3.9,
+      "X": 3.46,
+      "best_X": 3.6,
+      "over_2.5": 1.91,
+      "under_2.5": 1.98
+    },
+    "saved_at": "2026-03-01T03:44:29"
+  },
+  "1378131": {
+    "match": "Torino vs Lazio",
+    "opening": {
+      "2": 2.92,
+      "best_2": 2.96,
+      "1": 2.85,
+      "best_1": 3.0,
+      "X": 2.94,
+      "best_X": 3.0,
+      "over_2.0": 1.89,
+      "under_2.0": 2.0
+    },
+    "saved_at": "2026-03-01T03:45:01"
+  },
+  "1378129": {
+    "match": "AS Roma vs Juventus",
+    "opening": {
+      "1": 2.69,
+      "best_1": 2.76,
+      "2": 2.95,
+      "best_2": 3.1,
+      "X": 3.11,
+      "best_X": 3.15,
+      "over_2.25": 2.04,
+      "under_2.25": 1.86
+    },
+    "saved_at": "2026-03-01T03:45:34"
+  },
+  "1388522": {
+    "match": "VfB Stuttgart vs VfL Wolfsburg",
+    "opening": {
+      "1": 1.47,
+      "best_1": 1.49,
+      "2": 6.12,
+      "best_2": 6.8,
+      "X": 5.09,
+      "best_X": 5.3,
+      "over_3.25": 1.85,
+      "under_3.25": 2.04
+    },
+    "saved_at": "2026-03-01T03:46:07"
+  },
+  "1388519": {
+    "match": "Eintracht Frankfurt vs SC Freiburg",
+    "opening": {
+      "1": 2.15,
+      "best_1": 2.2,
+      "2": 3.46,
+      "best_2": 3.6,
+      "X": 3.56,
+      "best_X": 3.65,
+      "over_2.75": 1.99,
+      "under_2.75": 1.89
+    },
+    "saved_at": "2026-03-01T03:46:39"
+  },
+  "1388520": {
+    "match": "Hamburger SV vs RB Leipzig",
+    "opening": {
+      "1": 3.6,
+      "best_1": 3.85,
+      "2": 2.02,
+      "best_2": 2.06,
+      "X": 3.81,
+      "best_X": 3.85,
+      "over_3.0": 1.92,
+      "under_3.0": 1.97
+    },
+    "saved_at": "2026-03-01T03:47:12"
+  },
+  "1387911": {
+    "match": "Paris FC vs Nice",
+    "opening": {
+      "2": 3.12,
+      "best_2": 3.15,
+      "1": 2.43,
+      "best_1": 2.48,
+      "X": 3.31,
+      "best_X": 3.45,
+      "over_2.5": 1.95,
+      "under_2.5": 1.93
+    },
+    "saved_at": "2026-03-01T03:47:44"
+  },
+  "1387906": {
+    "match": "Lille vs Nantes",
+    "opening": {
+      "1": 1.52,
+      "best_1": 1.55,
+      "2": 6.54,
+      "best_2": 7.5,
+      "X": 4.45,
+      "best_X": 4.5,
+      "over_2.5": 1.85,
+      "under_2.5": 2.05
+    },
+    "saved_at": "2026-03-01T03:48:17"
+  },
+  "1387907": {
+    "match": "Lorient vs Auxerre",
+    "opening": {
+      "2": 3.99,
+      "best_2": 4.1,
+      "1": 2.06,
+      "best_1": 2.14,
+      "X": 3.34,
+      "best_X": 3.35,
+      "over_2.25": 2.03,
+      "under_2.25": 1.87
+    },
+    "saved_at": "2026-03-01T03:48:50"
+  },
+  "1387908": {
+    "match": "Marseille vs Lyon",
+    "opening": {
+      "2": 3.68,
+      "best_2": 3.9,
+      "1": 2.01,
+      "best_1": 2.04,
+      "X": 3.78,
+      "best_X": 3.9,
+      "over_2.75": 1.96,
+      "under_2.75": 1.93
+    },
+    "saved_at": "2026-03-01T03:49:55"
+  },
+  "1381091": {
+    "match": "PEC Zwolle vs Ajax",
+    "opening": {
+      "2": 1.81,
+      "best_2": 1.85,
+      "1": 4.14,
+      "best_1": 4.3,
+      "X": 4.12,
+      "best_X": 4.2,
+      "over_3.0": 1.85,
+      "under_3.0": 2.05
+    },
+    "saved_at": "2026-03-01T10:44:46"
+  },
+  "1381084": {
+    "match": "FC Volendam vs Groningen",
+    "opening": {
+      "1": 3.86,
+      "best_1": 4.0,
+      "2": 1.97,
+      "best_2": 2.0,
+      "X": 3.74,
+      "best_X": 3.85,
+      "over_2.75": 1.98,
+      "under_2.75": 1.91
+    },
+    "saved_at": "2026-03-01T10:45:43"
+  },
+  "1381089": {
+    "match": "Twente vs Feyenoord",
+    "opening": {
+      "1": 2.28,
+      "best_1": 2.32,
+      "2": 2.94,
+      "best_2": 3.1,
+      "X": 3.92,
+      "best_X": 3.95,
+      "over_3.0": 1.99,
+      "under_3.0": 1.9
+    },
+    "saved_at": "2026-03-01T10:46:16"
+  },
+  "1381090": {
+    "match": "Utrecht vs AZ Alkmaar",
+    "opening": {
+      "2": 3.39,
+      "best_2": 3.4,
+      "1": 2.19,
+      "best_1": 2.26,
+      "X": 3.54,
+      "best_X": 3.6,
+      "over_2.5": 1.86,
+      "under_2.5": 2.04,
+      "best_under_2.5": 2.12
+    },
+    "saved_at": "2026-03-01T10:46:48"
+  },
+  "1381083": {
+    "match": "Excelsior vs GO Ahead Eagles",
+    "opening": {
+      "1": 2.49,
+      "best_1": 2.5,
+      "2": 2.86,
+      "best_2": 2.96,
+      "X": 3.54,
+      "best_X": 3.65,
+      "over_2.75": 1.93,
+      "under_2.75": 1.96
+    },
+    "saved_at": "2026-03-01T10:47:20"
+  },
+  "1396451": {
+    "match": "Tondela vs Santa Clara",
+    "opening": {
+      "2": 2.53,
+      "best_2": 2.58,
+      "1": 3.34,
+      "best_1": 3.35,
+      "X": 2.96,
+      "best_X": 3.05,
+      "over_2.0": 1.99,
+      "under_2.0": 1.89
+    },
+    "saved_at": "2026-03-01T10:47:54"
+  },
+  "1396445": {
+    "match": "Casa Pia vs Moreirense",
+    "opening": {
+      "1": 2.68,
+      "2": 3.06,
+      "best_2": 3.2,
+      "X": 3.01,
+      "best_X": 3.1,
+      "over_2.0": 1.89,
+      "under_2.0": 2.0
+    },
+    "saved_at": "2026-03-01T10:48:27"
+  },
+  "1394647": {
+    "match": "Samsunspor vs Gaziantep FK",
+    "opening": {
+      "2": 4.31,
+      "best_2": 4.4,
+      "1": 1.94,
+      "best_1": 1.97,
+      "X": 3.48,
+      "best_X": 3.65,
+      "over_2.5": 1.96,
+      "under_2.5": 1.93
+    },
+    "saved_at": "2026-03-01T10:50:36"
+  },
+  "1391076": {
+    "match": "Real Madrid vs Getafe",
+    "opening": {
+      "2": 10.8,
+      "best_2": 12.6,
+      "1": 1.32,
+      "best_1": 1.36,
+      "X": 5.34,
+      "best_X": 5.5,
+      "over_2.5": 1.95,
+      "best_over_2.5": 2.02,
+      "under_2.5": 1.93,
+      "best_under_2.5": 1.97
+    },
+    "saved_at": "2026-03-02T07:23:40"
+  },
+  "1378128": {
+    "match": "Pisa vs Bologna",
+    "opening": {
+      "2": 1.98,
+      "best_2": 2.04,
+      "1": 4.26,
+      "best_1": 4.6,
+      "X": 3.4,
+      "best_X": 3.45,
+      "over_2.25": 2.03,
+      "under_2.25": 1.86,
+      "best_under_2.25": 1.91
+    },
+    "saved_at": "2026-03-02T07:36:01"
+  },
+  "1378132": {
+    "match": "Udinese vs Fiorentina",
+    "opening": {
+      "2": 2.46,
+      "best_2": 2.5,
+      "1": 3.26,
+      "best_1": 3.35,
+      "X": 3.14,
+      "best_X": 3.25,
+      "over_2.25": 1.9,
+      "under_2.25": 1.98
+    },
+    "saved_at": "2026-03-02T07:38:40"
+  },
+  "1396447": {
+    "match": "GIL Vicente vs Benfica",
+    "opening": {
+      "2": 1.56,
+      "best_2": 1.6,
+      "1": 6.2,
+      "best_1": 6.8,
+      "X": 4.14,
+      "best_X": 4.3,
+      "over_2.5": 2.0,
+      "best_over_2.5": 2.04,
+      "under_2.5": 1.88,
+      "best_under_2.5": 1.94
+    },
+    "saved_at": "2026-03-02T07:41:19"
+  },
+  "1379250": {
+    "match": "Bournemouth vs Brentford",
+    "opening": {
+      "1": 2.58,
+      "best_1": 2.62,
+      "2": 2.69,
+      "best_2": 2.82,
+      "X": 3.65,
+      "best_X": 3.75,
+      "over_3.0": 2.0,
+      "under_3.0": 1.89
+    },
+    "saved_at": "2026-03-03T09:18:23"
+  },
+  "1379252": {
+    "match": "Everton vs Burnley",
+    "opening": {
+      "2": 6.52,
+      "best_2": 7.0,
+      "1": 1.57,
+      "best_1": 1.62,
+      "X": 4.05,
+      "best_X": 4.21,
+      "over_2.5": 1.99,
+      "best_over_2.5": 2.04,
+      "under_2.5": 1.89,
+      "best_under_2.5": 2.0
+    },
+    "saved_at": "2026-03-03T09:23:02"
+  },
+  "1379254": {
+    "match": "Leeds vs Sunderland",
+    "opening": {
+      "1": 1.93,
+      "best_1": 1.96,
+      "2": 4.45,
+      "best_2": 4.8,
+      "X": 3.43,
+      "best_X": 3.56,
+      "over_2.25": 1.88,
+      "under_2.25": 2.0
+    },
+    "saved_at": "2026-03-03T09:27:41"
+  },
+  "1379258": {
+    "match": "Wolves vs Liverpool",
+    "opening": {
+      "1": 6.0,
+      "X": 4.75,
+      "2": 1.44,
+      "eh_away_+1": 7.0,
+      "eh_away_+2": 4.5,
+      "over_1.5": 2.25,
+      "under_1.5": 4.5,
+      "over_2.5": 5.5,
+      "under_2.5": 2.38,
+      "over_3.5": 15.0,
+      "under_3.5": 1.9,
+      "over_0.5": 1.28,
+      "under_0.5": 15.0,
+      "over_4.5": 21.0,
+      "under_4.5": 1.22,
+      "over_7.5": 29.0,
+      "over_5.5": 8.0,
+      "under_5.5": 2.1,
+      "over_6.5": 17.0,
+      "under_6.5": 1.67,
+      "btts_yes": 4.0,
+      "btts_no": 2.0,
+      "eh_home_-1": 13.0,
+      "eh_away_-1": 7.5,
+      "eh_away_-2": 34.0,
+      "dc_1x": 2.62,
+      "dc_12": 1.5,
+      "dc_x2": 1.14,
+      "both_halves_h": 23.0,
+      "both_halves_a": 3.5,
+      "1h_over_1.5": 2.3,
+      "1h_under_1.5": 1.6,
+      "1h_over_1.75": 2.85,
+      "1h_under_1.75": 1.4,
+      "1h_over_2.25": 4.65,
+      "1h_under_2.25": 1.18,
+      "1h_over_2.5": 5.5,
+      "1h_under_2.5": 1.15,
+      "1h_over_2.75": 7.0,
+      "1h_under_2.75": 1.1,
+      "1h_over_1.0": 1.55,
+      "1h_under_1.0": 2.38,
+      "1h_over_2.0": 4.1,
+      "1h_under_2.0": 1.23,
+      "1h_over_0.5": 1.27,
+      "1h_under_0.5": 3.55,
+      "1h_over_0.75": 1.38,
+      "1h_under_0.75": 3.0,
+      "1h_over_1.25": 1.95,
+      "1h_under_1.25": 1.85,
+      "1h_over_4.0": 1.91,
+      "1h_under_4.0": 2.75,
+      "1h_over_5.0": 2.6,
+      "1h_under_5.0": 1.95,
+      "1h_over_4.5": 1.82,
+      "1h_under_4.5": 1.98
+    },
+    "saved_at": "2026-03-03T09:32:26"
+  },
+  "1382799": {
+    "match": "Dundee Utd vs ST Mirren",
+    "opening": {
+      "1": 2.38,
+      "X": 3.3,
+      "2": 2.8,
+      "eh_away_-1": 5.5,
+      "eh_away_+1": 8.5,
+      "over_1.5": 2.75,
+      "under_1.5": 3.5,
+      "over_2.5": 8.0,
+      "under_2.5": 1.8,
+      "over_3.5": 21.0,
+      "under_3.5": 2.2,
+      "over_0.5": 1.4,
+      "under_0.5": 10.0,
+      "over_4.5": 6.5,
+      "under_4.5": 1.11,
+      "over_7.5": 51.0,
+      "over_5.5": 15.0,
+      "under_5.5": 1.73,
+      "over_6.5": 29.0,
+      "btts_yes": 4.5,
+      "btts_no": 2.0,
+      "eh_home_-1": 6.5,
+      "eh_away_-2": 11.0,
+      "eh_away_+2": 15.0,
+      "dc_1x": 1.4,
+      "dc_12": 1.62,
+      "dc_x2": 1.53,
+      "both_halves_h": 9.0,
+      "both_halves_a": 11.0,
+      "1h_over_1.5": 2.85,
+      "1h_under_1.5": 1.4,
+      "1h_over_1.75": 3.7,
+      "1h_under_1.75": 1.26,
+      "1h_over_2.25": 6.8,
+      "1h_under_2.25": 1.1,
+      "1h_over_1.0": 1.9,
+      "1h_under_1.0": 1.9,
+      "1h_over_2.0": 6.0,
+      "1h_under_2.0": 1.12,
+      "1h_over_0.5": 1.4,
+      "1h_under_0.5": 2.85,
+      "1h_over_0.75": 1.55,
+      "1h_under_0.75": 2.38,
+      "1h_over_1.25": 2.38,
+      "1h_under_1.25": 1.55,
+      "1h_over_5.0": 2.38,
+      "1h_under_5.0": 2.1,
+      "under_4.0": 1.85,
+      "over_4.0": 1.95,
+      "eh_home_+1": 1.73
+    },
+    "saved_at": "2026-03-03T09:37:17"
+  },
+  "544509": {
+    "match": "Rayo Vallecano de Madrid vs Elche CF",
+    "opening": {
+      "2": 4.95,
+      "best_2": 5.3,
+      "1": 1.77,
+      "best_1": 1.82,
+      "X": 3.71,
+      "best_X": 3.85,
+      "ah_away_0.75": 1.88,
+      "best_ah_away_0.75": 1.95,
+      "ah_home_-0.75": 2.03,
+      "best_ah_home_-0.75": 2.04,
+      "over_2.5": 2.01,
+      "best_over_2.5": 2.04,
+      "under_2.5": 1.88,
+      "best_under_2.5": 1.91
+    },
+    "saved_at": "2026-04-03T01:48:07"
+  },
+  "544510": {
+    "match": "Real Sociedad de Fútbol vs Levante UD",
+    "opening": {
+      "2": 5.81,
+      "best_2": 6.2,
+      "1": 1.58,
+      "best_1": 1.64,
+      "X": 4.29,
+      "best_X": 4.32,
+      "ah_away_+1": 1.88,
+      "best_ah_away_+1": 1.9,
+      "eh_away_+1": 1.88,
+      "best_eh_away_+1": 1.9,
+      "ah_home_-1": 2.02,
+      "best_ah_home_-1": 2.06,
+      "eh_home_-1": 2.02,
+      "best_eh_home_-1": 2.06,
+      "over_2.75": 1.93,
+      "under_2.75": 1.96
+    },
+    "saved_at": "2026-04-04T01:05:07"
+  },
+  "544505": {
+    "match": "RCD Mallorca vs Real Madrid CF",
+    "opening": {
+      "1": 5.71,
+      "best_1": 6.25,
+      "2": 1.56,
+      "best_2": 1.6,
+      "X": 4.49,
+      "best_X": 4.7,
+      "ah_home_+1": 1.93,
+      "best_ah_home_+1": 1.98,
+      "eh_home_+1": 1.93,
+      "best_eh_home_+1": 1.98,
+      "ah_away_-1": 1.97,
+      "best_ah_away_-1": 1.98,
+      "eh_away_-1": 1.97,
+      "best_eh_away_-1": 1.98,
+      "over_2.75": 1.86,
+      "under_2.75": 2.03
+    },
+    "saved_at": "2026-04-04T01:09:36"
+  },
+  "544503": {
+    "match": "Real Betis Balompié vs RCD Espanyol de Barcelona",
+    "opening": {
+      "2": 4.54,
+      "best_2": 5.0,
+      "1": 1.75,
+      "best_1": 1.79,
+      "X": 4.09,
+      "best_X": 4.21,
+      "ah_away_0.75": 1.93,
+      "best_ah_away_0.75": 1.96,
+      "ah_home_-0.75": 1.98,
+      "best_ah_home_-0.75": 2.0,
+      "over_2.5": 1.93,
+      "best_over_2.5": 1.96,
+      "under_2.5": 1.95,
+      "best_under_2.5": 2.02
+    },
+    "saved_at": "2026-04-04T01:14:05"
+  },
+  "537120": {
+    "match": "US Sassuolo Calcio vs Cagliari Calcio",
+    "opening": {
+      "2": 4.48,
+      "best_2": 4.7,
+      "1": 2.03,
+      "best_1": 2.08,
+      "X": 3.14,
+      "best_X": 3.3,
+      "ah_away_0.50": 1.87,
+      "best_ah_away_0.50": 1.93,
+      "ah_home_-0.50": 2.04,
+      "over_2.25": 1.91,
+      "under_2.25": 1.98
+    },
+    "saved_at": "2026-04-04T01:22:36"
+  },
+  "537115": {
+    "match": "Hellas Verona vs ACF Fiorentina",
+    "opening": {
+      "2": 1.97,
+      "best_2": 2.06,
+      "1": 4.17,
+      "best_1": 4.3,
+      "X": 3.48,
+      "best_X": 3.6,
+      "ah_away_-0.50": 1.98,
+      "best_ah_away_-0.50": 2.06,
+      "ah_home_0.50": 1.93,
+      "over_2.25": 1.97,
+      "under_2.25": 1.92
+    },
+    "saved_at": "2026-04-04T01:27:05"
+  },
+  "537118": {
+    "match": "SS Lazio vs Parma Calcio 1913",
+    "opening": {
+      "1": 1.79,
+      "best_1": 1.87,
+      "2": 5.16,
+      "best_2": 5.5,
+      "X": 3.53,
+      "best_X": 3.6,
+      "ah_home_-0.75": 2.08,
+      "best_ah_home_-0.75": 2.1,
+      "ah_away_0.75": 1.84,
+      "best_ah_away_0.75": 1.88,
+      "over_2.25": 2.04,
+      "under_2.25": 1.86
+    },
+    "saved_at": "2026-04-04T01:31:39"
+  },
+  "540653": {
+    "match": "Bayer 04 Leverkusen vs VfL Wolfsburg",
+    "opening": {
+      "1": 1.44,
+      "best_1": 1.48,
+      "2": 6.66,
+      "best_2": 7.0,
+      "X": 5.14,
+      "best_X": 5.4,
+      "ah_home_-1.25": 1.93,
+      "best_ah_home_-1.25": 1.97,
+      "ah_away_+1.25": 1.97,
+      "best_ah_away_+1.25": 1.98,
+      "over_3.25": 1.94,
+      "under_3.25": 1.94
+    },
+    "saved_at": "2026-04-04T01:36:08"
+  },
+  "540649": {
+    "match": "SC Freiburg vs Bayern München",
+    "opening": {
+      "2": 1.42,
+      "best_2": 1.46,
+      "1": 6.52,
+      "best_1": 7.4,
+      "X": 5.48,
+      "best_X": 5.7,
+      "ah_away_-1.25": 1.89,
+      "best_ah_away_-1.25": 1.91,
+      "ah_home_+1.25": 2.02,
+      "best_ah_home_+1.25": 2.04,
+      "over_3.5": 2.04,
+      "best_over_3.5": 2.06,
+      "under_3.5": 1.85,
+      "best_under_3.5": 1.9
+    },
+    "saved_at": "2026-04-04T01:38:53"
+  },
+  "540656": {
+    "match": "Borussia Mönchengladbach vs 1. Heidenheim 1846",
+    "opening": {
+      "2": 5.4,
+      "best_2": 6.0,
+      "1": 1.59,
+      "best_1": 1.63,
+      "X": 4.47,
+      "best_X": 4.5,
+      "ah_away_+1": 1.92,
+      "best_ah_away_+1": 1.93,
+      "eh_away_+1": 1.92,
+      "best_eh_away_+1": 1.93,
+      "ah_home_-1": 1.99,
+      "best_ah_home_-1": 2.04,
+      "eh_home_-1": 1.99,
+      "best_eh_home_-1": 2.04,
+      "over_3.0": 2.03,
+      "under_3.0": 1.87
+    },
+    "saved_at": "2026-04-04T01:41:16"
+  },
+  "540651": {
+    "match": "TSG 1899 Hoffenheim vs 1. FSV Mainz 05",
+    "opening": {
+      "2": 4.64,
+      "best_2": 5.0,
+      "1": 1.71,
+      "best_1": 1.75,
+      "X": 4.24,
+      "best_X": 4.33,
+      "ah_away_0.75": 2.01,
+      "best_ah_away_0.75": 2.02,
+      "ah_home_-0.75": 1.9,
+      "best_ah_home_-0.75": 1.96,
+      "over_3.0": 1.93,
+      "under_3.0": 1.95
+    },
+    "saved_at": "2026-04-04T01:43:37"
+  },
+  "540652": {
+    "match": "SV Werder Bremen vs RB Leipzig",
+    "opening": {
+      "2": 1.93,
+      "best_2": 1.99,
+      "1": 3.68,
+      "best_1": 3.9,
+      "X": 4.06,
+      "best_X": 4.11,
+      "ah_away_-0.50": 1.94,
+      "best_ah_away_-0.50": 1.99,
+      "ah_home_0.50": 1.96,
+      "best_ah_home_0.50": 2.0,
+      "over_3.25": 2.01,
+      "under_3.25": 1.88
+    },
+    "saved_at": "2026-04-04T01:45:57"
+  },
+  "540654": {
+    "match": "Hamburger SV vs Augsburg",
+    "opening": {
+      "2": 3.2,
+      "best_2": 3.3,
+      "1": 2.31,
+      "best_1": 2.4,
+      "X": 3.47,
+      "best_X": 3.6,
+      "ah_away_0.25": 1.91,
+      "best_ah_away_0.25": 1.93,
+      "ah_home_-0.25": 2.0,
+      "best_ah_home_-0.25": 2.06,
+      "over_2.75": 2.05,
+      "under_2.75": 1.85
+    },
+    "saved_at": "2026-04-04T01:48:18"
+  },
+  "540650": {
+    "match": "VfB Stuttgart vs Borussia Dortmund",
+    "opening": {
+      "2": 2.81,
+      "best_2": 2.96,
+      "1": 2.32,
+      "best_1": 2.4,
+      "X": 4.06,
+      "best_X": 4.2,
+      "ah_away_0.25": 1.86,
+      "best_ah_away_0.25": 1.9,
+      "ah_home_-0.25": 2.06,
+      "best_ah_home_-0.25": 2.08,
+      "over_3.25": 1.93,
+      "under_3.25": 1.95,
+      "best_under_3.25": 1.96
+    },
+    "saved_at": "2026-04-04T01:50:39"
+  },
+  "542655": {
+    "match": "RC Strasbourg Alsace vs OGC Nice",
+    "opening": {
+      "2": 4.34,
+      "best_2": 4.5,
+      "1": 1.87,
+      "best_1": 1.92,
+      "X": 3.69,
+      "best_X": 3.9,
+      "ah_away_0.50": 2.03,
+      "best_ah_away_0.50": 2.04,
+      "ah_home_-0.50": 1.88,
+      "best_ah_home_-0.50": 1.92,
+      "over_2.75": 1.9,
+      "under_2.75": 1.99
+    },
+    "saved_at": "2026-04-04T01:53:00"
+  },
+  "542653": {
+    "match": "Lille OSC vs Racing Club de Lens",
+    "opening": {
+      "1": 3.02,
+      "best_1": 3.06,
+      "2": 2.49,
+      "best_2": 2.56,
+      "X": 3.4,
+      "best_X": 3.5,
+      "ah_home_0.25": 1.81,
+      "ah_away_-0.25": 2.14,
+      "over_2.5": 1.9,
+      "best_over_2.5": 1.93,
+      "under_2.5": 2.01,
+      "best_under_2.5": 2.04
+    },
+    "saved_at": "2026-04-04T12:18:48"
+  },
+  "544507": {
+    "match": "Getafe CF vs Athletic Club",
+    "opening": {
+      "2": 5.31,
+      "best_2": 6.0,
+      "1": 1.76,
+      "best_1": 1.81,
+      "X": 3.23,
+      "best_X": 3.6,
+      "ah_away_-0.25": 1.81,
+      "ah_home_0.25": 2.07,
+      "over_2.75": 1.95,
+      "under_2.75": 1.91
+    },
+    "saved_at": "2026-04-05T15:33:59"
+  },
+  "544508": {
+    "match": "Valencia CF vs RC Celta de Vigo",
+    "opening": {
+      "2": 3.29,
+      "best_2": 3.35,
+      "1": 2.38,
+      "best_1": 2.46,
+      "X": 3.29,
+      "best_X": 3.4,
+      "ah_away_0.25": 1.89,
+      "best_ah_away_0.25": 1.9,
+      "ah_home_-0.25": 2.04,
+      "best_ah_home_-0.25": 2.08,
+      "over_2.25": 1.94,
+      "under_2.25": 1.96
+    },
+    "saved_at": "2026-04-05T15:36:21"
+  },
+  "544506": {
+    "match": "Real Oviedo vs Sevilla",
+    "opening": {
+      "1": 2.8,
+      "best_1": 2.88,
+      "2": 2.98,
+      "best_2": 3.0,
+      "X": 2.99,
+      "best_X": 3.05,
+      "over_2.0": 1.94,
+      "under_2.0": 1.96
+    },
+    "saved_at": "2026-04-05T15:38:42"
+  },
+  "544501": {
+    "match": "Deportivo Alavés vs CA Osasuna",
+    "opening": {
+      "1": 2.74,
+      "best_1": 2.78,
+      "2": 2.89,
+      "best_2": 3.0,
+      "X": 3.16,
+      "best_X": 3.2,
+      "over_2.25": 2.04,
+      "under_2.25": 1.88
+    },
+    "saved_at": "2026-04-05T15:41:04"
+  },
+  "537123": {
+    "match": "US Cremonese vs Bologna 1909",
+    "opening": {
+      "2": 2.17,
+      "best_2": 2.28,
+      "1": 3.65,
+      "best_1": 3.7,
+      "X": 3.4,
+      "best_X": 3.5,
+      "ah_away_-0.25": 1.87,
+      "best_ah_away_-0.25": 1.9,
+      "ah_home_0.25": 2.06,
+      "over_2.5": 2.01,
+      "best_over_2.5": 2.06,
+      "under_2.5": 1.89,
+      "best_under_2.5": 1.92
+    },
+    "saved_at": "2026-04-05T15:43:27"
+  },
+  "537119": {
+    "match": "AC Pisa 1909 vs Torino",
+    "opening": {
+      "1": 3.44,
+      "best_1": 3.55,
+      "2": 2.43,
+      "best_2": 2.55,
+      "X": 3.08,
+      "best_X": 3.1,
+      "ah_home_0.25": 1.88,
+      "best_ah_home_0.25": 1.9,
+      "ah_away_-0.25": 2.05,
+      "best_ah_away_-0.25": 2.08,
+      "over_2.25": 2.06,
+      "under_2.25": 1.85
+    },
+    "saved_at": "2026-04-05T15:45:49"
+  },
+  "537116": {
+    "match": "Internazionale Milano vs AS Roma",
+    "opening": {
+      "2": 5.84,
+      "best_2": 6.4,
+      "1": 1.63,
+      "best_1": 1.66,
+      "X": 4.01,
+      "best_X": 4.13,
+      "ah_away_+1": 1.82,
+      "best_ah_away_+1": 1.85,
+      "eh_away_+1": 1.82,
+      "best_eh_away_+1": 1.85,
+      "ah_home_-1": 2.12,
+      "eh_home_-1": 2.12,
+      "over_2.5": 1.93,
+      "best_over_2.5": 1.96,
+      "under_2.5": 1.97,
+      "best_under_2.5": 2.02
+    },
+    "saved_at": "2026-04-05T15:48:17"
+  },
+  "540655": {
+    "match": "1. Union Berlin vs St. Pauli 1910",
+    "opening": {
+      "2": 4.13,
+      "best_2": 4.3,
+      "1": 2.09,
+      "best_1": 2.2,
+      "X": 3.25,
+      "best_X": 3.3,
+      "ah_away_0.50": 1.84,
+      "best_ah_away_0.50": 1.86,
+      "ah_home_-0.50": 2.1,
+      "best_ah_home_-0.50": 2.14,
+      "over_2.0": 1.83,
+      "under_2.0": 2.1
+    },
+    "saved_at": "2026-04-05T15:50:39"
+  },
+  "540657": {
+    "match": "Eintracht Frankfurt vs 1. Köln",
+    "opening": {
+      "2": 3.9,
+      "best_2": 4.1,
+      "1": 1.97,
+      "best_1": 2.03,
+      "X": 3.79,
+      "best_X": 3.8,
+      "ah_away_0.50": 1.94,
+      "best_ah_away_0.50": 1.98,
+      "ah_home_-0.50": 1.98,
+      "best_ah_home_-0.50": 2.0,
+      "over_2.75": 1.94,
+      "under_2.75": 1.96,
+      "best_under_2.75": 1.97
+    },
+    "saved_at": "2026-04-05T15:53:00"
+  },
+  "542656": {
+    "match": "AngersO vs Olympique Lyonnais",
+    "opening": {
+      "1": 5.72,
+      "best_1": 6.2,
+      "2": 1.64,
+      "best_2": 1.65,
+      "X": 4.08,
+      "best_X": 4.41,
+      "ah_home_+1": 1.83,
+      "best_ah_home_+1": 1.91,
+      "eh_home_+1": 1.83,
+      "best_eh_home_+1": 1.91,
+      "ah_away_-1": 2.11,
+      "eh_away_-1": 2.11,
+      "over_2.75": 2.07,
+      "under_2.75": 1.85
+    },
+    "saved_at": "2026-04-05T15:55:21"
+  },
+  "542652": {
+    "match": "Metz vs Nantes",
+    "opening": {
+      "1": 3.0,
+      "best_1": 3.1,
+      "2": 2.55,
+      "best_2": 2.58,
+      "X": 3.31,
+      "best_X": 3.4,
+      "over_2.25": 1.88,
+      "under_2.25": 2.03
+    },
+    "saved_at": "2026-04-05T15:57:42"
+  },
+  "542649": {
+    "match": "Le Havre AC vs AJ Auxerre",
+    "opening": {
+      "2": 3.29,
+      "best_2": 3.3,
+      "1": 2.48,
+      "best_1": 2.54,
+      "X": 3.12,
+      "best_X": 3.25,
+      "ah_away_0.25": 1.83,
+      "best_ah_away_0.25": 1.85,
+      "ah_home_-0.25": 2.11,
+      "best_ah_home_-0.25": 2.12,
+      "over_2.25": 2.08,
+      "under_2.25": 1.84
+    },
+    "saved_at": "2026-04-05T16:00:03"
+  },
+  "542651": {
+    "match": "Lorient vs Paris",
+    "opening": {
+      "1": 2.45,
+      "best_1": 2.49,
+      "2": 3.14,
+      "best_2": 3.25,
+      "X": 3.32,
+      "best_X": 3.4,
+      "ah_home_-0.25": 2.1,
+      "ah_away_0.25": 1.84,
+      "best_ah_away_0.25": 1.87,
+      "over_2.25": 1.87,
+      "under_2.25": 2.05
+    },
+    "saved_at": "2026-04-05T16:02:46"
+  },
+  "542650": {
+    "match": "AS Monaco vs Olympique de Marseille",
+    "opening": {
+      "1": 2.18,
+      "best_1": 2.22,
+      "2": 3.31,
+      "best_2": 3.45,
+      "X": 3.73,
+      "best_X": 3.85,
+      "ah_home_-0.25": 1.91,
+      "best_ah_home_-0.25": 1.92,
+      "ah_away_0.25": 2.02,
+      "best_ah_away_0.25": 2.06,
+      "over_3.0": 1.93,
+      "best_over_3.0": 1.94,
+      "under_3.0": 1.97
+    },
+    "saved_at": "2026-04-05T16:05:13"
+  }
+}

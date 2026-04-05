@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-03-27T13:23:17.118503",
+  "n_samples": 907,
+  "roc_auc": 0.8049,
+  "importances": {
+    "edge": 0.3816,
+    "model_prob": 0.3639,
+    "bookmaker_odds": 0.1963,
+    "market_1x2": 0.0038,
+    "market_total": 0.0129,
+    "market_btts": 0.0086,
+    "market_hcap": 0.0035,
+    "market_dnb": 0.0114,
+    "market_dc": 0.0,
+    "market_1h": 0.0,
+    "conf_high": 0.0,
+    "conf_mid": 0.0078,
+    "odds_low": 0.0023,
+    "odds_high": 0.0079
+  },
+  "market_min_edge": {
+    "Исход": {
+      "min_edge": 0.08,
+      "roi": 0.059
+    },
+    "Тотал": {
+      "min_edge": 0.08,
+      "roi": 0.008
+    },
+    "BTTS": {
+      "min_edge": 0.06,
+      "roi": 0.62
+    },
+    "DNB": {
+      "min_edge": 0.05,
+      "roi": 0.033
+    },
+    "Двойной шанс": {
+      "min_edge": 0.04,
+      "roi": 0.029
+    }
+  }
+}

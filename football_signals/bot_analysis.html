@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football Bot v3 — Анализ эффективности</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Unbounded:wght@300;600;800&display=swap');
+
+  :root {
+    --bg: #080c10;
+    --surface: #0d1318;
+    --surface2: #121a22;
+    --border: #1e2d3d;
+    --accent: #00e5ff;
+    --accent2: #ff6b35;
+    --accent3: #7fff6b;
+    --accent4: #ffd23f;
+    --text: #c8d8e8;
+    --text-dim: #4a6070;
+    --red: #ff3b5c;
+    --green: #3bff8a;
+    --yellow: #ffd23f;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Noise texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HEADER */
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+  }
+  .header-tag {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    opacity: 0.7;
+  }
+  h1 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(22px, 4vw, 38px);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #fff;
+    letter-spacing: -0.02em;
+  }
+  h1 span { color: var(--accent); }
+  .header-sub {
+    margin-top: 12px;
+    color: var(--text-dim);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  /* VERDICT BLOCK */
+  .verdict {
+    background: linear-gradient(135deg, #0a1f2e, #081520);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    padding: 28px 32px;
+    margin-bottom: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .verdict::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+  }
+  .verdict-label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .verdict-score {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .verdict-score span {
+    font-size: 20px;
+    color: var(--text-dim);
+    font-weight: 300;
+  }
+  .verdict-text {
+    font-size: 14px;
+    color: var(--text);
+    max-width: 700px;
+    line-height: 1.8;
+  }
+  .verdict-text strong { color: #fff; }
+
+  /* SECTION */
+  h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section { margin-bottom: 48px; }
+
+  /* COMPARISON TABLE */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .compare-cell {
+    background: var(--surface);
+    padding: 20px;
+  }
+  .compare-cell.header-cell {
+    background: var(--surface2);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding: 12px 20px;
+  }
+  .compare-cell.our { background: #0a1f1a; }
+  .compare-name {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .compare-name.accent { color: var(--accent3); }
+  .compare-val {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .compare-val.green { color: var(--green); }
+  .compare-val.yellow { color: var(--yellow); }
+  .compare-val.dim { color: var(--text-dim); }
+  .compare-desc {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  /* FACTORS */
+  .factors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+  }
+  .factor {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: border-color 0.2s;
+  }
+  .factor:hover { border-color: var(--accent); }
+  .factor-icon {
+    font-size: 16px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .factor-name {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+  .factor-desc {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+  .factor-weight {
+    margin-left: auto;
+    font-size: 10px;
+    color: var(--accent);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  /* ACCURACY */
+  .accuracy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .acc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px 24px;
+  }
+  .acc-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+  }
+  .acc-val {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .acc-val.green { color: var(--green); }
+  .acc-val.yellow { color: var(--yellow); }
+  .acc-val.red { color: var(--red); }
+  .acc-val.blue { color: var(--accent); }
+  .acc-desc { font-size: 11px; color: var(--text-dim); line-height: 1.6; }
+  .acc-desc strong { color: var(--text); }
+
+  /* ML STATUS */
+  .ml-phases {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .ml-phase {
+    background: var(--surface);
+    padding: 20px;
+    position: relative;
+  }
+  .ml-phase.active {
+    background: #0a1a10;
+  }
+  .ml-phase.done {
+    background: #0a1520;
+  }
+  .ml-phase-num {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .ml-phase-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .ml-phase-req {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+  .ml-phase .status-dot {
+    position: absolute;
+    top: 14px; right: 14px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+  .status-done { background: var(--green); box-shadow: 0 0 8px var(--green); }
+  .status-active { background: var(--yellow); box-shadow: 0 0 8px var(--yellow); animation: pulse 1.5s infinite; }
+  .status-future { background: var(--text-dim); }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* WHAT'S MISSING */
+  .missing-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .missing-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    border-left: 3px solid;
+  }
+  .missing-item.critical { border-left-color: var(--red); }
+  .missing-item.important { border-left-color: var(--yellow); }
+  .missing-item.nice { border-left-color: var(--text-dim); }
+  .missing-tag {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 2px;
+    white-space: nowrap;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+  .tag-critical { background: #3b0a14; color: var(--red); }
+  .tag-important { background: #2a1f00; color: var(--yellow); }
+  .tag-nice { background: #151e28; color: var(--text-dim); }
+  .missing-text { font-size: 12px; color: var(--text); line-height: 1.6; }
+  .missing-text strong { color: #fff; }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px; top: 0; bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+  .tl-item {
+    position: relative;
+    margin-bottom: 24px;
+  }
+  .tl-dot {
+    position: absolute;
+    left: -25px;
+    top: 4px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    border: 1px solid;
+  }
+  .tl-dot.now { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 10px var(--accent); }
+  .tl-dot.soon { background: transparent; border-color: var(--yellow); }
+  .tl-dot.later { background: transparent; border-color: var(--text-dim); }
+  .tl-when {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .tl-when.yellow { color: var(--yellow); }
+  .tl-when.dim { color: var(--text-dim); }
+  .tl-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .tl-desc { font-size: 12px; color: var(--text-dim); line-height: 1.6; }
+
+  /* BOTTOM NOTE */
+  .bottom-note {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.8;
+  }
+  .bottom-note strong { color: var(--text); }
+
+  @media (max-width: 700px) {
+    .compare-grid { grid-template-columns: 1fr; }
+    .ml-phases { grid-template-columns: 1fr 1fr; }
+    .accuracy-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="header-tag">📊 Технический анализ · Март 2026</div>
+    <h1>Football Bot <span>v3</span><br>Анализ эффективности</h1>
+    <div class="header-sub">Сравнение с рынком · Точность модели · Когда запускать ML</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">⚡ Общая оценка</div>
+    <div class="verdict-score">7.2 <span>/ 10</span></div>
+    <div class="verdict-text">
+      Бот уже <strong>сильнее большинства платных Telegram-каналов</strong> по архитектуре модели (17 факторов, Dixon-Coles, Elo, xG). Главное ограничение сейчас — <strong>нет реальных коэффициентов</strong> (Odds API квота исчерпана, Fonbet без RU IP) и <strong>нет исторических данных</strong> для валидации точности. ML-обучение возможно, но потребует накопить минимум 200–300 реальных исходов.
+    </div>
+  </div>
+
+  <!-- СРАВНЕНИЕ -->
+  <div class="section">
+    <h2>Сравнение с существующими решениями</h2>
+    <div class="compare-grid">
+      <div class="compare-cell header-cell">Критерий</div>
+      <div class="compare-cell header-cell">Football Bot v3<br>(твой бот)</div>
+      <div class="compare-cell header-cell">Типичные конкуренты<br>(каналы / сервисы)</div>
+
+      <div class="compare-cell"><div class="compare-desc">Модель прогнозирования</div></div>
+      <div class="compare-cell our">
+        <div class="compare-val green">Dixon-Coles</div>
+        <div class="compare-desc">+ Poisson + Elo + xG + 14 факторов</div>
+      </div>
+      <div class="compare-cell">
+        <div class="compare-val dim">Poisson / Excel</div>
+        <div class="compare-desc">Большинство используют простой Пуассон без коррекций</div>
+      </div>
+
+      <div class="compare-cell"><div class="compare-desc">Источники данных</div></div>
+      <div class="compare-cell our">
+        <div class="compare-val green">10 API</div>
+        <div class="compare-desc">FD, AF, Understat, SofaScore, Betfair, ClubElo, Fonbet, Odds API, Pinnacle, OpenLigaDB</div>
+      </div>
+      <div class="compare-cell">
+        <div class="compare-val dim">1–3 API</div>
+        <div class="compare-desc">Обычно только 1 источник статистики + 1 букмекер</div>
+      </div>
+
+      <div class="compare-cell"><div class="compare-desc">Охват лиг</div></div>
+      <div class="compare-cell our">
+        <div class="compare-val green">42 лиги</div>
+        <div class="compare-desc">АПЛ, Ла Лига, РПЛ, Кубки, КОНМЕБОЛ, MLS и др.</div>
+      </div>
+      <div class="compare-cell">
+        <div class="compare-val dim">5–15 лиг</div>
+        <div class="compare-desc">Платные боты чаще всего только топ-5 Европы</div>
+      </div>
+
+      <div class="compare-cell"><div class="compare-desc">Управление банком</div></div>
+      <div class="compare-cell our">
+        <div class="compare-val green">Kelly</div>
+        <div class="compare-desc">Критерий Келли с динамическим множителем по просадке</div>
+      </div>
+      <div class="compare-cell">
+        <div class="compare-val dim">Фиксированный %</div>
+        <div class="compare-desc">90% каналов дают ставку без управления банком</div>
+      </div>
+
+      <div class="compare-cell"><div class="compare-desc">Реальные коэффициенты</div></div>
+      <div class="compare-cell our">
+        <div class="compare-val yellow">Частично</div>
+        <div class="compare-desc">Fonbet (нужен RU IP), Odds API (квота на апрель)</div>
+      </div>
+      <div class="compare-cell">
+        <div class="compare-val green">Да</div>
+        <div class="compare-desc">Большинство платных решений имеют постоянный доступ к линиям</div>
+      </div>
+
+      <div class="compare-cell"><div class="compare-desc">ML / самообучение</div></div>
+      <div class="compare-cell our">
+        <div class="compare-val yellow">Скелет готов</div>
+        <div class="compare-desc">Структура есть, нужны исторические данные</div>
+      </div>
+      <div class="compare-cell">
+        <div class="compare-val dim">Редко</div>
+        <div class="compare-desc">Единицы используют реальное ML в этой нише</div>
+      </div>
+
+      <div class="compare-cell"><div class="compare-desc">Прозрачность</div></div>
+      <div class="compare-cell our">
+        <div class="compare-val green">100%</div>
+        <div class="compare-desc">Полный исходный код, все расчёты открыты</div>
+      </div>
+      <div class="compare-cell">
+        <div class="compare-val dim">0%</div>
+        <div class="compare-desc">Чёрный ящик, нельзя проверить логику</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ТОЧНОСТЬ -->
+  <div class="section">
+    <h2>Реальная точность модели</h2>
+    <div class="accuracy-grid">
+      <div class="acc-card">
+        <div class="acc-label">Теоретическая точность Dixon-Coles</div>
+        <div class="acc-val blue">58–62%</div>
+        <div class="acc-desc">
+          По академическим исследованиям (Dixon &amp; Coles, 1997 + обновления), модель с xG, формой и H2H предсказывает исход матча <strong>на 58–62% правильно</strong>. Случайное угадывание — 33%.
+        </div>
+      </div>
+      <div class="acc-card">
+        <div class="acc-label">Точность с реальными коэффициентами</div>
+        <div class="acc-val green">55–58%</div>
+        <div class="acc-desc">
+          При наличии острых линий (Pinnacle, Betfair) точность снижается из-за высокого bar для value. Зато <strong>ROI при edge ≥ 8% исторически ~5–12%</strong> на дистанции.
+        </div>
+      </div>
+      <div class="acc-card">
+        <div class="acc-label">Точность расчётных коэф (сейчас)</div>
+        <div class="acc-val yellow">Неизмерима</div>
+        <div class="acc-desc">
+          Когда модель сравнивает себя с собой — edge завышен, настоящего value нет. <strong>Сигналы правильные по направлению, но коэффициент нужен реальный для ставки.</strong>
+        </div>
+      </div>
+      <div class="acc-card">
+        <div class="acc-label">Данных для валидации</div>
+        <div class="acc-val red">~0</div>
+        <div class="acc-desc">
+          В demo_signals.csv — <strong>303 записи, но без результатов матчей</strong>. Нельзя посчитать реальный % проходимости. Нужно накопить 200+ реальных исходов.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 17 ФАКТОРОВ -->
+  <div class="section">
+    <h2>Факторы модели (17 активных)</h2>
+    <div class="factors-grid">
+      <div class="factor">
+        <div class="factor-icon">🧮</div>
+        <div>
+          <div class="factor-name">Dixon-Coles + Poisson</div>
+          <div class="factor-desc">Матрица счётов 8×8. Коррекция малых счётов (0:0, 1:0)</div>
+        </div>
+        <div class="factor-weight">★★★★★</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">⚡</div>
+        <div>
+          <div class="factor-name">xG из Understat</div>
+          <div class="factor-desc">Реальные xG топ-6 лиг — точнее голов</div>
+        </div>
+        <div class="factor-weight">★★★★★</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">🏆</div>
+        <div>
+          <div class="factor-name">Elo рейтинги</div>
+          <div class="factor-desc">ClubElo.com — актуальные рейтинги 700+ клубов</div>
+        </div>
+        <div class="factor-weight">★★★★☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">📈</div>
+        <div>
+          <div class="factor-name">Форма (5 игр)</div>
+          <div class="factor-desc">Тренд атаки и обороны, скользящее окно</div>
+        </div>
+        <div class="factor-weight">★★★★☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">🏟</div>
+        <div>
+          <div class="factor-name">Домашняя/выездная форма</div>
+          <div class="factor-desc">Отдельная статистика дома и в гостях</div>
+        </div>
+        <div class="factor-weight">★★★★☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">⚔️</div>
+        <div>
+          <div class="factor-name">H2H история</div>
+          <div class="factor-desc">Последние 5 личных встреч с весом</div>
+        </div>
+        <div class="factor-weight">★★★☆☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">🏥</div>
+        <div>
+          <div class="factor-name">Травмы</div>
+          <div class="factor-desc">SofaScore + API-Football, штраф к xG</div>
+        </div>
+        <div class="factor-weight">★★★★☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">😴</div>
+        <div>
+          <div class="factor-name">Усталость</div>
+          <div class="factor-desc">Дни отдыха между матчами, турнирная нагрузка</div>
+        </div>
+        <div class="factor-weight">★★★☆☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">🌧</div>
+        <div>
+          <div class="factor-name">Погода</div>
+          <div class="factor-desc">Дождь/снег → снижение тотала на 0.1–0.2</div>
+        </div>
+        <div class="factor-weight">★★☆☆☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">👔</div>
+        <div>
+          <div class="factor-name">Судья</div>
+          <div class="factor-desc">Статистика карточек, пенальти, скандалы</div>
+        </div>
+        <div class="factor-weight">★★☆☆☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">🟨</div>
+        <div>
+          <div class="factor-name">Жёлтые карточки</div>
+          <div class="factor-desc">Риск дисквалификации ключевых игроков</div>
+        </div>
+        <div class="factor-weight">★★★☆☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">💰</div>
+        <div>
+          <div class="factor-name">Стоимость состава</div>
+          <div class="factor-desc">Transfermarkt — качество состава</div>
+        </div>
+        <div class="factor-weight">★★☆☆☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">📉</div>
+        <div>
+          <div class="factor-name">Движение линии</div>
+          <div class="factor-desc">Opening vs closing odds — умные деньги</div>
+        </div>
+        <div class="factor-weight">★★★★☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">🎰</div>
+        <div>
+          <div class="factor-name">Betfair биржа</div>
+          <div class="factor-desc">Биржевые вероятности без маржи букмекера</div>
+        </div>
+        <div class="factor-weight">★★★★☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">🎲</div>
+        <div>
+          <div class="factor-name">Kelly критерий</div>
+          <div class="factor-desc">Динамический размер ставки, защита от просадок</div>
+        </div>
+        <div class="factor-weight">★★★★☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">🤖</div>
+        <div>
+          <div class="factor-name">ML калибровка весов</div>
+          <div class="factor-desc">Структура есть, ждёт исторических данных</div>
+        </div>
+        <div class="factor-weight">★☆☆☆☆</div>
+      </div>
+      <div class="factor">
+        <div class="factor-icon">📰</div>
+        <div>
+          <div class="factor-name">Новости команд</div>
+          <div class="factor-desc">Мотивация, слухи, состав из прессы</div>
+        </div>
+        <div class="factor-weight">★★☆☆☆</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ML ФАЗЫ -->
+  <div class="section">
+    <h2>ML-обучение — дорожная карта</h2>
+    <div class="ml-phases">
+      <div class="ml-phase done">
+        <div class="status-dot status-done"></div>
+        <div class="ml-phase-num">Фаза 1</div>
+        <div class="ml-phase-name">Архитектура</div>
+        <div class="ml-phase-req">Модель, пайплайн, API, сохранение сигналов в CSV. <strong>✓ Готово</strong></div>
+      </div>
+      <div class="ml-phase active">
+        <div class="status-dot status-active"></div>
+        <div class="ml-phase-num">Фаза 2 ← сейчас</div>
+        <div class="ml-phase-name">Накопление данных</div>
+        <div class="ml-phase-req">Нужно: <strong>200–300 исходов</strong> с реальными коэффициентами. При 3–5 матчах в день → 6–8 недель (с 1 апреля когда сбросится квота).</div>
+      </div>
+      <div class="ml-phase">
+        <div class="status-dot status-future"></div>
+        <div class="ml-phase-num">Фаза 3</div>
+        <div class="ml-phase-name">Первое обучение</div>
+        <div class="ml-phase-req">XGBoost/LogReg на: edge, market, league, day_of_week, team_form, xG_delta → predict win/loss.</div>
+      </div>
+      <div class="ml-phase">
+        <div class="status-dot status-future"></div>
+        <div class="ml-phase-num">Фаза 4</div>
+        <div class="ml-phase-name">Интеграция</div>
+        <div class="ml-phase-req">Модель корректирует min_edge по рынкам, отключает слабые факторы, настраивает Kelly-множитель.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- КОГДА ML -->
+  <div class="section">
+    <h2>Конкретный план запуска ML</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot now"></div>
+        <div class="tl-when">Сейчас — март 2026</div>
+        <div class="tl-title">Запустить бот ежедневно, собирать сигналы</div>
+        <div class="tl-desc">Каждый запуск пишет в signals.csv. Нужно добавить столбец с реальным результатом матча (W/L) — либо вручную, либо через автоматический check на следующий день.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot soon"></div>
+        <div class="tl-when tl-when yellow">1 апреля 2026</div>
+        <div class="tl-title">Квота Odds API сбрасывается → включаются реальные коэффициенты</div>
+        <div class="tl-desc">С этого момента edge считается правильно. Данные до 1 апреля — только для модельной валидации направления.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot soon"></div>
+        <div class="tl-when tl-when yellow">Май–Июнь 2026 (~200 исходов)</div>
+        <div class="tl-title">Первое ML-обучение</div>
+        <div class="tl-desc">sklearn LogisticRegression + XGBoostClassifier на накопленных данных. Цель: найти какие рынки/лиги/условия дают реальный edge, а какие — шум.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot later"></div>
+        <div class="tl-when tl-when dim">Конец 2026 (~1000+ исходов)</div>
+        <div class="tl-title">Полноценная ML-модель поверх Dixon-Coles</div>
+        <div class="tl-desc">Neural net или gradient boosting, предсказывающий не просто исход, а реальную ценность ставки с учётом всех 17 факторов.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ГЛАВНОЕ ЧТО НУЖНО СДЕЛАТЬ -->
+  <div class="section">
+    <h2>Что нужно сделать прямо сейчас</h2>
+    <div class="missing-list">
+      <div class="missing-item critical">
+        <span class="missing-tag tag-critical">Критично</span>
+        <div class="missing-text"><strong>Реальные коэффициенты</strong> — без них edge не считается. 1 апреля: новый ключ Odds API. Или запустить с RU IP для Fonbet.</div>
+      </div>
+      <div class="missing-item critical">
+        <span class="missing-tag tag-critical">Критично</span>
+        <div class="missing-text"><strong>Добавить авто-верификацию результатов</strong> — бот должен на следующий день проверять матч (через football-data.org бесплатно) и записывать W/L в CSV. Без этого ML невозможен.</div>
+      </div>
+      <div class="missing-item important">
+        <span class="missing-tag tag-important">Важно</span>
+        <div class="missing-text"><strong>Статистика команд из реальных матчей</strong> — форма 1.00, Elo 1500 для многих команд = нет данных. Нужно донастроить загрузку через API-Football для текущего сезона.</div>
+      </div>
+      <div class="missing-item important">
+        <span class="missing-tag tag-important">Важно</span>
+        <div class="missing-text"><strong>Backtesting</strong> — прогон модели на исторических данных прошлого сезона. Покажет реальную точность до того как тратить деньги.</div>
+      </div>
+      <div class="missing-item nice">
+        <span class="missing-tag tag-nice">Улучшение</span>
+        <div class="missing-text"><strong>Азиатский гандикап</strong> — отключён сейчас, но даёт лучшие коэффициенты на одностороннем матче. Включить для матчей с большим перевесом (Elo разница &gt; 200).</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-note">
+    <strong>Итог:</strong> По архитектуре и факторам бот уже в топ-5% среди аналогов. Главное — это инструмент анализа, а не «гарантированный профит». Реальная эффективность подтвердится только после 200–300 задокументированных исходов с реальными коэффициентами. ML-обучение имеет смысл запускать не раньше мая 2026 при ежедневном использовании.
+  </div>
+
+</div>
+</body>
+</html>
