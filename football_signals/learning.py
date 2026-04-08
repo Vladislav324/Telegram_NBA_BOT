@@ -436,6 +436,7 @@ def _rsa_sha256_sign(message: bytes, pem_key: str) -> bytes:
 #  📊  GOOGLE SHEETS — API v4
 # ──────────────────────────────────────────────────────────────
 _TOKEN_CACHE: dict = {"token": None, "expires": 0}  # кэш токена
+_SHEET_INFO_CACHE: dict = {}  # кеш метаданных таблицы
 
 def _make_ssl():
     """SSL без верификации — фикс для Windows UNEXPECTED_EOF."""
@@ -503,33 +504,34 @@ def _get_gsheet_token() -> Optional[str]:
         sig = _rsa_sha256_sign(msg, creds["private_key"])
         jwt = f"{header}.{payload}.{_b64url(sig)}"
 
-        # Получаем access_token
-        import urllib.request, urllib.parse
-        body = urllib.parse.urlencode({
+        # ── Retry OAuth до 3 раз (сетевые ошибки Windows) ───────────
+        oauth_url = "https://oauth2.googleapis.com/token"
+        import urllib.parse as _up2
+        _oauth_body = _up2.urlencode({
             "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
             "assertion":  jwt,
         }).encode()
-        ctx = ssl.create_default_context()
-        ctx.check_hostname = False
-        ctx.verify_mode    = ssl.CERT_NONE
-        req = urllib.request.Request(
-            "https://oauth2.googleapis.com/token",
-            data=body,
-            headers={"Content-Type": "application/x-www-form-urlencoded"}
-        )
-        tok = _http_post(
-            "https://oauth2.googleapis.com/token",
-            body,
-            {"Content-Type": "application/x-www-form-urlencoded"}
-        )
-        if tok and tok.get("access_token"):
-            _TOKEN_CACHE["token"]   = tok["access_token"]
-            _TOKEN_CACHE["expires"] = time.time() + 3300  # 55 минут
-            return tok["access_token"]
-        print(f"  [Sheets] Ошибка: Google вернул {tok}")
+        _oauth_hdrs = {"Content-Type": "application/x-www-form-urlencoded"}
+
+        for _try in range(3):
+            tok = _http_post(oauth_url, _oauth_body, _oauth_hdrs)
+            if tok and tok.get("access_token"):
+                _TOKEN_CACHE["token"]   = tok["access_token"]
+                _TOKEN_CACHE["expires"] = time.time() + 3300
+                return tok["access_token"]
+            if tok is not None:
+                # Google вернул ошибку (не сетевая) — не retry
+                err = tok.get("error_description") or tok.get("error") or str(tok)
+                print(f"  [Sheets] OAuth ошибка: {err}")
+                return None
+            # tok=None → сетевая ошибка → retry с паузой
+            if _try < 2:
+                time.sleep(3 * (_try + 1))
+
+        print("  [Sheets] Не удалось получить OAuth-токен (3 попытки)")
         return None
     except Exception as e:
-        print(f"  [Sheets] Ошибка токена: {e}")
+        print(f"  [Sheets] Ошибка JWT/RSA: {e}")
         return None
 
 def _sheets_request(method: str, path: str, body=None,
@@ -559,62 +561,54 @@ def _sheets_request(method: str, path: str, body=None,
         try:
             with urllib.request.urlopen(req, timeout=25, context=ctx) as r:
                 return json.load(r)
-        except urllib.error.HTTPError as e:
-            last_err = f"HTTP {e.code}: {e.reason}"
-            body = ""
-            try: body = e.read().decode()[:200]
-            except: pass
-            if e.code == 429:  # Rate limit
-                wait = 2 ** attempt
-                print(f"  [Sheets] Rate limit — жду {wait}с...")
-                time.sleep(wait)
-                continue
-            print(f"  [Sheets] Ошибка: {last_err} | {body}")
-            return None
         except Exception as e:
             last_err = str(e)
-            is_ssl = any(x in last_err for x in
-                         ("EOF", "SSL", "TLS", "connection has been closed",
-                          "UNEXPECTED_EOF", "timeout"))
-            if is_ssl and attempt < _retries - 1:
-                wait = 2 ** attempt
-                time.sleep(wait)
-                continue
-            print(f"  [Sheets] Ошибка: {last_err}")
+            is_retry = any(x in last_err for x in
+                ("EOF", "SSL", "TLS", "UNEXPECTED_EOF", "timeout",
+                 "connection has been closed", "reset"))
+            if is_retry and attempt < _retries - 1:
+                time.sleep(2 ** attempt); continue
+            print(f"  [Sheets] {last_err[:80]}")
             return None
         finally:
-            time.sleep(0.3)  # 300мс пауза между запросами (rate limit 100/100sec)
+            time.sleep(0.3)   # 300мс между запросами Sheets API
 
     print(f"  [Sheets] Не удалось после {_retries} попыток: {last_err}")
     return None
 
 def _get_spreadsheet_info(force: bool = False) -> dict:
-    """Возвращает info о таблице с кешем — делает GET только раз за сессию."""
+    """GET метаданных с кешем — один запрос на весь запуск."""
     global _SHEET_INFO_CACHE
     if not force and _SHEET_INFO_CACHE:
         return _SHEET_INFO_CACHE
     info = _sheets_request("GET", "")
     if info:
         _SHEET_INFO_CACHE = info
-    return info or {}
+    return _SHEET_INFO_CACHE if _SHEET_INFO_CACHE else {}
+
+
+def _get_sheet_id(tab_name: str) -> int:
+    """sheetId вкладки по имени (из кеша)."""
+    for sh in _get_spreadsheet_info().get("sheets", []):
+        if sh.get("properties", {}).get("title") == tab_name:
+            return sh["properties"].get("sheetId", 0)
+    return 0
 
 
 def _ensure_tab(tab_name: str):
-    """Создаёт вкладку если её нет. Использует кеш — не делает лишние GET."""
+    """Создаёт вкладку если её нет. Использует кеш метаданных."""
     info = _get_spreadsheet_info()
     if not info:
-        print(f"  [Sheets] Не удалось получить список вкладок — проверь credentials.json и SHEET_ID")
+        print(f"  [Sheets] Нет доступа — проверь credentials.json")
         return
     sheets = [s["properties"]["title"] for s in info.get("sheets", [])]
     if tab_name not in sheets:
-        result = _sheets_request("POST", ":batchUpdate", {
+        r = _sheets_request("POST", ":batchUpdate", {
             "requests": [{"addSheet": {"properties": {"title": tab_name}}}]
         })
-        if result:
-            _SHEET_INFO_CACHE.clear()  # сброс кеша после изменения
+        if r:
+            _SHEET_INFO_CACHE.clear()
             print(f"  [Sheets] ✅ Создана вкладка '{tab_name}'")
-        else:
-            print(f"  [Sheets] ❌ Не удалось создать вкладку '{tab_name}'")
 
 def _get_existing_ids(tab_name: str) -> set:
     """Возвращает set fixture_id уже записанных строк."""
@@ -653,7 +647,7 @@ def _write_headers(tab_name: str):
     # Скрываем колонку fixture_id (A) — техническая
     _sheets_request("POST", ":batchUpdate", {"requests": [{
         "updateDimensionProperties": {
-            "range": {"sheetId": 0, "dimension": "COLUMNS",
+            "range": {"sheetId": _get_sheet_id(tab_name), "dimension": "COLUMNS",
                       "startIndex": 0, "endIndex": 1},
             "properties": {"hiddenByUser": True},
             "fields": "hiddenByUser"
@@ -737,7 +731,6 @@ def push_to_sheets(results: list):
 
     if total_new == 0:
         print(f"  [Sheets] Нет новых строк для добавления")
-        print(f"  [Sheets] Возможно все {len(results)} матчей уже синхронизированы")
 
     # Статистика — тоже по текущему месяцу
     stats_tab = _monthly_tab(SHEET_TAB_STATS)

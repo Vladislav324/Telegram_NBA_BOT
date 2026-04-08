@@ -10354,5 +10354,1214 @@
     "xg_pred": "2.17:1.45",
     "signals": [],
     "logged_at": "2026-04-05T15:12:04"
+  },
+  {
+    "fixture_id": 554838,
+    "match": "São Paulo vs Cruzeiro EC",
+    "league": "Жюпиле Про Лига (Бельгия)",
+    "date": "2026-04-05",
+    "time": "00:30",
+    "result": "2:0",
+    "xg_pred": "2.50:0.89",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.5822,
+        "bookmaker_odds": 1.86,
+        "edge": 0.0808,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 7.22,
+        "score": 0.0,
+        "won": false
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.5605,
+        "bookmaker_odds": 1.96,
+        "edge": 0.086,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 7.69,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.6311,
+        "bookmaker_odds": 1.76,
+        "edge": 0.1027,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 10.93,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-06T07:42:10"
+  },
+  {
+    "fixture_id": 554834,
+    "match": "Coritiba FBC vs Fluminense",
+    "league": "Жюпиле Про Лига (Бельгия)",
+    "date": "2026-04-05",
+    "time": "02:30",
+    "result": "0:0",
+    "xg_pred": "2.10:1.09",
+    "signals": [
+      {
+        "market": "Исход",
+        "selection": "Победа хозяев (1)",
+        "model_prob": 0.5393,
+        "bookmaker_odds": 2.11,
+        "edge": 0.0959,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 9.31,
+        "score": 0.0,
+        "won": false
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.5472,
+        "bookmaker_odds": 1.91,
+        "edge": 0.0603,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 3.73,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.5458,
+        "bookmaker_odds": 2.13,
+        "edge": 0.1092,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 10.79,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Фора 0",
+        "selection": "Хозяева (Ф0)",
+        "model_prob": 0.6788,
+        "bookmaker_odds": 1.57,
+        "edge": 0.0864,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 8.64,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-06T07:42:10"
+  },
+  {
+    "fixture_id": 554839,
+    "match": "CR Vasco da Gama vs Botafogo FR",
+    "league": "Жюпиле Про Лига (Бельгия)",
+    "date": "2026-04-05",
+    "time": "03:00",
+    "result": "1:2",
+    "xg_pred": "1.64:1.31",
+    "signals": [
+      {
+        "market": "Обе забьют",
+        "selection": "Да",
+        "model_prob": 0.5355,
+        "bookmaker_odds": 2.05,
+        "edge": 0.0819,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 6.99,
+        "score": 0.0,
+        "won": true
+      }
+    ],
+    "logged_at": "2026-04-06T07:42:10"
+  },
+  {
+    "fixture_id": 544507,
+    "match": "Хетафе vs Атлетик Бильбао",
+    "league": "Ла Лига",
+    "date": "2026-04-05",
+    "time": "15:00",
+    "result": "2:0",
+    "xg_pred": "1.91:1.52",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:10"
+  },
+  {
+    "fixture_id": 544508,
+    "match": "Валенсия vs Сельта",
+    "league": "Ла Лига",
+    "date": "2026-04-05",
+    "time": "17:15",
+    "result": "2:3",
+    "xg_pred": "2.50:2.20",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:10"
+  },
+  {
+    "fixture_id": 544506,
+    "match": "Реал Овьедо vs Севилья",
+    "league": "Ла Лига",
+    "date": "2026-04-05",
+    "time": "19:30",
+    "result": "1:0",
+    "xg_pred": "2.50:1.93",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:10"
+  },
+  {
+    "fixture_id": 544501,
+    "match": "Deportivo Alavés vs Осасуна",
+    "league": "Ла Лига",
+    "date": "2026-04-05",
+    "time": "22:00",
+    "result": "0:0",
+    "xg_pred": "2.50:2.20",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:11"
+  },
+  {
+    "fixture_id": 537123,
+    "match": "Кремонезе vs Болонья",
+    "league": "Серия А",
+    "date": "2026-04-05",
+    "time": "16:00",
+    "result": "1:2",
+    "xg_pred": "1.87:1.36",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:11"
+  },
+  {
+    "fixture_id": 537119,
+    "match": "Пиза vs Торино",
+    "league": "Серия А",
+    "date": "2026-04-05",
+    "time": "19:00",
+    "result": "0:1",
+    "xg_pred": "2.50:1.36",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:11"
+  },
+  {
+    "fixture_id": 537116,
+    "match": "Интер vs Рома",
+    "league": "Серия А",
+    "date": "2026-04-05",
+    "time": "21:45",
+    "result": "5:2",
+    "xg_pred": "2.50:1.65",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.6129,
+        "bookmaker_odds": 1.96,
+        "edge": 0.1077,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 15.72,
+        "score": 0.0,
+        "won": true
+      }
+    ],
+    "logged_at": "2026-04-06T07:42:11"
+  },
+  {
+    "fixture_id": 540655,
+    "match": "Унион Берлин vs Санкт-Паули",
+    "league": "Бундеслига",
+    "date": "2026-04-05",
+    "time": "16:30",
+    "result": "1:1",
+    "xg_pred": "2.08:1.35",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:11"
+  },
+  {
+    "fixture_id": 540657,
+    "match": "Айнтрахт vs 1. Köln",
+    "league": "Бундеслига",
+    "date": "2026-04-05",
+    "time": "18:30",
+    "result": "2:2",
+    "xg_pred": "1.81:0.99",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:11"
+  },
+  {
+    "fixture_id": 542656,
+    "match": "Анже vs Лион",
+    "league": "Лига 1",
+    "date": "2026-04-05",
+    "time": "16:00",
+    "result": "3:1",
+    "xg_pred": "2.07:1.49",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:11"
+  },
+  {
+    "fixture_id": 542652,
+    "match": "Мец vs Нант",
+    "league": "Лига 1",
+    "date": "2026-04-05",
+    "time": "18:15",
+    "result": "0:0",
+    "xg_pred": "1.79:1.23",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:11"
+  },
+  {
+    "fixture_id": 542649,
+    "match": "Гавр vs Осер",
+    "league": "Лига 1",
+    "date": "2026-04-05",
+    "time": "18:15",
+    "result": "1:1",
+    "xg_pred": "1.96:1.45",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:11"
+  },
+  {
+    "fixture_id": 542651,
+    "match": "Лорьян vs ПСЖ",
+    "league": "Лига 1",
+    "date": "2026-04-05",
+    "time": "18:15",
+    "result": "1:1",
+    "xg_pred": "2.40:1.62",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:11"
+  },
+  {
+    "fixture_id": 542650,
+    "match": "Монако vs Марсель",
+    "league": "Лига 1",
+    "date": "2026-04-05",
+    "time": "21:45",
+    "result": "2:1",
+    "xg_pred": "2.29:1.99",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:11"
+  },
+  {
+    "fixture_id": 554832,
+    "match": "Chapecoense AF vs EC Vitória",
+    "league": "Жюпиле Про Лига (Бельгия)",
+    "date": "2026-04-05",
+    "time": "22:00",
+    "result": "3:0",
+    "xg_pred": "2.17:1.05",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:11"
+  },
+  {
+    "fixture_id": 554835,
+    "match": "CR Flamengo vs Santos",
+    "league": "Жюпиле Про Лига (Бельгия)",
+    "date": "2026-04-05",
+    "time": "23:30",
+    "result": "3:1",
+    "xg_pred": "1.75:1.07",
+    "signals": [],
+    "logged_at": "2026-04-06T07:42:12"
+  },
+  {
+    "fixture_id": 554830,
+    "match": "CA Mineiro vs CA Paranaense",
+    "league": "Жюпиле Про Лига (Бельгия)",
+    "date": "2026-04-05",
+    "time": "23:30",
+    "result": "4:0",
+    "xg_pred": "1.75:1.74",
+    "signals": [
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.6072,
+        "bookmaker_odds": 1.7,
+        "edge": 0.0602,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 3.46,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-06T07:42:12"
+  },
+  {
+    "fixture_id": 554831,
+    "match": "EC Bahia vs SE Palmeiras",
+    "league": "Жюпиле Про Лига (Бельгия)",
+    "date": "2026-04-06",
+    "time": "01:30",
+    "result": "3:0",
+    "xg_pred": "1.17:1.58",
+    "signals": [],
+    "logged_at": "2026-04-07T00:06:00"
+  },
+  {
+    "fixture_id": 554833,
+    "match": "SC Corinthians Paulista vs Насьонал",
+    "league": "Жюпиле Про Лига (Бельгия)",
+    "date": "2026-04-06",
+    "time": "01:30",
+    "result": "2:1",
+    "xg_pred": "1.99:1.41",
+    "signals": [
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.588,
+        "bookmaker_odds": 1.79,
+        "edge": 0.0684,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 4.98,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.5192,
+        "bookmaker_odds": 2.27,
+        "edge": 0.1096,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 10.55,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Фора 0",
+        "selection": "Хозяева (Ф0)",
+        "model_prob": 0.5822,
+        "bookmaker_odds": 1.84,
+        "edge": 0.0768,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 6.36,
+        "score": 0.0,
+        "won": true
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:00"
+  },
+  {
+    "fixture_id": 554837,
+    "match": "Mirassol vs Брага",
+    "league": "Жюпиле Про Лига (Бельгия)",
+    "date": "2026-04-06",
+    "time": "02:00",
+    "result": "0:3",
+    "xg_pred": "1.64:2.20",
+    "signals": [
+      {
+        "market": "Угловые",
+        "selection": "Больше 9.5",
+        "model_prob": 0.5573,
+        "bookmaker_odds": 1.93,
+        "edge": 0.0754,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 6.09,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые гостей",
+        "selection": "Больше 4.5",
+        "model_prob": 0.5147,
+        "bookmaker_odds": 2.16,
+        "edge": 0.0841,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 7.22,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 554836,
+    "match": "Grêmio FBPA vs Clube do Remo",
+    "league": "Жюпиле Про Лига (Бельгия)",
+    "date": "2026-04-06",
+    "time": "02:30",
+    "result": "0:0",
+    "xg_pred": "1.97:0.88",
+    "signals": [],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 537122,
+    "match": "Удинезе vs Комо",
+    "league": "Серия А",
+    "date": "2026-04-06",
+    "time": "13:30",
+    "result": "0:0",
+    "xg_pred": "1.89:1.69",
+    "signals": [],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 537124,
+    "match": "Лечче vs Аталанта",
+    "league": "Серия А",
+    "date": "2026-04-06",
+    "time": "16:00",
+    "result": "0:3",
+    "xg_pred": "2.39:1.31",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.5623,
+        "bookmaker_odds": 2.09,
+        "edge": 0.0957,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 12.06,
+        "score": 0.0,
+        "won": true
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 537117,
+    "match": "Ювентус vs Генуя",
+    "league": "Серия А",
+    "date": "2026-04-06",
+    "time": "19:00",
+    "result": "2:0",
+    "xg_pred": "2.50:1.65",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.6149,
+        "bookmaker_odds": 1.99,
+        "edge": 0.1059,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 16.94,
+        "score": 0.0,
+        "won": false
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 541198,
+    "match": "Портсмут vs Оксфорд",
+    "league": "Чемпионшип",
+    "date": "2026-04-06",
+    "time": "14:30",
+    "result": "2:2",
+    "xg_pred": "2.34:1.58",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.6594,
+        "bookmaker_odds": 1.65,
+        "edge": 0.0925,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 10.15,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Обе забьют",
+        "selection": "Да",
+        "model_prob": 0.649,
+        "bookmaker_odds": 1.59,
+        "edge": 0.064,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 4.05,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.6389,
+        "bookmaker_odds": 1.75,
+        "edge": 0.1075,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 11.81,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 9.5",
+        "model_prob": 0.5346,
+        "bookmaker_odds": 2.29,
+        "edge": 0.1284,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 13.03,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.5818,
+        "bookmaker_odds": 1.97,
+        "edge": 0.1097,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 11.3,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 541197,
+    "match": "Миллуолл vs Норвич",
+    "league": "Чемпионшип",
+    "date": "2026-04-06",
+    "time": "15:00",
+    "result": "1:2",
+    "xg_pred": "2.34:1.58",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.6594,
+        "bookmaker_odds": 1.65,
+        "edge": 0.0925,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 10.15,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Обе забьют",
+        "selection": "Да",
+        "model_prob": 0.649,
+        "bookmaker_odds": 1.59,
+        "edge": 0.064,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 4.05,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.6389,
+        "bookmaker_odds": 1.75,
+        "edge": 0.1075,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 11.81,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 9.5",
+        "model_prob": 0.5346,
+        "bookmaker_odds": 2.29,
+        "edge": 0.1284,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 13.03,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.5818,
+        "bookmaker_odds": 1.97,
+        "edge": 0.1097,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 11.3,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 541192,
+    "match": "Блэкберн vs Вест Бромвич",
+    "league": "Чемпионшип",
+    "date": "2026-04-06",
+    "time": "17:00",
+    "result": "0:0",
+    "xg_pred": "2.50:1.36",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.6333,
+        "bookmaker_odds": 1.87,
+        "edge": 0.1333,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 15.88,
+        "score": 0.0,
+        "won": false
+      },
+      {
+        "market": "Обе забьют",
+        "selection": "Да",
+        "model_prob": 0.6091,
+        "bookmaker_odds": 1.77,
+        "edge": 0.0836,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 7.6,
+        "score": 0.0,
+        "won": false
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.6073,
+        "bookmaker_odds": 2.04,
+        "edge": 0.1514,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 17.23,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.5961,
+        "bookmaker_odds": 2.09,
+        "edge": 0.1511,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 16.91,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 541202,
+    "match": "Уотфорд vs Charlton Athletic",
+    "league": "Чемпионшип",
+    "date": "2026-04-06",
+    "time": "17:00",
+    "result": "1:1",
+    "xg_pred": "1.95:1.46",
+    "signals": [
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.5662,
+        "bookmaker_odds": 1.91,
+        "edge": 0.0793,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 6.71,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.5159,
+        "bookmaker_odds": 2.04,
+        "edge": 0.06,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 3.78,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 541194,
+    "match": "Дерби vs Сток",
+    "league": "Чемпионшип",
+    "date": "2026-04-06",
+    "time": "17:00",
+    "result": "2:0",
+    "xg_pred": "2.34:1.58",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.6594,
+        "bookmaker_odds": 1.65,
+        "edge": 0.0925,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 10.15,
+        "score": 0.0,
+        "won": false
+      },
+      {
+        "market": "Обе забьют",
+        "selection": "Да",
+        "model_prob": 0.649,
+        "bookmaker_odds": 1.59,
+        "edge": 0.064,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 4.05,
+        "score": 0.0,
+        "won": false
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.6389,
+        "bookmaker_odds": 1.75,
+        "edge": 0.1075,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 11.81,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 9.5",
+        "model_prob": 0.5346,
+        "bookmaker_odds": 2.29,
+        "edge": 0.1284,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 13.03,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.5818,
+        "bookmaker_odds": 1.97,
+        "edge": 0.1097,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 11.3,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 541200,
+    "match": "Шеффилд Уэнсдей vs Лестер",
+    "league": "Чемпионшип",
+    "date": "2026-04-06",
+    "time": "17:00",
+    "result": "1:1",
+    "xg_pred": "2.50:1.25",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 1.5",
+        "model_prob": 0.8107,
+        "bookmaker_odds": 1.28,
+        "edge": 0.0824,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 10.09,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.6143,
+        "bookmaker_odds": 1.97,
+        "edge": 0.1397,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 16.26,
+        "score": 0.0,
+        "won": false
+      },
+      {
+        "market": "Обе забьют",
+        "selection": "Да",
+        "model_prob": 0.5847,
+        "bookmaker_odds": 1.86,
+        "edge": 0.0847,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 7.63,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.5845,
+        "bookmaker_odds": 2.18,
+        "edge": 0.1578,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 17.42,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.5961,
+        "bookmaker_odds": 2.09,
+        "edge": 0.1511,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 16.91,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 541196,
+    "match": "Ипсвич vs Бирмингем",
+    "league": "Чемпионшип",
+    "date": "2026-04-06",
+    "time": "17:00",
+    "result": "2:1",
+    "xg_pred": "1.56:2.06",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 1.5",
+        "model_prob": 0.7856,
+        "bookmaker_odds": 1.39,
+        "edge": 0.1127,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 17.69,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.5809,
+        "bookmaker_odds": 2.28,
+        "edge": 0.1716,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 19.02,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Обе забьют",
+        "selection": "Да",
+        "model_prob": 0.5963,
+        "bookmaker_odds": 1.99,
+        "edge": 0.129,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 14.14,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.5469,
+        "bookmaker_odds": 2.64,
+        "edge": 0.1946,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 20.3,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 541193,
+    "match": "Бристоль vs Шеффилд Юнайтед",
+    "league": "Чемпионшип",
+    "date": "2026-04-06",
+    "time": "17:00",
+    "result": "1:0",
+    "xg_pred": "2.34:1.58",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.6536,
+        "bookmaker_odds": 1.71,
+        "edge": 0.106,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 12.43,
+        "score": 0.0,
+        "won": false
+      },
+      {
+        "market": "Обе забьют",
+        "selection": "Да",
+        "model_prob": 0.6457,
+        "bookmaker_odds": 1.62,
+        "edge": 0.0716,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 5.57,
+        "score": 0.0,
+        "won": false
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.632,
+        "bookmaker_odds": 1.83,
+        "edge": 0.1238,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 14.14,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 9.5",
+        "model_prob": 0.5285,
+        "bookmaker_odds": 2.41,
+        "edge": 0.1426,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 14.56,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.5737,
+        "bookmaker_odds": 2.09,
+        "edge": 0.1287,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 13.69,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 541199,
+    "match": "Престон vs КПР",
+    "league": "Чемпионшип",
+    "date": "2026-04-06",
+    "time": "17:00",
+    "result": "1:1",
+    "xg_pred": "1.84:1.58",
+    "signals": [
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.5816,
+        "bookmaker_odds": 1.75,
+        "edge": 0.0502,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 1.78,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 541201,
+    "match": "Суонси vs Мидлсбро",
+    "league": "Чемпионшип",
+    "date": "2026-04-06",
+    "time": "19:30",
+    "result": "2:2",
+    "xg_pred": "2.50:1.32",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.6323,
+        "bookmaker_odds": 1.83,
+        "edge": 0.1216,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 14.19,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Обе забьют",
+        "selection": "Да",
+        "model_prob": 0.6028,
+        "bookmaker_odds": 1.77,
+        "edge": 0.0774,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 6.53,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.6053,
+        "bookmaker_odds": 1.99,
+        "edge": 0.1379,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 15.49,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.6042,
+        "bookmaker_odds": 1.97,
+        "edge": 0.1321,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 14.71,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-07T00:06:01"
+  },
+  {
+    "fixture_id": 544504,
+    "match": "Жирона vs Вильярреал",
+    "league": "Ла Лига",
+    "date": "2026-04-06",
+    "time": "22:00",
+    "result": "1:0",
+    "xg_pred": "2.50:1.64",
+    "signals": [],
+    "logged_at": "2026-04-07T18:58:38"
+  },
+  {
+    "fixture_id": 537121,
+    "match": "Наполи vs Милан",
+    "league": "Серия А",
+    "date": "2026-04-06",
+    "time": "21:45",
+    "result": "1:0",
+    "xg_pred": "1.78:1.47",
+    "signals": [],
+    "logged_at": "2026-04-07T18:58:38"
+  },
+  {
+    "fixture_id": 541195,
+    "match": "Халл vs Ковентри",
+    "league": "Чемпионшип",
+    "date": "2026-04-06",
+    "time": "22:00",
+    "result": "0:0",
+    "xg_pred": "2.34:1.53",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.6538,
+        "bookmaker_odds": 1.65,
+        "edge": 0.0869,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 9.1,
+        "score": 0.0,
+        "won": false
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.6323,
+        "bookmaker_odds": 1.75,
+        "edge": 0.1009,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 10.66,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 9.5",
+        "model_prob": 0.5274,
+        "bookmaker_odds": 2.29,
+        "edge": 0.1213,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 12.08,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.5818,
+        "bookmaker_odds": 1.97,
+        "edge": 0.1097,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 11.3,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-07T18:58:38"
+  },
+  {
+    "fixture_id": 556721,
+    "match": "Спортинг vs Арсенал",
+    "league": "Лига Чемпионов",
+    "date": "2026-04-07",
+    "time": "22:00",
+    "result": "0:1",
+    "xg_pred": "2.35:1.19",
+    "signals": [],
+    "logged_at": "2026-04-08T01:18:31"
+  },
+  {
+    "fixture_id": 556719,
+    "match": "Реал Мадрид vs Bayern München",
+    "league": "Лига Чемпионов",
+    "date": "2026-04-07",
+    "time": "22:00",
+    "result": "1:2",
+    "xg_pred": "2.50:1.77",
+    "signals": [],
+    "logged_at": "2026-04-08T01:18:31"
+  },
+  {
+    "fixture_id": 541203,
+    "match": "Wrexham vs Саутгемптон",
+    "league": "Чемпионшип",
+    "date": "2026-04-07",
+    "time": "22:00",
+    "result": "1:5",
+    "xg_pred": "2.50:0.92",
+    "signals": [
+      {
+        "market": "Тотал",
+        "selection": "Больше 1.5",
+        "model_prob": 0.7781,
+        "bookmaker_odds": 1.37,
+        "edge": 0.0967,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 26.74,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Тотал",
+        "selection": "Больше 2.5",
+        "model_prob": 0.5713,
+        "bookmaker_odds": 2.24,
+        "edge": 0.1547,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 33.85,
+        "score": 0.0,
+        "won": true
+      },
+      {
+        "market": "Угловые",
+        "selection": "Больше 8.5",
+        "model_prob": 0.5335,
+        "bookmaker_odds": 2.47,
+        "edge": 0.157,
+        "confidence": "📌 НИЗКАЯ",
+        "kelly_stake": 32.42,
+        "score": 0.0,
+        "won": null
+      },
+      {
+        "market": "Угловые хозяев",
+        "selection": "Больше 4.5",
+        "model_prob": 0.6136,
+        "bookmaker_odds": 1.97,
+        "edge": 0.1415,
+        "confidence": "✅ СРЕДНЯЯ",
+        "kelly_stake": 32.29,
+        "score": 0.0,
+        "won": null
+      }
+    ],
+    "logged_at": "2026-04-08T01:18:31"
   }
 ]

@@ -16,6 +16,22 @@
   python live_monitor.py               — live-мониторинг матчей
 """
 
+# ── Опциональные модули ───────────────────────────────────────────
+try:
+    from betfair_client import fetch_betfair_odds_new as _bf_odds_new
+    _BF_CLIENT_OK = True
+except ImportError:
+    _bf_odds_new  = None
+    _BF_CLIENT_OK = False
+
+try:
+    from odds_fetcher import fetch_real_odds as _fetch_real_odds
+    _ODDS_FETCHER_OK = True
+except ImportError:
+    _fetch_real_odds  = None
+    _ODDS_FETCHER_OK  = False
+# ─────────────────────────────────────────────────────────────────
+
 import os, sys, json, math, csv, ssl, time, datetime
 import urllib.request, urllib.parse, urllib.error
 
@@ -3157,18 +3173,7 @@ def score_signal(
 # ══════════════════════════════════════════════════════════════
 #  🤖  ML-ВЕСА — загружаем из ml_weights.json если есть
 # ══════════════════════════════════════════════════════════════
-_ML_MARKET_EDGES: dict = {
-    # Из 446 матчей 27фев-22мар 2026
-    "Тотал Больше 2.5":    {"min_edge": 0.18},  # WR=43% ROI=-28%
-    "Тотал Больше 1.5":    {"min_edge": 0.15},  # WR=60% ROI=-19%
-    "Тотал Больше 3.5":    {"min_edge": 0.25},  # WR=0%  ROI=-100%
-    "Обе забьют Да":        {"min_edge": 0.15},  # WR=33% ROI=-23%
-    "Двойной шанс X2":      {"min_edge": 0.18},  # WR=25% ROI=-76%
-    "Тотал Меньше 2.5":    {"min_edge": 0.04},  # WR=72% ROI=+52% ← снижен
-    "Исход Победа хозяев (1)": {"min_edge": 0.04},
-    "Двойной шанс 1X":      {"min_edge": 0.04},
-    "DNB Хозяева (DNB)":   {"min_edge": 0.04},
-}
+_ML_MARKET_EDGES: dict = {}   # min_edge по рынкам из ML-калибровки
 
 def _load_ml_weights():
     """Загружает ML-оптимизированные пороги валуя по рынкам."""
@@ -5804,7 +5809,7 @@ class Poisson:
             if _has_sharp:
                 CALIB_W = calib["calib_w"]
             elif _is_calc_now:
-                CALIB_W = 0.70  # расч.коэфы: больше доверяем модели (рынок = та же модель)
+                CALIB_W = 0.75  # расч.коэфы: модель важнее (рынок=та же модель)
             else:
                 # FIX: CALIB_W зависит от качества данных матча
                 # data_quality: 0.60=Understat, 0.50=AF, 0.40=только TEAM_DB static
@@ -5855,14 +5860,14 @@ class Poisson:
             if market in _calc_markets:
                 min_e = min_e + 0.015   # чуть выше для ИТ
             elif _is_calc_odds:
-                # Расч.коэфы: edge max 3-5%, снижаем порог до 2-3%
-                min_e = max(0.02, min_e - 0.06)
+                # При расч.коэфах edge max 3-5% — снижаем порог для разнообразия
+                min_e = max(0.02, min_e - 0.07)  # известная лига: мягкий порог
+            # BTTS/DNB/DC — меньший порог (рынок реальный, маржа 4-6%)
             elif market in ("Фора 0", "Двойной шанс"):
-                # DNB/DC: при расч.коэфах — мягкий порог
                 if _is_calc_odds:
-                    min_e = max(0.025, min_e - 0.03)
+                    min_e = max(0.025, min_e - 0.04)  # расч.коэф: мягко
                 else:
-                    min_e = max(0.040, min_e + 0.010)
+                    min_e = max(0.040, min_e + 0.010)  # реальный коэф: строго
             # BTTS убран
             elif market in ("Фора", "Тотал 1Т", "Исход 1Т"):
                 min_e = max(0.025, min_e - 0.010)
@@ -5890,7 +5895,7 @@ class Poisson:
             # Проверка ликвидности: коэф < 1.05 или > 15.0 — мусор
             if bk < 1.05 or bk > 15.0:
                 return
-            # При расчётных коэфах убираем gap-барьер (double filter)
+            # При расч.коэфах убираем gap-барьер (double filter лишний)
             _eff_min_p = 0.51 if _is_calc_odds else min_p
             if prob >= _eff_min_p and edge >= min_e:
                 _sig = Signal(
@@ -5909,56 +5914,47 @@ class Poisson:
                 sigs.append(_sig)
 
         ph,pd,pa = self.prob_1x2(m)
-        _xg_h = lh
-        _xg_a = la
-
-        # При расч.коэфах для 1X2: edge ≈ 0 (модель=рынок)
-        # Добавляем сигналы на основе АБСОЛЮТНОЙ вероятности модели
-        _is_co = bool(odds.get("_calc_1x2"))
-        if _is_co:
-            # Хозяева: если модель даёт P>62% → сильный фаворит → сигнал
-            _me1_co = 0.005 if ph > 0.62 else 0.020
-            _me_x_co = 0.020 if abs(_xg_h - _xg_a) < 0.20 else 0.030
-            _me2_co = 0.020 if pa > 0.30 else 0.030
-            emit("Исход", "Победа хозяев (1)", ph, "1", elo_prob=elo_ph, min_edge_override=_me1_co - 0.005)
-        else:
-            emit("Исход", "Победа хозяев (1)", ph, "1", elo_prob=elo_ph, min_edge_override=+0.005)
+        # Объявляем _xg_h/_xg_a заранее — используются в нескольких местах
+        # lh/la = ожидаемые голы (xG) из модели Пуассона
+        _xg_h = lh   # xG хозяев
+        _xg_a = la   # xG гостей
+        # Для исходов передаём Elo как дополнительную оценку
+        # Хозяева и так перегружены сигналами — базовый порог
+        emit("Исход", "Победа хозяев (1)", ph, "1", elo_prob=elo_ph, min_edge_override=+0.005)
         # КАЛИБРОВКА: ничья — динамический порог
         _draw_override = -0.005
         if abs(_xg_h - _xg_a) < 0.15:
-            _draw_override = -0.035  # очень равный матч → ничья вероятна
+            _draw_override = -0.035  # очень равный матч
         elif abs(_xg_h - _xg_a) < 0.30:
             _draw_override = -0.025  # равный матч
-        _draw_ov = _me_x_co if _is_co else _draw_override
-        emit("Исход", "Ничья (X)", pd, "X", elo_prob=elo_pd, min_edge_override=-_draw_ov if _is_co else _draw_override)
+        emit("Исход", "Ничья (X)", pd, "X", elo_prob=elo_pd, min_edge_override=_draw_override)
         # КАЛИБРОВКА: гости недооценены — динамический порог
         # _xg_h/_xg_a уже объявлены выше
         _away_override = -0.010
         if _xg_a > _xg_h + 0.7:
-            _away_override = -0.040  # гости явно доминируют
+            _away_override = -0.040
         elif _xg_a > _xg_h + 0.4:
             _away_override = -0.030
-        elif _xg_a > _xg_h + 0.1:
+        elif _xg_a > _xg_h + 0.15:
             _away_override = -0.020
-        _away_ov = _me2_co if _is_co else _away_override
-        emit("Исход", "Победа гостей (2)", pa, "2", elo_prob=elo_pa, min_edge_override=-_away_ov if _is_co else _away_override)
+        emit("Исход", "Победа гостей (2)", pa, "2", elo_prob=elo_pa, min_edge_override=_away_override)
         for line in TOTAL_LINES:
             po,pu = self.prob_total(m, line)
             # FIX: Больше 2.5 исторически WR=45% → повышен порог
             # КАЛИБРОВКА: Больше 2.5 WR=44% ROI=-23% → raise edge hard
-            _over_ov = 0.0
-            if line == 1.5:  _over_ov = 0.08   # Больше 1.5: ROI=-19%
-            elif line == 2.5: _over_ov = 0.12  # Больше 2.5: ROI=-28%
-            elif line == 3.5: _over_ov = 0.20  # Больше 3.5: WR=0%
+            if line == 1.5:   _over_ov = 0.08
+            elif line == 2.5: _over_ov = 0.12  # WR=43% ROI=-28%
+            elif line == 3.5: _over_ov = 0.20  # WR=0%
+            else:             _over_ov = 0.06
             emit("Тотал", f"Больше {line}", po, f"over_{line}", min_edge_override=_over_ov)
             # КАЛИБРОВКА: Меньше X WR=72% ROI=+52% → снижаем min_edge
-            if line == 2.5:   _under_ov = -0.025  # Меньше 2.5: WR=72% лучший рынок
+            if line == 2.5:   _under_ov = -0.025  # WR=72% ROI=+52%
             elif line == 3.5: _under_ov = -0.015
             else:             _under_ov = -0.010
             emit("Тотал", f"Меньше {line}", pu, f"under_{line}", min_edge_override=_under_ov)
         # ── ОБЕ ЗАБЬЮТ (BTTS) ───────────────────────────────
         py_btts, pn_btts = self.prob_btts(m)
-        emit("Обе забьют", "Да",  py_btts, "btts_yes", min_edge_override=-0.010)
+        emit("Обе забьют", "Да",  py_btts, "btts_yes")
         # BTTS НЕТ: только в лигах где исторически проходит (WR>58%)
         if league_id in (78, 135, 39, 144, 203, 40):  # BTTS НЕТ по лигам
             emit("Обе забьют", "Нет", pn_btts, "btts_no", min_edge_override=-0.010)
@@ -8413,6 +8409,35 @@ def run_scan(days_ahead: int = 3, today_only: bool = False):
                 print(f"      ✋ Ручные коэфы: {len(_real_keys)} рынков  "
                       f"1={bk_odds.get('1','—')}  X={bk_odds.get('X','—')}  2={bk_odds.get('2','—')}")
 
+            # 0a) Betfair Exchange — без маржи
+            if not bk_odds and _BF_CLIENT_OK and _bf_odds_new:
+                try:
+                    _bf_r = _bf_odds_new(hname_en, aname_en, fdate)
+                    if _bf_r and _bf_r.get("1"):
+                        bk_odds = _bf_r
+                        _odds_source_used = "📊 Betfair"
+                        _rk = [k for k in bk_odds if not k.startswith("_")]
+                        print(f"      📊 Betfair: {len(_rk)} рынков  "
+                              f"1={bk_odds.get('1','—')}  X={bk_odds.get('X','—')}  2={bk_odds.get('2','—')}")
+                except Exception:
+                    pass
+
+            # 0b) OddsFetcher — Odds API + 1xBet
+            if not bk_odds and _ODDS_FETCHER_OK and _fetch_real_odds:
+                try:
+                    _of_r = _fetch_real_odds(
+                        home=hname_en, away=aname_en,
+                        fixture_id=fid, league_id=league_id, date=fdate,
+                    )
+                    if _of_r and _of_r.get("1"):
+                        bk_odds = _of_r
+                        _odds_source_used = "🔄 OddsFetcher"
+                        _rk = [k for k in bk_odds if not k.startswith("_")]
+                        print(f"      🔄 OddsFetcher: {len(_rk)} рынков  "
+                              f"1={bk_odds.get('1','—')}  X={bk_odds.get('X','—')}  2={bk_odds.get('2','—')}")
+                except Exception:
+                    pass
+
             # 1) Pinnacle Guest API — без регистрации, острая линия
             if not bk_odds:
                 pg = fetch_pinnacle_guest_odds(hname_en, aname_en, fdate)
@@ -8856,7 +8881,7 @@ def run_scan(days_ahead: int = 3, today_only: bool = False):
 
             # ── ФИЛЬТР КОРРЕЛЯЦИЙ ─────────────────────────────
             sigs = filter_correlated(sigs)
-            sigs = filter_diverse(sigs, max_per_type=0.30)  # max 30% одного типа
+            sigs = filter_diverse(sigs, max_per_type=0.30)
             if len(sigs) > 10:
                 sigs = sorted(sigs, key=lambda s: s.score, reverse=True)[:10]
 

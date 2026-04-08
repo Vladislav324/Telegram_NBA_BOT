@@ -549,5 +549,130 @@
       "under_3.0": 1.97
     },
     "saved_at": "2026-04-05T16:05"
+  },
+  "544504": {
+    "match": "Girona vs Villarreal CF",
+    "odds": {
+      "1": 3.2,
+      "best_1": 3.4,
+      "2": 2.31,
+      "best_2": 2.34,
+      "X": 3.47,
+      "best_X": 3.65,
+      "ah_home_0.25": 1.91,
+      "best_ah_home_0.25": 1.96,
+      "ah_away_-0.25": 2.0,
+      "over_2.75": 1.88,
+      "under_2.75": 2.01
+    },
+    "saved_at": "2026-04-06T08:03"
+  },
+  "537122": {
+    "match": "Udinese Calcio vs Como 1907",
+    "odds": {
+      "2": 1.68,
+      "best_2": 1.75,
+      "1": 5.41,
+      "best_1": 5.7,
+      "X": 3.93,
+      "best_X": 3.95,
+      "ah_away_-0.75": 1.9,
+      "best_ah_away_-0.75": 1.94,
+      "ah_home_0.75": 2.01,
+      "best_ah_home_0.75": 2.02,
+      "over_2.25": 1.82,
+      "under_2.25": 2.08
+    },
+    "saved_at": "2026-04-06T08:06"
+  },
+  "537124": {
+    "match": "US Lecce vs Atalanta BC",
+    "odds": {
+      "2": 1.78,
+      "best_2": 1.82,
+      "1": 4.9,
+      "best_1": 5.5,
+      "X": 3.73,
+      "best_X": 3.85,
+      "ah_away_-0.75": 2.04,
+      "ah_home_0.75": 1.88,
+      "best_ah_home_0.75": 1.93,
+      "over_2.5": 2.08,
+      "best_over_2.5": 2.09,
+      "under_2.5": 1.82,
+      "best_under_2.5": 1.86
+    },
+    "saved_at": "2026-04-06T08:08"
+  },
+  "537117": {
+    "match": "Juventus vs Genoa CFC",
+    "odds": {
+      "2": 9.28,
+      "best_2": 10.5,
+      "1": 1.37,
+      "best_1": 1.41,
+      "X": 4.99,
+      "best_X": 5.2,
+      "ah_away_+1.25": 2.02,
+      "best_ah_away_+1.25": 2.04,
+      "ah_home_-1.25": 1.88,
+      "best_ah_home_-1.25": 1.92,
+      "over_2.5": 1.91,
+      "best_over_2.5": 1.99,
+      "under_2.5": 1.98,
+      "best_under_2.5": 2.04
+    },
+    "saved_at": "2026-04-06T08:10"
+  },
+  "537121": {
+    "match": "SSC Napoli vs AC Milan",
+    "odds": {
+      "2": 3.24,
+      "best_2": 3.4,
+      "1": 2.53,
+      "best_1": 2.59,
+      "X": 3.03,
+      "best_X": 3.11,
+      "ah_away_0.25": 1.79,
+      "best_ah_away_0.25": 1.86,
+      "ah_home_-0.25": 2.14,
+      "over_2.25": 2.04,
+      "under_2.25": 1.86
+    },
+    "saved_at": "2026-04-06T08:13"
+  },
+  "556721": {
+    "match": "Sporting Clube de Portugal vs Arsenal",
+    "odds": {
+      "2": 1.85,
+      "best_2": 1.9,
+      "1": 4.54,
+      "best_1": 4.75,
+      "X": 3.7,
+      "best_X": 3.8,
+      "ah_away_-0.50": 1.86,
+      "ah_home_0.50": 2.07,
+      "over_2.5": 1.95,
+      "under_2.5": 1.95,
+      "best_under_2.5": 2.01
+    },
+    "saved_at": "2026-04-07T13:26"
+  },
+  "556719": {
+    "match": "Real Madrid CF vs Bayern München",
+    "odds": {
+      "2": 2.37,
+      "best_2": 2.42,
+      "1": 2.78,
+      "best_1": 2.82,
+      "X": 4.05,
+      "best_X": 4.2,
+      "ah_away_-0.25": 2.1,
+      "ah_home_0.25": 1.84,
+      "over_3.5": 1.91,
+      "best_over_3.5": 1.97,
+      "under_3.5": 2.0
+    },
+    "saved_at": "2026-04-07T13:29"
   }
 }

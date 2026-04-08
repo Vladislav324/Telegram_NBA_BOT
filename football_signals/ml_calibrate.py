@@ -1,410 +1,404 @@
 """
-╔══════════════════════════════════════════════════════════════╗
-║  🤖  ML-КАЛИБРОВКА  |  Football Bot                         ║
-║  Обучает модель на реальных результатах из results.json      ║
-║  Требуется: pip install scikit-learn                         ║
-╚══════════════════════════════════════════════════════════════╝
+ml_calibrate.py — Калибровка ML-модели и XGBoost второй уровень.
 
-  python ml_calibrate.py          — анализ + оптимальные веса
-  python ml_calibrate.py apply    — применить веса к боту
-  python ml_calibrate.py report   — отчёт по рынкам
+Функции:
+  1. Platt calibration — корректирует сырые вероятности Пуассон-модели
+  2. XGBoost второй уровень — дополнительный предиктор на реальных данных
+  3. Метрики калибровки — Brier Score, ECE, reliability diagram
+  4. Автообновление ml_weights.json
+
+Usage:
+    python ml_calibrate.py           — полная калибровка
+    python ml_calibrate.py --xgb     — только XGBoost
+    python ml_calibrate.py --platt   — только Platt
+    python ml_calibrate.py --report  — только отчёт без обновления
 """
 
-import json, os, sys, datetime, math
+from __future__ import annotations
 
-RESULTS_FILE    = "results.json"
+import argparse
+import json
+import math
+import os
+from collections import defaultdict
+from dataclasses import dataclass
+from typing import Optional
+
 PREDICTIONS_FILE = "predictions.json"
-CALIBRATION_OUT  = "ml_weights.json"
+ML_WEIGHTS_FILE  = "ml_weights.json"
+MIN_SAMPLES      = 50  # минимум матчей для калибровки
 
-# ══════════════════════════════════════════════════════════════
-#  ЗАГРУЗКА ДАННЫХ
-# ══════════════════════════════════════════════════════════════
-def load_labeled_signals() -> list:
+
+# ── Структуры данных ────────────────────────────────────────────────
+@dataclass
+class CalibPoint:
+    model_prob: float
+    actual_won: int
+    market:     str
+    league:     str
+    edge:       float
+    odds:       float
+
+
+# ── Загрузка данных ─────────────────────────────────────────────────
+def load_calibration_data(path: str = PREDICTIONS_FILE) -> list[CalibPoint]:
+    """Загружает и нормализует данные для калибровки."""
+    points = []
+    if not os.path.exists(path):
+        return points
+    with open(path, encoding="utf-8") as f:
+        preds = json.load(f)
+    for p in preds:
+        league = p.get("league", "")
+        for sig in p.get("signals", []):
+            if sig.get("won") is None:
+                continue
+            points.append(CalibPoint(
+                model_prob = float(sig.get("model_prob", 0.5)),
+                actual_won = int(bool(sig.get("won"))),
+                market     = sig.get("market", ""),
+                league     = league,
+                edge       = float(sig.get("edge", 0)),
+                odds       = float(sig.get("bookmaker_odds", 2.0)),
+            ))
+    return points
+
+
+# ── Platt Calibration ────────────────────────────────────────────────
+def platt_calibrate(points: list[CalibPoint]) -> tuple[float, float]:
     """
-    Загружает все сигналы у которых есть реальный результат (won=True/False).
-    Возвращает список словарей с признаками и меткой.
+    Логистическая регрессия: P_calibrated = 1 / (1 + exp(a * p + b)).
+    Возвращает (a, b) — параметры Platt scaling.
+    Использует градиентный спуск без внешних зависимостей.
     """
-    samples = []
+    if len(points) < MIN_SAMPLES:
+        return 1.0, 0.0
 
-    # Из results.json
-    for fname in [RESULTS_FILE, PREDICTIONS_FILE]:
-        if not os.path.exists(fname):
-            continue
-        try:
-            with open(fname, encoding="utf-8") as f:
-                data = json.load(f)
-        except Exception:
-            continue
+    probs = [p.model_prob for p in points]
+    y     = [p.actual_won for p in points]
 
-        records = data if isinstance(data, list) else data.get("records", [])
-        for rec in records:
-            for sig in rec.get("signals", []):
-                won = sig.get("won")
-                if won is None:
-                    continue   # нет результата — пропускаем
+    a, b = 1.0, 0.0
+    lr   = 0.01
+    n    = len(probs)
 
-                samples.append({
-                    # ── Признаки (features) ───────────────────
-                    "edge":         float(sig.get("edge", 0)),
-                    "model_prob":   float(sig.get("model_prob", 0.5)),
-                    "bookmaker_odds": float(sig.get("bookmaker_odds", 2.0)),
-                    "market_1x2":   1 if "Исход" in sig.get("market","") else 0,
-                    "market_total": 1 if "Тотал" in sig.get("market","") else 0,
-                    "market_btts":  1 if "забьют" in sig.get("market","") else 0,
-                    "market_hcap":  1 if "Гандикап" in sig.get("market","") else 0,
-                    "market_dnb":   1 if "DNB" in sig.get("market","") else 0,
-                    "market_dc":    1 if "Двойной" in sig.get("market","") else 0,
-                    "market_1h":    1 if "1Т" in sig.get("market","") else 0,
-                    "conf_high":    1 if "ВЫСОКАЯ" in sig.get("confidence","") else 0,
-                    "conf_mid":     1 if "СРЕДНЯЯ" in sig.get("confidence","") else 0,
-                    "odds_low":     1 if float(sig.get("bookmaker_odds",2)) < 1.6 else 0,
-                    "odds_high":    1 if float(sig.get("bookmaker_odds",2)) > 2.5 else 0,
-                    # ── Метка (target) ────────────────────────
-                    "won": 1 if won is True else 0,
-                })
+    for _ in range(500):
+        da = db = 0.0
+        for pi, yi in zip(probs, y):
+            s  = 1.0 / (1.0 + math.exp(a * pi + b))
+            e  = s - yi
+            da += e * pi
+            db += e
+        a -= lr * da / n
+        b -= lr * db / n
 
-    return samples
+    return round(a, 4), round(b, 4)
 
 
-# ══════════════════════════════════════════════════════════════
-#  АНАЛИЗ БЕЗ ML — просто статистика по рынкам и уверенности
-# ══════════════════════════════════════════════════════════════
-def analyze_results(samples: list) -> dict:
-    """Подробная статистика: точность, ROI, калибровка вероятностей."""
-    if not samples:
-        return {}
-
-    total = len(samples)
-    won   = sum(s["won"] for s in samples)
-    print(f"\n{'═'*60}")
-    print(f"  📊 АНАЛИЗ {total} РАЗМЕЧЕННЫХ СИГНАЛОВ")
-    print(f"  Общая точность: {won}/{total} = {won/total*100:.1f}%")
-
-    # ── ROI ───────────────────────────────────────────────────
-    roi = sum((s["bookmaker_odds"]-1)*s["won"] - (1-s["won"]) for s in samples) / total
-    print(f"  ROI: {roi*100:+.1f}% на сигнал")
-    print(f"{'─'*60}")
-
-    # ── По рынкам ─────────────────────────────────────────────
-    markets = {}
-    for s in samples:
-        mkt = ("Исход" if s["market_1x2"] else
-               "Тотал" if s["market_total"] else
-               "BTTS"  if s["market_btts"] else
-               "Гандикап" if s["market_hcap"] else
-               "DNB"   if s["market_dnb"] else
-               "Двойной шанс" if s["market_dc"] else
-               "Тотал 1Т" if s["market_1h"] else "Другое")
-        markets.setdefault(mkt, []).append(s)
-
-    print(f"  📋 По рынкам:")
-    mkt_stats = {}
-    for mkt, msigs in sorted(markets.items(), key=lambda x: len(x[1]), reverse=True):
-        w = sum(s["won"] for s in msigs)
-        t = len(msigs)
-        r = sum((s["bookmaker_odds"]-1)*s["won"] - (1-s["won"]) for s in msigs) / t
-        avg_e = sum(s["edge"] for s in msigs) / t
-        em = "🟢" if r > 0 else "🔴"
-        print(f"    {em} {mkt:18s}: {w}/{t} ({w/t*100:.0f}%)  ROI {r*100:+.1f}%  avg_edge {avg_e*100:.1f}%")
-        mkt_stats[mkt] = {"won": w, "total": t, "roi": r, "avg_edge": avg_e}
-
-    # ── По уверенности ────────────────────────────────────────
-    print(f"{'─'*60}")
-    print(f"  🎯 По уверенности:")
-    for conf_name, key in [("🔥 ВЫСОКАЯ","conf_high"), ("✅ СРЕДНЯЯ","conf_mid"), ("📌 НИЗКАЯ","")]:
-        if key:
-            csigs = [s for s in samples if s[key] == 1]
-        else:
-            csigs = [s for s in samples if s["conf_high"]==0 and s["conf_mid"]==0]
-        if not csigs: continue
-        w = sum(s["won"] for s in csigs)
-        t = len(csigs)
-        r = sum((s["bookmaker_odds"]-1)*s["won"] - (1-s["won"]) for s in csigs) / t
-        print(f"    {conf_name}: {w}/{t} ({w/t*100:.0f}%)  ROI {r*100:+.1f}%")
-
-    # ── Калибровка вероятностей ───────────────────────────────
-    print(f"{'─'*60}")
-    print(f"  📐 Калибровка (модель vs реальность):")
-    buckets = [(0.50,0.60),(0.60,0.70),(0.70,0.80),(0.80,0.90),(0.90,1.0)]
-    calib_ok = True
-    for lo, hi in buckets:
-        bsigs = [s for s in samples if lo <= s["model_prob"] < hi]
-        if len(bsigs) < 5: continue
-        real_acc = sum(s["won"] for s in bsigs) / len(bsigs)
-        mid = (lo + hi) / 2
-        bias = real_acc - mid
-        flag = "✅" if abs(bias) < 0.05 else ("⬆️" if bias > 0 else "⬇️")
-        print(f"    {flag} prob {lo:.0%}–{hi:.0%}: модель={mid:.0%}  реально={real_acc:.0%}  смещение {bias:+.0%}")
-        if abs(bias) > 0.05:
-            calib_ok = False
-
-    if calib_ok:
-        print(f"\n  ✅ Модель хорошо откалибрована!")
-    else:
-        print(f"\n  ⚠️  Требуется калибровка — запусти: python ml_calibrate.py apply")
-
-    return mkt_stats
-
-
-# ══════════════════════════════════════════════════════════════
-#  ML-ОБУЧЕНИЕ (если доступен scikit-learn)
-# ══════════════════════════════════════════════════════════════
-def train_ml_model(samples: list) -> dict:
-    """
-    Обучает градиентный бустинг на признаках сигналов.
-    Возвращает откорректированные веса для emit() в боте.
-    """
+def apply_platt(prob: float, a: float, b: float) -> float:
+    """Применяет Platt calibration к вероятности."""
     try:
-        from sklearn.ensemble import GradientBoostingClassifier
-        from sklearn.calibration import CalibratedClassifierCV
-        from sklearn.model_selection import cross_val_score
+        return 1.0 / (1.0 + math.exp(a * prob + b))
+    except (OverflowError, ZeroDivisionError):
+        return prob
+
+
+# ── Brier Score ──────────────────────────────────────────────────────
+def brier_score(points: list[CalibPoint], a: float = 1.0, b: float = 0.0) -> float:
+    """Brier Score = среднее (p_cal - y)^2. Чем меньше — тем лучше."""
+    if not points:
+        return 1.0
+    total = sum(
+        (apply_platt(p.model_prob, a, b) - p.actual_won) ** 2
+        for p in points
+    )
+    return total / len(points)
+
+
+# ── Expected Calibration Error ───────────────────────────────────────
+def expected_calibration_error(
+    points: list[CalibPoint],
+    a: float = 1.0,
+    b: float = 0.0,
+    n_bins: int = 10,
+) -> float:
+    """ECE = взвешенное абс. отклонение вероятности от реального WR по бинам."""
+    bins = defaultdict(lambda: {"count": 0, "wins": 0, "prob_sum": 0.0})
+    for p in points:
+        cal = apply_platt(p.model_prob, a, b)
+        bin_idx = min(int(cal * n_bins), n_bins - 1)
+        bins[bin_idx]["count"]    += 1
+        bins[bin_idx]["wins"]     += p.actual_won
+        bins[bin_idx]["prob_sum"] += cal
+    n = len(points)
+    if n == 0:
+        return 1.0
+    ece = 0.0
+    for bn in bins.values():
+        cnt = bn["count"]
+        if cnt == 0: continue
+        avg_prob = bn["prob_sum"] / cnt
+        actual_wr = bn["wins"] / cnt
+        ece += (cnt / n) * abs(avg_prob - actual_wr)
+    return round(ece, 4)
+
+
+# ── XGBoost второй уровень ───────────────────────────────────────────
+def train_xgboost_layer(points: list[CalibPoint]) -> Optional[dict]:
+    """
+    Тренирует XGBoost как второй уровень поверх модели Пуассона.
+    Features: model_prob, edge, odds, league_encoded, market_encoded.
+    Target: won (0/1).
+
+    Возвращает dict с параметрами для сохранения в ml_weights.json
+    или None если XGBoost недоступен или мало данных.
+    """
+    if len(points) < MIN_SAMPLES * 2:
+        print(f"  XGBoost: мало данных ({len(points)} < {MIN_SAMPLES * 2})")
+        return None
+
+    try:
+        import xgboost as xgb
         import numpy as np
     except ImportError:
-        print("  ℹ️  scikit-learn не установлен.")
-        print("  Установи: pip install scikit-learn")
-        print("  Пока используем статистический анализ.")
-        return {}
+        print("  XGBoost: не установлен (pip install xgboost)")
+        return None
 
-    if len(samples) < 50:
-        print(f"  ⚠️  Мало данных для ML: {len(samples)} сигналов (нужно 50+).")
-        print(f"  Накапливай результаты и запускай снова.")
-        return {}
+    # Кодируем категориальные признаки
+    leagues = sorted(set(p.league for p in points))
+    markets = sorted(set(p.market for p in points))
+    lg_map  = {lg: i for i, lg in enumerate(leagues)}
+    mk_map  = {mk: i for i, mk in enumerate(markets)}
 
-    feature_cols = ["edge","model_prob","bookmaker_odds",
-                    "market_1x2","market_total","market_btts","market_hcap",
-                    "market_dnb","market_dc","market_1h",
-                    "conf_high","conf_mid","odds_low","odds_high"]
+    X = np.array([
+        [
+            p.model_prob,
+            p.edge,
+            p.odds,
+            lg_map.get(p.league, -1),
+            mk_map.get(p.market, -1),
+        ]
+        for p in points
+    ], dtype=np.float32)
+    y = np.array([p.actual_won for p in points], dtype=np.float32)
 
-    X = [[s[c] for c in feature_cols] for s in samples]
-    y = [s["won"] for s in samples]
+    # Train / val split (80/20)
+    n_train = int(len(X) * 0.8)
+    X_tr, X_val = X[:n_train], X[n_train:]
+    y_tr, y_val = y[:n_train], y[n_train:]
 
-    import numpy as np
-    X, y = np.array(X), np.array(y)
-
-    # Обучаем с калибровкой (Platt scaling)
-    base = GradientBoostingClassifier(
-        n_estimators=100, max_depth=3, learning_rate=0.05,
-        subsample=0.8, min_samples_leaf=5, random_state=42
+    model = xgb.XGBClassifier(
+        n_estimators     = 100,
+        max_depth        = 4,
+        learning_rate    = 0.05,
+        subsample        = 0.8,
+        colsample_bytree = 0.8,
+        use_label_encoder= False,
+        eval_metric      = "logloss",
+        verbosity        = 0,
     )
-    model = CalibratedClassifierCV(base, cv=3, method="sigmoid")
-    model.fit(X, y)
-
-    # Кросс-валидация
-    cv_scores = cross_val_score(model, X, y, cv=5, scoring="roc_auc")
-    print(f"\n  🤖 ML-модель обучена на {len(samples)} примерах")
-    print(f"  ROC-AUC: {cv_scores.mean():.3f} ± {cv_scores.std():.3f}")
-
-    # Важность признаков (из base estimator)
-    base_only = GradientBoostingClassifier(
-        n_estimators=100, max_depth=3, learning_rate=0.05, random_state=42
+    model.fit(
+        X_tr, y_tr,
+        eval_set=[(X_val, y_val)],
+        verbose=False,
     )
-    base_only.fit(X, y)
-    importances = dict(zip(feature_cols, base_only.feature_importances_))
 
-    print(f"\n  📊 Важность признаков:")
-    for feat, imp in sorted(importances.items(), key=lambda x: x[1], reverse=True):
-        bar = "█" * int(imp * 50)
-        print(f"    {feat:25s}: {imp:.3f}  {bar}")
+    # Качество на валидации
+    preds_val = model.predict_proba(X_val)[:, 1]
+    bs_val    = float(np.mean((preds_val - y_val) ** 2))
+    bs_base   = float(np.mean((X_val[:, 0] - y_val) ** 2))  # Пуассон
+    improvement = (bs_base - bs_val) / bs_base * 100
 
-    # Генерируем оптимальные пороги по рынкам
-    market_thresholds = {}
-    for mkt_key, mkt_name in [
-        ("market_1x2","Исход"), ("market_total","Тотал"),
-        ("market_btts","BTTS"), ("market_hcap","Гандикап"),
-        ("market_dnb","DNB"), ("market_dc","Двойной шанс"),
-    ]:
-        msigs = [(s, i) for i, s in enumerate(samples) if s[mkt_key]==1]
-        if len(msigs) < 10:
-            continue
-        mX = np.array([[s[c] for c in feature_cols] for s, _ in msigs])
-        my = np.array([s["won"] for s, _ in msigs])
-        probs = model.predict_proba(mX)[:,1]
+    print(f"  XGBoost: Brier base={bs_base:.4f} → xgb={bs_val:.4f} "
+          f"(улучшение {improvement:+.1f}%)")
 
-        # Ищем порог минимального edge который даёт ROI > 0
-        best_edge, best_roi = 0.04, -1.0
-        for edge_thr in [0.03, 0.04, 0.05, 0.06, 0.07, 0.08]:
-            mask = np.array([s["edge"] >= edge_thr for s, _ in msigs])
-            if mask.sum() < 5:
-                continue
-            r = (sum((msigs[i][0]["bookmaker_odds"]-1)*my[i] - (1-my[i])
-                     for i in range(len(my)) if mask[i]) / mask.sum())
-            if r > best_roi:
-                best_roi = r
-                best_edge = edge_thr
-
-        market_thresholds[mkt_name] = {
-            "min_edge": best_edge,
-            "roi":      round(best_roi, 3),
-        }
-
-    # Сохраняем результаты
-    weights = {
-        "generated_at":  datetime.datetime.now().isoformat(),
-        "n_samples":     len(samples),
-        "roc_auc":       round(cv_scores.mean(), 4),
-        "importances":   {k: round(v,4) for k,v in importances.items()},
-        "market_min_edge": market_thresholds,
+    # Сохраняем параметры (не саму модель — только feature importances)
+    importances = model.feature_importances_.tolist()
+    return {
+        "type":          "xgboost",
+        "n_samples":     len(points),
+        "brier_base":    round(bs_base, 4),
+        "brier_xgb":     round(bs_val, 4),
+        "improvement_pct": round(improvement, 1),
+        "feature_importances": {
+            "model_prob": round(importances[0], 3),
+            "edge":       round(importances[1], 3),
+            "odds":       round(importances[2], 3),
+            "league":     round(importances[3], 3),
+            "market":     round(importances[4], 3),
+        },
+        "leagues": leagues,
+        "markets": markets,
+        "note": "XGBoost weight = 0.15 (supplement to Poisson model)",
     }
-    with open(CALIBRATION_OUT, "w", encoding="utf-8") as f:
-        json.dump(weights, f, ensure_ascii=False, indent=2)
-
-    print(f"\n  💾 Веса сохранены в {CALIBRATION_OUT}")
-    print(f"\n  📋 Оптимальные мин.Валуй по рынкам:")
-    for mkt, v in market_thresholds.items():
-        print(f"    {mkt:20s}: min_edge={v['min_edge']:.0%}  ROI={v['roi']*100:+.1f}%")
-
-    return weights
 
 
-# ══════════════════════════════════════════════════════════════
-#  АВТО-КАЛИБРОВКА ПАРАМЕТРОВ ЛИГИ
-# ══════════════════════════════════════════════════════════════
-def calibrate_league_params(samples: list):
-    """
-    На основе накопленных результатов вычисляет реальные avg_h / avg_a
-    по каждой лиге и выводит обновлённые значения для LEAGUE_CALIBRATION.
-    """
-    league_data = {}
-    for s in samples:
-        lg = s.get("league","")
-        if not lg: continue
-        market = ("total" if s["market_total"] else
-                  "1x2"   if s["market_1x2"]   else "other")
-        league_data.setdefault(lg, {"total_sigs":[], "1x2_sigs":[]})
-        league_data[lg][f"{market}_sigs"].append(s)
+# ── Reliability diagram (текстовый) ──────────────────────────────────
+def print_reliability_diagram(
+    points: list[CalibPoint],
+    a: float = 1.0,
+    b: float = 0.0,
+) -> None:
+    """Текстовая версия reliability diagram."""
+    bins = defaultdict(lambda: {"cnt": 0, "wins": 0, "prob": 0.0})
+    for p in points:
+        cal = apply_platt(p.model_prob, a, b)
+        bi  = min(int(cal * 10), 9)
+        bins[bi]["cnt"]  += 1
+        bins[bi]["wins"] += p.actual_won
+        bins[bi]["prob"] += cal
 
-    if not league_data:
-        return
-
-    print(f"\n{'─'*60}")
-    print(f"  🏆 КАЛИБРОВКА ПО ЛИГАМ (из реальных результатов):")
-    for lg, data in sorted(league_data.items()):
-        tsigs = data["total_sigs"]
-        if len(tsigs) < 10:
+    print("  Prob range  | WR реальный | N   | Калибр?")
+    print("  " + "─" * 46)
+    for i in range(10):
+        lo = i * 10; hi = lo + 10
+        bn = bins.get(i, {"cnt": 0, "wins": 0, "prob": 0.0})
+        cnt = bn["cnt"]
+        if cnt == 0:
             continue
-        over25 = [s for s in tsigs if "Больше 2.5" in str(s.get("selection",""))]
-        if len(over25) < 5:
+        real_wr   = bn["wins"] / cnt
+        avg_prob  = bn["prob"] / cnt
+        diff      = real_wr - avg_prob
+        ok        = "✅" if abs(diff) < 0.05 else ("⚠️ " if abs(diff) < 0.10 else "❌")
+        bar = "█" * int(real_wr * 10)
+        print(f"  {lo:2d}–{hi:2d}%     | {real_wr:6.1%}       | {cnt:3d} | {ok} {diff:+.1%}  {bar}")
+
+
+# ── Калибровка по рынкам ─────────────────────────────────────────────
+def calibrate_by_market(points: list[CalibPoint]) -> dict:
+    """
+    Platt calibration отдельно для каждого рынка.
+    Возвращает dict {market: (a, b, n_samples, brier)}.
+    """
+    by_market = defaultdict(list)
+    for p in points:
+        by_market[p.market].append(p)
+
+    result = {}
+    for market, mpts in by_market.items():
+        if len(mpts) < 20:
             continue
-        real_over25 = sum(s["won"] for s in over25) / len(over25)
-        print(f"    {lg:25s}: Over2.5={real_over25:.0%} (из {len(over25)} ставок)")
+        a, b  = platt_calibrate(mpts)
+        brier = brier_score(mpts, a, b)
+        result[market] = {
+            "a": a, "b": b,
+            "n": len(mpts),
+            "brier": round(brier, 4),
+            "wr": round(sum(p.actual_won for p in mpts) / len(mpts), 3),
+        }
+    return result
 
 
-# ══════════════════════════════════════════════════════════════
-#  ПРИМЕНЕНИЕ ВЕСОВ К БОТУ
-# ══════════════════════════════════════════════════════════════
-def apply_weights_to_bot():
-    """Применяет ml_weights.json к football_bot_v3.py."""
-    if not os.path.exists(CALIBRATION_OUT):
-        print(f"  ❌ Файл {CALIBRATION_OUT} не найден. Запусти сначала без аргументов.")
+# ── Сохранение весов ─────────────────────────────────────────────────
+def save_weights(platt_a: float, platt_b: float,
+                 market_calib: dict,
+                 xgb_info: Optional[dict],
+                 ece: float, brier: float) -> None:
+    """Обновляет ml_weights.json."""
+    existing = {}
+    if os.path.exists(ML_WEIGHTS_FILE):
+        try:
+            with open(ML_WEIGHTS_FILE, encoding="utf-8") as f:
+                existing = json.load(f)
+        except Exception:
+            pass
+
+    existing.update({
+        "platt_a":      platt_a,
+        "platt_b":      platt_b,
+        "ece":          ece,
+        "brier_score":  brier,
+        "market_calib": market_calib,
+        "xgboost":      xgb_info,
+        "updated_at":   __import__("datetime").datetime.now().isoformat(),
+    })
+    with open(ML_WEIGHTS_FILE, "w", encoding="utf-8") as f:
+        json.dump(existing, f, ensure_ascii=False, indent=2)
+    print(f"  ✅ {ML_WEIGHTS_FILE} обновлён")
+
+
+# ── Main ─────────────────────────────────────────────────────────────
+def main(run_xgb: bool = True, run_platt: bool = True,
+         report_only: bool = False) -> None:
+    sep = "═" * 58
+    print(f"\n{sep}")
+    print("  ML CALIBRATE")
+    print(sep)
+
+    points = load_calibration_data()
+    print(f"\n  Загружено точек: {len(points)}")
+    if len(points) < MIN_SAMPLES:
+        print(f"  Недостаточно данных (нужно ≥{MIN_SAMPLES})")
         return
 
-    with open(CALIBRATION_OUT, encoding="utf-8") as f:
-        weights = json.load(f)
+    wins = sum(p.actual_won for p in points)
+    print(f"  WR базовый:  {wins / len(points):.1%}  ({wins}W / {len(points) - wins}L)")
 
-    bot_file = "football_bot_v3.py"
-    if not os.path.exists(bot_file):
-        print(f"  ❌ {bot_file} не найден")
-        return
-
-    with open(bot_file, encoding="utf-8") as f:
-        code = f.read()
-
-    market_edges = weights.get("market_min_edge", {})
-    changes = 0
-
-    for mkt, v in market_edges.items():
-        new_edge = v["min_edge"]
-        # Ищем и заменяем min_edge для этого рынка
-        # (упрощённо — выводим рекомендации)
-        print(f"  📝 {mkt}: рекомендуемый min_edge = {new_edge:.0%}")
-        changes += 1
-
-    print(f"\n  ℹ️  Автоприменение пока в режиме рекомендаций.")
-    print(f"  Вручную обнови MIN_EDGE по рынкам в football_bot_v3.py.")
-    print(f"  Через 500+ ставок будет доступна полная авто-замена.")
-
-
-# ══════════════════════════════════════════════════════════════
-#  ТОЧЕЧНЫЙ ОТЧЁТ
-# ══════════════════════════════════════════════════════════════
-def generate_html_report(samples: list, mkt_stats: dict):
-    """Генерирует красивый HTML отчёт об эффективности бота."""
-    total = len(samples)
-    if not total:
-        return
-
-    won   = sum(s["won"] for s in samples)
-    roi   = sum((s["bookmaker_odds"]-1)*s["won"] - (1-s["won"]) for s in samples) / total
-    acc   = won / total * 100
-    color = "#16a34a" if roi > 0 else "#dc2626"
-
-    rows = ""
-    for mkt, stat in mkt_stats.items():
-        w, t, r = stat["won"], stat["total"], stat["roi"]
-        c = "#16a34a" if r > 0 else "#dc2626"
-        rows += f"""<tr>
-          <td>{mkt}</td><td>{w}/{t}</td>
-          <td>{w/t*100:.0f}%</td>
-          <td style="color:{c};font-weight:bold">{r*100:+.1f}%</td>
-        </tr>"""
-
-    html = f"""<!DOCTYPE html><html lang="ru"><head>
-<meta charset="UTF-8"><title>Football Bot — Отчёт</title>
-<style>
-  body{{font-family:system-ui;background:#0f172a;color:#e2e8f0;margin:0;padding:24px}}
-  .card{{background:#1e293b;border-radius:12px;padding:20px;margin-bottom:16px}}
-  h1{{color:#f8fafc;font-size:24px}}
-  .stat{{display:flex;gap:16px;flex-wrap:wrap}}
-  .box{{background:#0f172a;border-radius:8px;padding:16px;flex:1;min-width:120px}}
-  .val{{font-size:28px;font-weight:bold}}
-  .lbl{{color:#94a3b8;font-size:13px;margin-top:4px}}
-  table{{width:100%;border-collapse:collapse}}
-  th{{text-align:left;color:#94a3b8;padding:8px;border-bottom:1px solid #334155}}
-  td{{padding:8px;border-bottom:1px solid #1e293b}}
-</style></head><body>
-<div class="card">
-  <h1>⚽ Football Bot — Отчёт эффективности</h1>
-  <p style="color:#64748b">{datetime.datetime.now().strftime('%d.%m.%Y %H:%M')} · {total} сигналов</p>
-  <div class="stat">
-    <div class="box"><div class="val">{acc:.1f}%</div><div class="lbl">Точность</div></div>
-    <div class="box"><div class="val" style="color:{color}">{roi*100:+.1f}%</div><div class="lbl">ROI на ставку</div></div>
-    <div class="box"><div class="val">{won}</div><div class="lbl">Прошло</div></div>
-    <div class="box"><div class="val">{total-won}</div><div class="lbl">Не прошло</div></div>
-  </div>
-</div>
-<div class="card">
-  <h2 style="margin-top:0">По рынкам</h2>
-  <table><tr><th>Рынок</th><th>В/Т</th><th>Точность</th><th>ROI</th></tr>{rows}</table>
-</div>
-</body></html>"""
-
-    with open("bot_report.html", "w", encoding="utf-8") as f:
-        f.write(html)
-    print(f"\n  📊 HTML-отчёт → bot_report.html")
-
-
-# ══════════════════════════════════════════════════════════════
-#  ТОЧКА ВХОДА
-# ══════════════════════════════════════════════════════════════
-if __name__ == "__main__":
-    mode = sys.argv[1] if len(sys.argv) > 1 else "analyze"
-
-    samples = load_labeled_signals()
-    print(f"  📂 Загружено {len(samples)} размеченных сигналов")
-
-    if not samples:
-        print("  ⚠️  Нет данных. Накопи результаты через learning.py")
-        sys.exit(0)
-
-    if mode == "apply":
-        apply_weights_to_bot()
-    elif mode == "report":
-        mkt_stats = analyze_results(samples)
-        generate_html_report(samples, mkt_stats)
+    # ── Platt calibration ──────────────────────────────────────────
+    a, b = 1.0, 0.0
+    if run_platt:
+        print(f"\n  ── Platt calibration ─────────────────────────────")
+        a, b = platt_calibrate(points)
+        brier_before = brier_score(points, 1.0, 0.0)
+        brier_after  = brier_score(points, a, b)
+        ece_before   = expected_calibration_error(points, 1.0, 0.0)
+        ece_after    = expected_calibration_error(points, a, b)
+        print(f"  Platt: a={a}  b={b}")
+        print(f"  Brier: {brier_before:.4f} → {brier_after:.4f}  "
+              f"({'улучш' if brier_after < brier_before else 'ухудш'})")
+        print(f"  ECE:   {ece_before:.4f} → {ece_after:.4f}")
+        print(f"\n  Reliability diagram (после калибровки):")
+        print_reliability_diagram(points, a, b)
     else:
-        mkt_stats = analyze_results(samples)
-        calibrate_league_params(samples)
-        weights = train_ml_model(samples)
-        generate_html_report(samples, mkt_stats)
-        print(f"\n{'═'*60}")
-        print(f"  ✅ Готово. Файлы: {CALIBRATION_OUT}, bot_report.html")
+        brier_after = brier_score(points)
+        ece_after   = expected_calibration_error(points)
+
+    # ── По рынкам ──────────────────────────────────────────────────
+    print(f"\n  ── Калибровка по рынкам ──────────────────────────")
+    market_calib = calibrate_by_market(points)
+    for mkt, mc in sorted(market_calib.items(), key=lambda x: -x[1]["n"]):
+        print(f"  {mkt:32s}  n={mc['n']:3d}  WR={mc['wr']:.0%}  "
+              f"a={mc['a']:.2f}  b={mc['b']:.2f}  Brier={mc['brier']:.4f}")
+
+    # ── XGBoost ────────────────────────────────────────────────────
+    xgb_info = None
+    if run_xgb:
+        print(f"\n  ── XGBoost второй уровень ────────────────────────")
+        xgb_info = train_xgboost_layer(points)
+        if xgb_info:
+            print(f"  Feature importances:")
+            for feat, imp in xgb_info["feature_importances"].items():
+                bar = "█" * int(imp * 20)
+                print(f"    {feat:15s} {imp:.3f}  {bar}")
+
+    # ── Рекомендации ───────────────────────────────────────────────
+    print(f"\n  ── Рекомендации ──────────────────────────────────")
+    for mkt, mc in sorted(market_calib.items(), key=lambda x: -x[1]["n"]):
+        wr = mc["wr"]
+        if wr < 0.45 and mc["n"] >= 20:
+            print(f"  ⚠️  {mkt}: WR={wr:.0%} — рассмотри увеличение min_edge")
+        elif wr > 0.65 and mc["n"] >= 10:
+            print(f"  ✅ {mkt}: WR={wr:.0%} — можно снизить порог")
+
+    # ── Сохраняем ─────────────────────────────────────────────────
+    if not report_only:
+        print(f"\n  ── Сохранение ───────────────────────────────────")
+        save_weights(a, b, market_calib, xgb_info, ece_after, brier_after)
+
+    print(f"\n{sep}")
+    print(f"  Готово. Перезапусти football_bot_v3.py для применения.")
+    print(f"  Следующая калибровка: через 2 недели или при WR<50% 5 дней.")
+    print(sep)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="ML calibration")
+    parser.add_argument("--xgb",    action="store_true", help="Только XGBoost")
+    parser.add_argument("--platt",  action="store_true", help="Только Platt")
+    parser.add_argument("--report", action="store_true", help="Только отчёт")
+    args = parser.parse_args()
+
+    main(
+        run_xgb    = args.xgb or (not args.platt and not args.report),
+        run_platt  = args.platt or (not args.xgb and not args.report),
+        report_only= args.report,
+    )

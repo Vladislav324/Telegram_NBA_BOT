@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  football-bot:
+    build: .
+    container_name: football_bot
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./credentials.json:/app/credentials.json:ro
+    depends_on:
+      - redis
+    environment:
+      - PROXY_URL=${PROXY_URL:-}
+    networks:
+      - bot-net
+
+  redis:
+    image: redis:7-alpine
+    container_name: football_redis
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+    networks:
+      - bot-net
+
+  learning:
+    build: .
+    container_name: football_learning
+    restart: "no"
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+      - ./credentials.json:/app/credentials.json:ro
+    command: python learning.py
+    networks:
+      - bot-net
+
+volumes:
+  redis-data:
+
+networks:
+  bot-net:
+    driver: bridge
